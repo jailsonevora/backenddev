@@ -16,7 +16,7 @@
 	<meta property="og:url" content="https://jailsonevora.com/2020/08/11/linear-regression-under-the-hood-using-matlab/">
 	<meta property="og:site_name" content="Backend-Dev">
 	<meta property="article:published_time" content="2020-08-11T11:00:00+00:00">
-	<meta property="article:modified_time" content="2023-04-19T11:16:19+00:00">
+	<meta property="article:modified_time" content="2023-04-19T21:08:13+00:00">
 	<meta property="og:image" content="https://jailsonevora.com/wp-content/uploads/2020/05/ML.Linear-Regression.png">
 	<meta property="og:image:width" content="2541">
 	<meta property="og:image:height" content="1605">
@@ -46,7 +46,7 @@
 	            },
 	            "thumbnailUrl": "https://jailsonevora.com/wp-content/uploads/2020/05/ML.Linear-Regression.png",
 	            "datePublished": "2020-08-11T11:00:00+00:00",
-	            "dateModified": "2023-04-19T11:16:19+00:00",
+	            "dateModified": "2023-04-19T21:08:13+00:00",
 	            "author": {
 	                "@id": "https://jailsonevora.com/#/schema/person/dbc135529fc61a4826e3aa4d6eda9ad6"
 	            },
@@ -210,9 +210,6 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 <style id="wp-block-spacer-inline-css">
 .wp-block-spacer{clear:both}
 </style>
-<style id="wp-block-comments-inline-css">
-.wp-block-post-comments{box-sizing:border-box}.wp-block-post-comments .alignleft{float:left}.wp-block-post-comments .alignright{float:right}.wp-block-post-comments .navigation:after{clear:both;content:"";display:table}.wp-block-post-comments .commentlist{clear:both;list-style:none;margin:0;padding:0}.wp-block-post-comments .commentlist .comment{min-height:2.25em;padding-left:3.25em}.wp-block-post-comments .commentlist .comment p{font-size:1em;line-height:1.8;margin:1em 0}.wp-block-post-comments .commentlist .children{list-style:none;margin:0;padding:0}.wp-block-post-comments .comment-author{line-height:1.5}.wp-block-post-comments .comment-author .avatar{border-radius:1.5em;display:block;float:left;height:2.5em;margin-right:.75em;margin-top:.5em;width:2.5em}.wp-block-post-comments .comment-author cite{font-style:normal}.wp-block-post-comments .comment-meta{font-size:.875em;line-height:1.5}.wp-block-post-comments .comment-meta b{font-weight:400}.wp-block-post-comments .comment-meta .comment-awaiting-moderation{display:block;margin-bottom:1em;margin-top:1em}.wp-block-post-comments .comment-body .commentmetadata{font-size:.875em}.wp-block-post-comments .comment-form-author label,.wp-block-post-comments .comment-form-comment label,.wp-block-post-comments .comment-form-email label,.wp-block-post-comments .comment-form-url label{display:block;margin-bottom:.25em}.wp-block-post-comments .comment-form input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments .comment-form textarea{box-sizing:border-box;display:block;width:100%}.wp-block-post-comments .comment-form-cookies-consent{display:flex;gap:.25em}.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent{margin-top:.35em}.wp-block-post-comments .comment-reply-title{margin-bottom:0}.wp-block-post-comments .comment-reply-title :where(small){font-size:var(--wp--preset--font-size--medium,smaller);margin-left:.5em}.wp-block-post-comments .reply{font-size:.875em;margin-bottom:1.4em}.wp-block-post-comments input:not([type=submit]),.wp-block-post-comments textarea{border:1px solid #949494;font-family:inherit;font-size:1em}.wp-block-post-comments input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments textarea{padding:calc(.667em + 2px)}:where(.wp-block-post-comments input[type=submit]){border:none}
-</style>
 <link rel="stylesheet" id="wp-block-social-links-css" href="https://jailsonevora.com/wp-includes/blocks/social-links/style.min.css?ver=6.2" media="all">
 <style id="wp-block-library-inline-css">
 :root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{clip:auto!important;background-color:#ddd;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}figure{margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
@@ -272,15 +269,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 <div class="entry-content wp-block-post-content is-layout-constrained">
-<p class="has-drop-cap has-medium-font-size">Sometimes to choose the appropriate model, the right training algorithms, the hyperparameter to best fit the task, as well as to debug issues and perform error analysis more efficiently,  it is necessary to understand what is under the hood.</p>
+<p class="has-drop-cap has-medium-font-size">Sometimes to choose the appropriate model, the right training algorithms, and the hyperparameter to best fit the task, as well as to debug issues and perform error analysis more efficiently,  it is necessary to understand what is under the hood.</p>
 
 
 
-<p class="has-medium-font-size">Hence, in this post, we will dissect the implementation of the linear regression using Matlab. Linear regression is known as a statistic algorithm used in machine learning, as a supervised learning technic to predicts a real-valued output based on an input value.&nbsp;</p>
+<p class="has-medium-font-size">Hence, in this post, we will dissect the implementation of linear regression using Matlab. Linear regression is known as a statistical algorithm used in machine learning, as a supervised learning technic to predict a real-valued output based on an input value.&nbsp;</p>
 
 
 
-<p class="has-medium-font-size">For this analysis, we selected a free and publicly available dataset from a well-known data <a href="http://kaggle.com">source</a>. It contains a house, lot area, year of build, bedroom avg, and many more features. Also, we use the vectorization that is more efficient than for loops because of its parallel computation capability.</p>
+<p class="has-medium-font-size">For this analysis, we selected a free and publicly available dataset from a well-known data <a href="http://kaggle.com">source</a>. It contains a house, lot area, year of build, bedroom avg, and many more features. Also, we use vectorization which is more efficient than for loops because of its parallel computation capability.</p>
 
 
 
@@ -292,7 +289,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Bear in mind that the superscript \({(i)}\) in the notation is an index of the training set instead of the exponentiation. We will also use X to denote the input values and Y as the output values, both as real number &#8477;.</p>
+<p class="has-medium-font-size">Bear in mind that the superscript \({(i)}\) in the notation is an index of the training set instead of the exponentiation. We will also use X to denote the input values and Y as the output values, both as real numbers &#8477;.</p>
 
 
 
@@ -312,7 +309,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">We can measure the accuracy of our hypothesis by using the &ldquo;Squared error &ldquo;/ &ldquo;Mean squared error&rdquo; <strong>cost function</strong>. The idea of this function is to choose <strong>$latex \theta_0$</strong> and <strong>$latex \theta_1$</strong> so that <strong>$latex {h_\theta(x)}$</strong> it is close to \({y}\) for the training example, where the value of $latex J(\theta_0, \theta_1)$ will be 0. The MSE is a convex function where we will have only a global optima in contrast with other function where we could end in local optima.</p>
+<p class="has-medium-font-size">We can measure the accuracy of our hypothesis by using the &ldquo;Squared error &ldquo;/ &ldquo;Mean squared error&rdquo; <strong>cost function</strong>. The idea of this function is to choose <strong>$latex \theta_0$</strong> and <strong>$latex \theta_1$</strong> so that <strong>$latex {h_\theta(x)}$</strong> it is close to \({y}\) for the training example, where the value of $latex J(\theta_0, \theta_1)$ will be 0. The MSE is a convex function where we will have only a global optimum in contrast with other functions where we could end in local optima.</p>
 
 
 
@@ -332,7 +329,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Matlab is a computer numerical program, that interprets the operator &ldquo;*&rdquo; as the multiplicator for two matrices. So, if we want to multiply a scalar value to a matrix, vector or another scalar, we need to add a &ldquo;.*&rdquo; before each operator as we did in the computation of the exponential of \({(h(x) &ndash; y)^2}\), while element-wise multiplication. Also, we can use a series of pre-built functions as we did using the <strong>sum()</strong> function.</p>
+<p class="has-medium-font-size">Matlab is a computer numerical program, that interprets the operator &ldquo;*&rdquo; as the multiplicator for two matrices. So, if we want to multiply a scalar value to a matrix, vector, or another scalar, we need to add a &ldquo;.*&rdquo; before each operator as we did in the computation of the exponential of \({(h(x) &ndash; y)^2}\), while element-wise multiplication. Also, we can use a series of pre-built functions as we did use the <strong>sum()</strong> function.</p>
 
 
 
@@ -368,7 +365,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">To compute the batch gradient descent, some additional useful hyperparameters are needed. Essentially the number of iteration and the learning rate alpha.</p>
+<p class="has-medium-font-size">To compute the batch gradient descent, some additional useful hyperparameters are needed. Essentially the number of iterations and the learning rate alpha.</p>
 
 
 
@@ -384,7 +381,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Linear regression with multiple variables is also known as multivariate linear regression. For multiple variables, our notation differentiates slightly from the initially presented. Now we can have any number of input variables.</p>
+<p class="has-medium-font-size">Linear regression with multiple variables is also known as multivariate linear regression. For multiple variables, our notation differentiates slightly from the initially presented one. Now we can have any number of input variables.</p>
 
 
 
@@ -404,7 +401,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">We can think about&nbsp;$latex \theta_0$&#8203;&nbsp;as the basic price of a house,&nbsp;$latex \theta_1$&#8203;&nbsp;as the price per lot area,&nbsp;$latex \theta_2$&#8203;&nbsp;as the price per bedrooms&hellip;.&nbsp;\({x_1}\) will be the number of lot area in the house,&nbsp;\({x_2}\)&#8203;&nbsp;the number of bedrooms and so on.</p>
+<p class="has-medium-font-size">We can think about&nbsp;$latex \theta_0$&#8203;&nbsp;as the basic price of a house,&nbsp;$latex \theta_1$&#8203;&nbsp;as the price per lot area,&nbsp;$latex \theta_2$&#8203;&nbsp;as the price per bedroom&hellip;.&nbsp;\({x_1}\) will be the number of lot area in the house,&nbsp;\({x_2}\)&#8203;&nbsp;the number of bedrooms and so on.</p>
 
 
 
@@ -424,7 +421,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%20272%20127'%3E%3C/svg%3E" data-src="../wp-content/uploads/2020/05/image-63.png" alt="" class="wp-image-2319 lazy" width="272" height="127"></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%20272%20127'%3E%3C/svg%3E" data-src="https://jailsonevora.com/wp-content/uploads/2020/05/image-63.png" alt="" class="wp-image-2319 lazy" width="272" height="127"></figure>
 
 
 
@@ -436,11 +433,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">As well in the linear regression with one variable, the only difference is the number of the input value features and the number of <strong>theta </strong>that is proportional with the number o feature X matrix.</p>
+<p class="has-medium-font-size">As well in the linear regression with one variable, the only difference is the number of the input value features and the number of <strong>theta that is proportional to</strong> the number o feature X matrix.</p>
 
 
 
-<p class="has-medium-font-size">Notice too that the vectorized version of the hypothesis, we need to transpond the theta. We did this by inverting the order of the multiplication of X*theta. This is the same as theta&rsquo;*X since suppose our matrix X is 10&times;4 and the vector theta must is 4&times;1. Thus we are multiplying matrices of compatible dimensions where collum X is equal to the row theta.</p>
+<p class="has-medium-font-size">Notice too that in the vectorized version of the hypothesis, we need to transport the theta. We did this by inverting the order of the multiplication of X*theta. This is the same as theta&rsquo;*X since suppose our matrix X is 10&times;4 and the vector theta must be 4&times;1. Thus we are multiplying matrices of compatible dimensions where collum X is equal to the row theta.</p>
 
 
 
@@ -464,7 +461,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">It has been proven that if learning rate &alpha; is sufficiently small, then $latex J(\theta_0)$ will decrease on every iteration. For sufficiently small $latex \alpha$, $latex J(\theta)$ should decrease on every interaction otherwise If&nbsp;$latex \alpha$&nbsp;is too small: gradient descent can be slow to converge.</p>
+<p class="has-medium-font-size">It has been proven that if the learning rate &alpha; is sufficiently small, then $latex J(\theta_0)$ will decrease on every iteration. For sufficiently small $latex \alpha$, $latex J(\theta)$ should decrease on every interaction otherwise If&nbsp;$latex \alpha$&nbsp;is too small: gradient descent can slowly converge.</p>
 
 
 
@@ -476,7 +473,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Gradient descent works faster when each of our input values in roughly the same range. This is because $latex \theta$ will descend quickly on small ranges and slowly on large ranges. </p>
+<p class="has-medium-font-size">Gradient descent works faster when each of our input values is in roughly the same range. This is because $latex \theta$ will descend quickly on small ranges and slowly on large ranges. </p>
 
 
 
@@ -504,7 +501,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">To perform these technics, first in MATLAB, we can use the mean and <strong>std</strong> function to compute the mean and the standard deviation for all the features. The standard deviation is a way of measuring how much variation there is in the range of values of a particular feature. </p>
+<p class="has-medium-font-size">To perform these technics, first in MATLAB, we can use the mean and <strong>std</strong> functions to compute the mean and the standard deviation for all the features. The standard deviation is a way of measuring how much variation there is in the range of values of a particular feature. </p>
 
 
 
@@ -512,7 +509,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Gradient descent gives one way of minimizing $latex J$. Another way to do this explicitly and without resorting to an iterative algorithm is by using the &ldquo;Normal Equation&rdquo; method. We minimize $latex J$ by explicitly taking its derivatives with respect to the $latex \theta_j&rsquo;s$, and setting them to zero. This allows us to find the optimum theta without iteration:</p>
+<p class="has-medium-font-size">Gradient descent gives one way of minimizing $latex J$. Another way to do this explicitly and without resorting to an iterative algorithm is by using the &ldquo;Normal Equation&rdquo; method. We minimize $latex J$ by explicitly taking its derivatives concerning the $latex \theta_j&rsquo;s$, and setting them to zero. This allows us to find the optimum theta without iteration:</p>
 
 
 
@@ -520,7 +517,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">When we are using the normal equation we do not need&nbsp;to do feature scaling. With the normal equation, computing the inversion requires much more big $latex {O}$ time. So if we have a very large number of features, the normal equation will be slow and we should choose the iterative process.</p>
+<p class="has-medium-font-size">When we are using the standard equation we do not need&nbsp;to do feature scaling. With the standard equation, computing the inversion requires much more big $latex {O}$ time. So if we have a very large number of features, the standard equation will be slow and we should choose the iterative process.</p>
 
 
 
@@ -532,7 +529,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">Also just for reference,  beyond using the normal equation we can use another more complex and advanced mechanism to minimize $latex J$. These are MATLAB built-in function called <strong>fminunc </strong>and <strong>fmincg</strong>.</p>
+<p class="has-medium-font-size">Also just for reference,  beyond using the normal equation we can use another more complex and advanced mechanism to minimize $latex J$. These are MATLAB built-in functions called <strong>fminunc </strong>and <strong>fmincg</strong>.</p>
 
 
 
@@ -540,7 +537,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p class="has-medium-font-size">In this article, we dissected the implementation of the linear regression using Matlab since the importance of established a notation, the use o linear regression for one variable, or for multiple variables. We also reveal how&nbsp;<strong><em>Bacht Gradient Descent</em></strong>&nbsp;is used to estimate the parameters in the hypothesis function as well as the use of&nbsp;<strong><em>Feature Scaling</em></strong>&nbsp;and&nbsp;<strong><em>Mean Normalization</em></strong>&nbsp;to normalize our input values in roughly the same range. &nbsp;</p>
+<p class="has-medium-font-size">In this article, we dissected the implementation of linear regression using Matlab since the importance of establishing a notation, and the use o linear regression for one variable, or multiple variables. We also reveal how&nbsp;<strong><em>Bacht Gradient Descent</em></strong>&nbsp;is used to estimate the parameters in the hypothesis function as well as the use of&nbsp;<strong><em>Feature Scaling</em></strong>&nbsp;and&nbsp;<strong><em>Mean Normalization</em></strong>&nbsp;to normalize our input values in roughly the same range. &nbsp;</p>
 
 
 
@@ -566,8 +563,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
-
-
 </div>
 </main>
 </div>
@@ -580,11 +575,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-<p>Software Engineer &ndash; Machine Learning with 10 years of experience in software development. A blog to share thoughts with the community about experiences solving technical problems. 4 articles on @DZone with over 100k views. </p>
+<p>Software Engineer &ndash; Machine Learning with 10 years of experience in software development. A blog to share thoughts with the community about experiences solving problems. 4 articles on @DZone with over 100k views. </p>
 
 
 
-<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only is-content-justification-left is-layout-flex wp-container-12"><li style="color: #606060; " class="wp-social-link wp-social-link-twitter wp-block-social-link"><a rel=" noopener nofollow" target="_blank" href="https://twitter.com/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
+<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only is-content-justification-left is-layout-flex wp-container-12"><li style="color: #606060; " class="wp-social-link wp-social-link-twitter wp-block-social-link"><a rel=" noopener nofollow" target="_blank" href="https://twitter.com/JailsonEvora" class="wp-block-social-link-anchor"><svg width="24" height="24" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
 
 <li style="color: #606060; " class="wp-social-link wp-social-link-github wp-block-social-link"><a rel=" noopener nofollow" target="_blank" href="https://github.com/jailsonevora" class="wp-block-social-link-anchor"><svg width="24" height="24" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,2C6.477,2,2,6.477,2,12c0,4.419,2.865,8.166,6.839,9.489c0.5,0.09,0.682-0.218,0.682-0.484 c0-0.236-0.009-0.866-0.014-1.699c-2.782,0.602-3.369-1.34-3.369-1.34c-0.455-1.157-1.11-1.465-1.11-1.465 c-0.909-0.62,0.069-0.608,0.069-0.608c1.004,0.071,1.532,1.03,1.532,1.03c0.891,1.529,2.341,1.089,2.91,0.833 c0.091-0.647,0.349-1.086,0.635-1.337c-2.22-0.251-4.555-1.111-4.555-4.943c0-1.091,0.39-1.984,1.03-2.682 C6.546,8.54,6.202,7.524,6.746,6.148c0,0,0.84-0.269,2.75,1.025C10.295,6.95,11.15,6.84,12,6.836 c0.85,0.004,1.705,0.114,2.504,0.336c1.909-1.294,2.748-1.025,2.748-1.025c0.546,1.376,0.202,2.394,0.1,2.646 c0.64,0.699,1.026,1.591,1.026,2.682c0,3.841-2.337,4.687-4.565,4.935c0.359,0.307,0.679,0.917,0.679,1.852 c0,1.335-0.012,2.415-0.012,2.741c0,0.269,0.18,0.579,0.688,0.481C19.138,20.161,22,16.416,22,12C22,6.477,17.523,2,12,2z"></path></svg><span class="wp-block-social-link-label screen-reader-text">GitHub</span></a></li>
 

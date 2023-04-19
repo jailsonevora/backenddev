@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/oauth/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/oauth/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 11:45:44 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 21:51:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -35,11 +35,11 @@
 		<category><![CDATA[Token-based]]></category>
 		<guid isPermaLink="false">https://www.jeevora.com/?p=866</guid>
 
-					<description><![CDATA[<p>Within the universe of microservices security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allowing third parties (a particular application or service) communicate with other applications or services, acting on behalf of, and not while the application or service. Authorization to third parties using the traditional model, where the client accesses a protected [&#8230;]</p>
+					<description><![CDATA[<p>Within the universe of microservices security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service. Authorization to third parties using the traditional model, where the client accesses a [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/">Microservices Security Mechanisms</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">Within the universe of <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666957602618843103249">microservice</gwmw>s security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allowing third parties (a particular application or service) communicate with other applications or services, acting on behalf of, and not while the application or service.</p>
+<p class="has-drop-cap has-medium-font-size">Within the universe of <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666957602618843103249">microservice</gwmw>s security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service.</p>
 
 
 
@@ -48,7 +48,7 @@
 
 
 <ul>
-<li>Credentials need to be stored in third party applications for future use.</li>
+<li>Credentials need to be stored in third-party applications for future use.</li>
 
 
 
@@ -60,11 +60,11 @@
 
 
 
-<li>The resource owner cannot revoke access to a third party without revoking access to all others and is only possible by changing the password.</li>
+<li>The resource owner cannot revoke access to a third party without revoking access to all others and this is only possible by changing the password.</li>
 
 
 
-<li>The security breach in third party application results in exposure of credentials and all data protected in the third party.</li>
+<li>The security breach in third-party applications results in the exposure of credentials and all data protected by the third party.</li>
 </ul>
 
 
@@ -85,7 +85,7 @@
 
 
 
-<p class="has-medium-font-size">The problems and limitations identified in the traditional authorization model are addressed by this standard by introducing the authorization layer, separating the role of the client from the resource owner. The client requests access to resources owned by the resource owner hosted on the resource server and different credentials are issued than those of the resource owner. Instead of using the resource owner&#8217;s credentials to access protected resources, the client obtains an access token that indicates a specific scope, time, and other access attributes, which tokens are issued by with the approval of the resource owner. The client uses the access token to access protected resources hosted by the resource server (Figure 1) [1]. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">The problems and limitations identified in the traditional authorization model are addressed by this standard by introducing the authorization layer, separating the role of the client from the resource owner. The client requests access to resources owned by the resource owner hosted on the resource server and different credentials are issued than those of the resource owner. Instead of using the resource owner&#8217;s credentials to access protected resources, the client obtains an access token that indicates a specific scope, time, and other access attributes, which tokens are issued with the approval of the resource owner. The client uses the access token to access protected resources hosted by the resource server (Figure 1) [1]. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -101,7 +101,7 @@
 
 
 
-<p class="has-medium-font-size">OpenID Connect builds on top of OAuth2 and adds authentication. OpenID Connect adds some constraint to OAuth2 like <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666777153698581948814">UserInfo</gwmw> Endpoint, ID Token, discovery and dynamic registration of OpenID Connect providers and session management.</p>
+<p class="has-medium-font-size">OpenID Connect builds on top of OAuth2 and adds authentication. OpenID Connect adds some constraints to OAuth2 like UserInfo Endpoint, ID Token, discovery and dynamic registration of OpenID Connect providers, and session management.</p>
 
 
 
@@ -109,7 +109,7 @@
 
 
 
-<p class="has-medium-font-size">OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as encryption of identity data, the discovery of OpenID Providers, and session management.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as the encryption of identity data, the discovery of OpenID Providers, and session management.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-<p class="has-medium-font-size">The client accesses the server by sending the access credentials, the service provider validates the credentials, saves an authorization token on success, associates the token with the client address and assigns the lifetime of this access token. The service sends a success message to the customer along with the token. The client starts to invoke the services on the server by sending the authorization token, where the server will validate each request, checking if the token is valid (Figure 2).<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">The client accesses the server by sending the access credentials, the service provider validates the credentials, saves an authorization token on success, associates the token with the client address, and assigns the lifetime of this access token. The service sends a success message to the customer along with the token. The client starts to invoke the services on the server by sending the authorization token, where the server will validate each request, checking if the token is valid (Figure 2).<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -141,7 +141,7 @@
 
 
 
-<p class="has-medium-font-size">JWT tokens are JSON encoded data structures that contain information about the issuer, subject (claims), expiration time, access token, refresh token, id token and so on. </p>
+<p class="has-medium-font-size">JWT tokens are JSON-encoded data structures that contain information about the issuer, subject (claims), expiration time, access token, refresh token, id token, and so on. </p>
 
 
 
@@ -172,11 +172,11 @@
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 49/53 objects using disk
+Object Caching 50/52 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/7 queries in 0.018 seconds using disk
+Database Caching 2/6 queries in 0.007 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:18:05 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:52:42 by W3 Total Cache
 -->

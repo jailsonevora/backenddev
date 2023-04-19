@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/soapui/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/soapui/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 11:23:47 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 21:22:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -37,15 +37,15 @@
 		<category><![CDATA[WCF]]></category>
 		<guid isPermaLink="false">https://www.jeevora.com/?p=1663</guid>
 
-					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create New SOAP project Firstly we need to [&#8230;]</p>
+					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project Firstly we need [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
+<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
 
 
 
-<h3 class="wp-block-heading">1-Basic WCF SOAP using SoapUI &#8211; Create New SOAP project</h3>
+<h3 class="wp-block-heading">1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project</h3>
 
 
 
@@ -61,7 +61,7 @@
 
 
 
-<p class="has-medium-font-size">After create successfully the new SoapUI project, collapse in until the request´s endpoint. Now double click the request or right-click of the mouse to open the <em><strong>&#8220;Show Request Editor&#8221;</strong></em>. Navigate to the <em><strong>&#8220;Auth (Basic)&#8221;</strong></em> tab in the bottom corner, surround toward a green circle.</p>
+<p class="has-medium-font-size">After create successfully the new SoapUI project, collapse until the request´s endpoint. Now double-click the request or right-click the mouse to open the &#8220;Show Request Editor&#8221;. Navigate to the &#8220;Auth (Basic)&#8221; tab in the bottom corner, surrounded by a green circle.</p>
 
 
 
@@ -69,7 +69,7 @@
 
 
 
-<p class="has-medium-font-size">In the <strong><em>&#8220;Authorization&#8221; </em></strong>dropdown list, select <em><strong>&#8220;Basic&#8221;</strong></em>. It is the same as the service created before. Following, SoapUI shows a form when we can insert the &#8220;Username&#8221; and the &#8220;Password&#8221; service credentials <strong><em>&#8220;AVeryBigSum&#8221;</em></strong>, <em><strong>&#8220;12345&#8221;</strong></em> respectively.</p>
+<p class="has-medium-font-size">In the <strong><em>&#8220;Authorization&#8221; </em></strong>dropdown list, select <em><strong>&#8220;Basic&#8221;</strong></em>. It is the same as the service created before. Following, SoapUI shows a form where we can insert the &#8220;Username&#8221; and the &#8220;Password&#8221; service credentials &#8220;AVeryBigSum&#8221;, and <em><strong>&#8220;12345&#8221;</strong></em> respectively.</p>
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-<p class="has-medium-font-size">Navigate to the <em><strong>&#8220;</strong></em><strong><em>WS-A&#8221;</em></strong> Configurations tab, and enable the <a rel="noreferrer noopener" href="https://www.w3.org/Submission/ws-addressing/" target="_blank">WS-A addressing</a>, that defines two interoperable constructs typically provided by transport protocols (<em>endpoint references</em>) and messaging systems (<em>message information headers</em>). These constructs normalize this underlying information into a uniform format that can be processed independently of transport or application.</p>
+<p class="has-medium-font-size">Navigate to the <em><strong>&#8220;</strong></em><strong><em>WS-A&#8221;</em></strong> Configurations tab, and enable the <a href="https://www.w3.org/Submission/ws-addressing/" target="_blank" rel="noreferrer noopener">WS-A addressing</a>, which defines two interoperable constructs typically provided by transport protocols (<em>endpoint references</em>) and messaging systems (<em>message information headers</em>). These constructs normalize this underlying information into a uniform format that can be processed independently of transport or application.</p>
 
 
 
@@ -89,15 +89,15 @@
 
 
 
-<p class="has-medium-font-size">This tool allows us to enable the <em><strong>&#8220;Add default wsa: </strong></em>To&#8221; and <em><strong>&#8220;Add default wsa: Action&#8221;</strong></em> configuration. The <em><strong>&#8220;Add default wsa: To&#8221;</strong></em> provides the value for the destination property. The default anonymous value for this property is &#8220;<a rel="noreferrer noopener" href="https://www.w3.org/TR/2006/REC-ws-addr-core-20060509/" target="_blank">http://www.w3.org/2005/08/addressing/anonymous</a>&#8220;. In the above example, the default <strong>wsa: Action</strong>, <strong>wsa: To</strong> and <strong>wsa: MessageId</strong> headers have been enabled, so when we send the request we can see them in the raw request view.</p>
+<p class="has-medium-font-size">This tool allows us to enable the <em><strong>&#8220;Add default wsa: </strong></em>To&#8221; and <em><strong>&#8220;Add default wsa: Action&#8221;</strong></em> configurations. The &#8220;Add default wsa: To&#8221; provides the value for the destination property. The default anonymous value for this property is &#8220;http://www.w3.org/2005/08/addressing/anonymous&#8221;. In the above example, the default wsa: Action, wsa: To, and <strong>wsa: MessageId</strong> headers have been enabled, so when we send the request we can see them in the raw request view.</p>
 
 
 
-<h3 class="wp-block-heading">4-Secure WCF SOAP using SoapUI &#8211; WS-Reliable message related settings tab</h3>
+<h3 class="wp-block-heading">4-Secure WCF SOAP using SoapUI &#8211; WS-Reliable message-related settings tab</h3>
 
 
 
-<p class="has-medium-font-size">To ensure reliable communication between two systems we enable the <em><strong>&#8220;WS-Reliable Message&#8221;</strong></em> specification. The aim of this is to ensure that messages are transferred properly from the sender to the receiver in the presence of network failures. As well we select the latest <strong>version </strong>of this specification for this demonstration.</p>
+<p class="has-medium-font-size">To ensure reliable communication between the two systems we enable the <em><strong>&#8220;WS-Reliable Message&#8221;</strong></em> specification. The aim of this is to ensure that messages are transferred properly from the sender to the receiver in the presence of network failures. As well we select the latest <strong>version </strong>of this specification for this demonstration.</p>
 
 
 
@@ -109,7 +109,7 @@
 
 
 
-<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -&gt; <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one to one relationship of user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
+<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -> <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service,&nbsp;we used the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this&nbsp;<a rel="noreferrer noopener" href="https://github.com/jeevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank">link</a>.</p>
+<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
 
 
 
@@ -157,7 +157,7 @@
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jeevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
+<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
 
 
 
@@ -165,7 +165,7 @@
 
 
 
-<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.jeevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
+<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
 
 
 
@@ -173,11 +173,11 @@
 
 
 
-<p class="has-medium-font-size">From Menu File, New, then Project or click on Start Page to start a new project. Let’s name the solution and the project to <strong>AVeryBigSum_BasicAuthentication</strong>. </p>
+<p class="has-medium-font-size">From Menu File, New, then Project, or click on Start Page to start a new project. Let’s name the solution and the project to <strong>AVeryBigSum_BasicAuthentication</strong>. </p>
 
 
 
-<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click in it -&gt; <em>View Markup</em> and change to that bellow.</p>
+<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -> <em>View Markup</em> and changing to that below.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -215,7 +215,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">In case you chose to delete those files you can add a new interface by right-clicking on the project and <em>Add new item</em>. Select the Interface template and rename it to IAvbs. As well you need to copy the code above and add it to the newly created interface.</p>
+<p class="has-medium-font-size">In case you chose to delete those files you can add a new interface by right-clicking on the project and <em>Add a new item</em>. Select the Interface template and rename it to IAvbs. As well you need to copy the code above and add it to the newly created interface.</p>
 
 
 
@@ -242,7 +242,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">So far we have defined a service contract, an operation with a sample definition. Now we have to define its endpoints. To add an endpoint, we need to change the configuration file (web.config). Apart from copying and paste, we need to understand the importance of each of these WCF tags. </p>
+<p class="has-medium-font-size">So far we have defined a service contract, an operation with a sample definition. Now we have to define its endpoints. To add an endpoint, we need to change the configuration file (web.config). Apart from copying and pasting, we need to understand the importance of each of these WCF tags. </p>
 
 
 
@@ -299,7 +299,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size"> Inside <i>service credential</i>s, another important property is defined to specifies the settings for username and password validation. The <em>userNamePasswordValidationMode </em>property sets how the credential is validated. Our service uses a custom class to validate the credentials. This class <em>AVeryBigSum.ServiceAuthenticator</em> can be found in the AVeryBigSum project.</p>
+<p class="has-medium-font-size"> Inside <i>service credential</i>s, another important property is defined to specify the settings for username and password validation. The <em>userNamePasswordValidationMode </em>property sets how the credential is validated. Our service uses a custom class to validate the credentials. This class <em>AVeryBigSum.ServiceAuthenticator</em> can be found in the AVeryBigSum project.</p>
 
 
 
@@ -311,7 +311,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">As we can see we are using WSHttpBinding. It represents an interoperable binding that supports distributed transactions, secure, reliable sessions. </p>
+<p class="has-medium-font-size">As we can see we are using WSHttpBinding. It represents an interoperable binding that supports distributed transactions, and secure, reliable sessions. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -337,7 +337,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">Inside the WSHttpBinding element, we define the security mode as TransportWithMessageCredential. The transport determines the actual mechanism that provides the transport-level security. For HTTP, the mechanism is Secure Sockets Layer (SSL) over HTTP (HTTPS); </p>
+<p class="has-medium-font-size">Inside the WSHttpBinding element, we define the security mode as TransportWithMessageCredential. The transport determines the actual mechanism that provides transport-level security. For HTTP, the mechanism is Secure Sockets Layer (SSL) over HTTP (HTTPS); </p>
 
 
 
@@ -365,7 +365,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">The custom validator extends the UserNamePasswordValidator class and overrides the method <em>Validate. </em>This validator is defined in Service Behaviors as default Authorization manager, as showed above in the behavior section. This class compares the information received by the client call to those defined in the AppsSetting element.</p>
+<p class="has-medium-font-size">The custom validator extends the UserNamePasswordValidator class and overrides the method <em>Validate. </em>This validator is defined in Service Behaviors as the default Authorization manager, as shown above in the behavior section. This class compares the information received by the client call to those defined in the AppsSetting element.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -398,7 +398,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -&gt; Manage NuGet Packages, browse for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
+<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -> Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
 
 
 
@@ -410,7 +410,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">1 &#8211; To host our service in IIS, right-click on the project and go to <em>Properties</em>. In properties window select Web tab.</p>
+<p class="has-medium-font-size">1 &#8211; To host our service in IIS, right-click on the project and go to <em>Properties</em>. In the properties, the window selects the Web tab.</p>
 
 
 
@@ -422,11 +422,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">3 &#8211; Now Click on Create Virtual Directory with Visual Studio running As Administrator. You’ll get a message <em>The Virtual directory was created successfully!</em> Otherwise, you’ll receive an error message and you need to launch Visual studio again as Administrator.</p>
+<p class="has-medium-font-size">3 &#8211; Now Click on Create Virtual Directory with Visual Studio running As Administrator. You’ll get a message <em>The Virtual directory was created successfully!</em> Otherwise, you’ll receive an error message and you need to launch Visual Studio again as Administrator.</p>
 
 
 
-<p class="has-medium-font-size">Now press F5 and your application will be up and running on the IIS server instead of your IIS express.</p>
+<p class="has-medium-font-size">Now press F5 and your application will be up and running on the IIS server instead of your IIS Express.</p>
 
 
 
@@ -438,11 +438,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> By the end of this demonstration,&nbsp;we have a secure service to be invoked by SoapUI. Our next post will demonstrate step by step how to do that.</p>
+<p class="has-medium-font-size"> By the end of this demonstration, we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
 
 
 
-<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a href="https://github.com/jeevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
+<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
@@ -457,11 +457,11 @@ namespace AVeryBigSum_BasicAuthentication
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 68/72 objects using disk
+Object Caching 69/71 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/7 queries in 0.011 seconds using disk
+Database Caching 2/6 queries in 0.007 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:18:54 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:53:14 by W3 Total Cache
 -->

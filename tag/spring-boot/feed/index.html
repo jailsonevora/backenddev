@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/spring-boot/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/spring-boot/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 11:36:36 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 21:43:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -47,7 +47,7 @@
 
 
 
-<p class="has-medium-font-size"> Annotation can also be used in REST API. REST stands for Representational State Transfer and it is an architectural style for designing distributed applications. Brought by Roy Fielding in his Ph.D. dissertation where he proposed as its basis, six principles where, it should be separated between clients and servers; the communication between client and server should be stateless; multiple hierarchical layers can exist between them; the server responses must be declared as cacheable or noncacheable; the uniformity of their interfaces must be based in all interactions between client, server, and intermediary components and finally the clients can extend their functionality by using code on demand.</p>
+<p class="has-medium-font-size"> Annotation can also be used in REST API. REST stands for Representational State Transfer and it is an architectural style for designing distributed applications. Brought by Roy Fielding in his Ph.D. dissertation where he proposed as its basis, six principles that should be separated between clients and servers; the communication between client and server should be stateless; multiple hierarchical layers can exist between them; the server responses must be declared as cacheable or noncacheable; the uniformity of their interfaces must be based in all interactions between client, server, and intermediary components and finally the clients can extend their functionality by using code on demand.</p>
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-<p class="has-medium-font-size"> The API is a simple module to implement CRUD operation of Business Entity from a more complex system with intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the API uses the H2 in-memory database. </p>
+<p class="has-medium-font-size"> The API is a simple module to implement CRUD operation of Business Entity from a more complex system intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the API uses the H2 in-memory database. </p>
 
 
 
@@ -67,7 +67,7 @@
 
 
 
-<p class="has-medium-font-size">The project structure is constituted by three modules, but this post will focus on the module to manage entities. That module has a dependency from the Common module, where it shares things like error handling and essential useful classes with the remaining part of the whole system.  The sample code is accessible from the GitHub repository, to download it, please follow this <a rel="noreferrer noopener" aria-label="link (opens in a new tab)" href="https://github.com/JERBEvora/spring-boot-api-communication-through-kafka" target="_blank">link</a>, let&#8217;s get started.</p>
+<p class="has-medium-font-size">The project structure is constituted of three modules, but this post will focus on the module to manage entities. That module has a dependency on the Common module, which shares things like error handling and essential useful classes with the remaining part of the whole system.  The sample code is accessible from the GitHub repository, to download it, please follow this <a href="https://github.com/jailsonevora/spring-boot-api-communication-through-kafka" target="_blank" rel="noreferrer noopener">link</a>, let&#8217;s get started.</p>
 
 
 
@@ -79,7 +79,7 @@
 
 
 
-<p class="has-medium-font-size">The great advantage of Spring Boot is that we can focus on the business rules avoiding some tedious development steps, boilerplate code and a more complex configuration improving the development and to ease the bootstrapping of new spring applications.</p>
+<p class="has-medium-font-size">The great advantage of Spring Boot is that we can focus on the business rules avoiding some tedious development steps, boilerplate code, and a more complex configuration improving the development and easing the bootstrapping of new spring applications.</p>
 
 
 
@@ -113,11 +113,11 @@ public class BusinessEntityManagementApplication {
 </pre></div>
 
 
-<p class="has-medium-font-size">Another annotation present in the code snippet is the @EnableJpaAuditing. The auditing allows the system to track and logging events related to persistent entities, or entity versioning. Also related to JPA configuration, we have the @EnableJpaRepositories. This annotation enables JPA repositories. It will scan the package of the annotated configuration class for Spring Data repositories by default. Inside this annotation we specify the base package to be scanned for annotated components. </p>
+<p class="has-medium-font-size">Another annotation present in the code snippet is the @EnableJpaAuditing. The auditing allows the system to track and log events related to persistent entities, or entity versioning. Also related to JPA configuration, we have the @EnableJpaRepositories. This annotation enables JPA repositories. It will scan the package of the annotated configuration class for Spring Data repositories by default. Inside this annotation, we specify the base package to be scanned for annotated components. </p>
 
 
 
-<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a rel="noreferrer noopener" aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank">@EntityScan</a>. To a specific scan, we can specify&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank">basePackageClasses()</a></code>,&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank">basePackages()</a></code>&nbsp;or its alias&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank">value()</a></code>&nbsp;to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
+<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank" rel="noreferrer noopener">@EntityScan</a>. For a specific scan, we can specify <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank" rel="noreferrer noopener">basePackageClasses()</a></code>, <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank" rel="noreferrer noopener">basePackages()</a></code> or its alias <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank" rel="noreferrer noopener">value()</a></code> to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
 
 
 
@@ -169,7 +169,7 @@ public class SwaggerConfig {
 </pre></div>
 
 
-<p class="has-medium-font-size">A specific annotation for Swagger is the <a rel="noreferrer noopener" aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring java config and should have an accompanying @Configuration annotation. The <a rel="noreferrer noopener" aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank">@Bean</a> is a method-level annotation and a direct analog of the XML&nbsp;<code>&lt;bean/&gt;</code>&nbsp;element.</p>
+<p class="has-medium-font-size">A specific annotation for Swagger is the <a aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank" rel="noreferrer noopener">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring Java config and should have an accompanying @Configuration annotation. The <a aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank" rel="noreferrer noopener">@Bean</a> is a method-level annotation and a direct analog of the XML <code>&lt;bean/></code> element.</p>
 
 
 
@@ -193,11 +193,11 @@ public class SwaggerConfig {
 
 
 
-<p class="has-medium-font-size"> In the model class, we use @Entity annotation that indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the&nbsp;<em>@Table</em>&nbsp;annotation. </p>
+<p class="has-medium-font-size"> In the model class, we use @Entity annotation which indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the <em>@Table</em> annotation. </p>
 
 
 
-<p class="has-medium-font-size">To handle the problem related to the serialization of the model using Jackson API when the model attributes have a lazy loading defined, we have to tell the serializer to ignore the chain or helpful garbage that Hibernate adds to classes, so it can manage lazy loading of data by declaring @JsonIgnoreProperties({&#8220;hibernateLazyInitializer&#8221;, &#8220;handler&#8221;}) annotation.</p>
+<p class="has-medium-font-size">To handle the problem related to the serialization of the model using Jackson API when the model attributes have a lazy loading defined, we have to tell the serializer to ignore the chain or helpful garbage that Hibernate adds to classes, so it can manage the lazy loading of data by declaring @JsonIgnoreProperties({&#8220;hibernateLazyInitializer&#8221;, &#8220;handler&#8221;}) annotation.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -234,15 +234,15 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">To a class field, there are many kinds of annotations dependent on the type and purpose of that field. For example, @Id annotation must be declared in one of the class attributes. Every entity object stored in the database has a primary key. Once assigned, the primary key cannot be modified. @GeneratedValue indicating that the framework should generate the document key value using the specified generator type like  AUTO, IDENTITY, SEQUENCE, and TABLE. </p>
+<p class="has-medium-font-size">For a class field, there are many kinds of annotations dependent on the type and purpose of that field. For example, the @Id annotation must be declared in one of the class attributes. Every entity object stored in the database has a primary key. Once assigned, the primary key cannot be modified. @GeneratedValue indicates that the framework should generate the document key value using the specified generator type like  AUTO, IDENTITY, SEQUENCE, and TABLE. </p>
 
 
 
-<p class="has-medium-font-size">Another interesting annotation targeting domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be&nbsp;<code>null</code>.&nbsp; It can be used as well in a method or parameter. The @Column annotation specifies the name to the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
+<p class="has-medium-font-size">Another interesting annotation targeting the domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be null.  It can be used as well in a method or parameter. The @Column annotation specifies the name of the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
 
 
 
-<p class="has-medium-font-size">Sometimes most objects have a natural identifier, so Hibernate also allows to model this identifier as a natural identifier of an entity and provides an extra API for retrieving them from the database.  This is achieved using @NaturalId annotation.</p>
+<p class="has-medium-font-size">Sometimes most objects have a natural identifier, so Hibernate also allows modeling this identifier as a natural identifier of an entity and provides an extra API for retrieving them from the database.  This is achieved using @NaturalId annotation.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -271,7 +271,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null nor empty, we can also annotate it with @NotEmpty. It target a vast kind of element, since {METHOD,FIELD,ANNOTATION_TYPE,CONSTRUCTOR,PARAMETER,TYPE_USE}. The @Size annotation delimits the boundaries to the element annotated. The boundaries are specified by two attributes, min, and max.</p>
+<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null nor empty, we can also annotate it with @NotEmpty. It targets a vast kind of element, since {METHOD,FIELD,ANNOTATION_TYPE,CONSTRUCTOR,PARAMETER,TYPE_USE}. The @Size annotation delimits the boundaries of the element annotated. The boundaries are specified by two attributes, min, and max.</p>
 
 
 
@@ -279,7 +279,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">One of the most important features of any ORM mechanism is how which one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as foreign-key in this relationship.</p>
+<p class="has-medium-font-size">One of the most important features of any ORM mechanism is how one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as a foreign key in this relationship.</p>
 
 
 
@@ -316,7 +316,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size"> Together with @ManyToMany annotation, we specify the @JoinTable annotation that allows us in a many to many relations to define the bridge table between two other related table, using two essential attributes, joincolumns for the class where we declare the @ManyToMany annotation and inverseJoinColumns for another table. </p>
+<p class="has-medium-font-size"> Together with the @ManyToMany annotation, we specify the @JoinTable annotation that allows us in many-to-many relations to define the bridge table between two other related tables, using two essential attributes, joincolumns for the class where we declare the @ManyToMany annotation and inverseJoinColumns for another table. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -335,7 +335,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size"> In the other table, it is recommended to define also the inverse relation. This declaration is slightly different from the showed in the code related to the Bussines Entity model. The inverse relation declaration differentiates by the attribute &#8220;mappedBy&#8221;.  </p>
+<p class="has-medium-font-size"> In the other table, it is recommended to define also the inverse relation. This declaration is slightly different from the showed in code related to the Business Entity model. The inverse relation declaration differentiates by the attribute &#8220;mappedBy&#8221;.  </p>
 
 
 
@@ -355,7 +355,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. To serialize and deserialize the DTO object, we need to annotate these objects with Jackson annotation. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
+<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. To serialize and deserialize the DTO object, we need to annotate these objects with Jackson&#8217;s annotation. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method, or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -416,7 +416,7 @@ public class BusinessEntity {
 
 
 
-<p class="has-medium-font-size">Controllers stand for C on the MVC pattern. Controllers are responsible for receiving requests from users and invoking back-end services for business processing. After processing, it may return some data for views to present. Controllers collect it and prepare models for views to present. Controllers are often referred to as a dispatcher servlet. It acts as the front controller of the Spring MVC framework, and every web request must go through it so that it can manage the entire request-handling process [3]. When a web request is sent to a Spring MVC application, a controller first receives the request. Then it organizes the different components configured in Spring’s web application context or annotations present in the controller itself, all needed to handle the request.</p>
+<p class="has-medium-font-size">Controllers stand for C on the MVC pattern. Controllers are responsible for receiving requests from users and invoking back-end services for business processing. After processing, it may return some data for views to present. Controllers collect it and prepare models for views to present. Controllers are often referred to as dispatcher servlets. It acts as the front controller of the Spring MVC framework, and every web request must go through it so that it can manage the entire request-handling process [3]. When a web request is sent to a Spring MVC application, a controller first receives the request. Then it organizes the different components configured in Spring’s web application context or annotations present in the controller itself, all needed to handle the request.</p>
 
 
 
@@ -468,7 +468,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">For Swagger documentation purposes, the&nbsp;<code><a rel="noreferrer noopener" aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank">@ApiOperation</a></code> annotation&nbsp;is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated with&nbsp;<code>@ApiOperation</code>&nbsp;will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
+<p class="has-medium-font-size">For Swagger documentation purposes, the <code><a aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank" rel="noreferrer noopener">@ApiOperation</a></code> annotation is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated <code>@ApiOperation</code> will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
 
 
 
@@ -506,7 +506,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Another useful annotation used in a well-designed system is&nbsp;<code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, lead us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
+<p class="has-medium-font-size">Another useful annotation used in a well-designed system is <code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, leading us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
 
 
 
@@ -518,7 +518,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Our class should validate incoming identifier requests before processes the soft delete. By simply adding the @Valid annotation to the method, Spring will ensure that the incoming identifier requests are run through our defined validation rules first.</p>
+<p class="has-medium-font-size">Our class should validate incoming identifier requests before processing the soft delete. By simply adding the @Valid annotation to the method, Spring will ensure that the incoming identifier requests are run through our defined validation rules first.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -563,7 +563,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Repositories, or Data Access Objects (DAO), provide an abstraction for interacting with datastores. Repositories traditionally include an interface that provides a set of finder methods such as findById, findAll for retrieving data, and methods to persist and delete data. Repositories also include a class that implements this interface using datastore-specific technologies. It is also customary to have one Repository per domain object. Although this has been a popular approach, there is a lot of boilerplate code that gets duplicated in each repository implementation [1].</p>
+<p class="has-medium-font-size">Repositories, or Data Access Objects (DAO), provide an abstraction for interacting with data stores. Repositories traditionally include an interface that provides a set of finder methods such as findById, and findAll for retrieving data, and methods to persist and delete data. Repositories also include a class that implements this interface using datastore-specific technologies. It is also customary to have one Repository per domain object. Although this has been a popular approach, there is a lot of boilerplate code that gets duplicated in each repository implementation [1].</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -586,7 +586,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 </pre></div>
 
 
-<p class="has-medium-font-size">With <a rel="noreferrer noopener" aria-label="@NoRepositoryBean (opens in a new tab)" href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/NoRepositoryBean.html" target="_blank">@NoRepositoryBean</a> annotation, we can use it to exclude repository interfaces from being picked up and thus, in consequence, getting an instance being created. This will typically be used when providing an extended base interface for all repositories in combination with a custom repository base class to implement methods declared in that intermediate interface. In this case, we typically derive our concrete repository interfaces from the intermediate one but we don&#8217;t want to create a Spring bean for the intermediate interface.</p>
+<p class="has-medium-font-size">With <a aria-label="@NoRepositoryBean (opens in a new tab)" href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/NoRepositoryBean.html" target="_blank" rel="noreferrer noopener">@NoRepositoryBean</a> annotation, we can use it to exclude repository interfaces from being picked up and thus, in consequence, get an instance created. This will typically be used when providing an extended base interface for all repositories in combination with a custom repository base class to implement methods declared in that intermediate interface. In this case, we typically derive our concrete repository interfaces from the intermediate one but we don&#8217;t want to create a Spring bean for the intermediate interface.</p>
 
 
 
@@ -629,11 +629,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 46/50 objects using disk
+Object Caching 47/49 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/7 queries in 0.008 seconds using disk
+Database Caching 2/6 queries in 0.008 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:19:01 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:53:20 by W3 Total Cache
 -->

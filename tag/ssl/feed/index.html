@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/ssl/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/ssl/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 11:59:10 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 21:59:43 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -50,7 +50,7 @@
 
 
 
-<p class="has-medium-font-size">Our demo creates a service that will implement a simple, repeated string algorithm. In this scenario, the service is hosted under <a rel="noreferrer noopener" aria-label="Internet Information Services (opens in a new tab)" href="https://en.wikipedia.org/wiki/Internet_Information_Services" target="_blank">Internet Information Services</a> (IIS) which is configured with Secure Sockets Layer (SSL) and configured with an SSL certificate to allow clients to verify the identity of the server. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">Our demo creates a service that will implement a simple, repeated string algorithm. In this scenario, the service is hosted under <a aria-label="Internet Information Services (opens in a new tab)" href="https://en.wikipedia.org/wiki/Internet_Information_Services" target="_blank" rel="noreferrer noopener">Internet Information Services</a> (IIS) which is configured with a Secure Sockets Layer (SSL) and configured with an SSL certificate to allow clients to verify the identity of the server. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -62,7 +62,7 @@
 
 
 
-<p class="has-medium-font-size"> We choose <em>transport </em>as the security mode, allowing the communication between existing <a rel="noreferrer noopener" href="https://www.jeevora.com/2019/08/10/java-ee/" target="_blank">client and service</a>. Data Integrity and Data Confidentiality are preserved. The transport protocol is HTTPS with <a href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wshttpbinding">WSHttpBinding</a> binding. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size"> We choose <em>transport </em>as the security mode, allowing communication between existing <a href="https://www.jailsonevora.com/2019/08/10/java-ee/" target="_blank" rel="noreferrer noopener">clients and services</a>. Data Integrity and Data Confidentiality are preserved. The transport protocol is HTTPS with <a href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wshttpbinding">WSHttpBinding</a> binding. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-<p class="has-medium-font-size"> Our service defines one method from Lili lowercase English letters that she repeated infinitely many times. It should return an integer representing the number of occurrences of&nbsp;<strong><em><code>a</code></em></strong>&nbsp;in the prefix of length&nbsp;in the infinitely repeating string.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
+<p class="has-medium-font-size"> Our service defines one method from Lili&#8217;s lowercase English letters that she repeated infinitely many times. It should return an integer representing the number of occurrences of <strong><em><code>a</code></em></strong> in the prefix of length in the infinitely repeating string.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
 
 
 
@@ -115,7 +115,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">The operation interacts through the repeated string, counting the number of a character occurrence. With performance in mind, firstly we should calculate the factor and the remainder of the repeated string, avoiding interact through all characters.</p>
+<p class="has-medium-font-size">The operation interacts through the repeated string, counting the number of character occurrences. With performance in mind, firstly we should calculate the factor and the remainder of the repeated string, avoiding interaction through all characters.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; highlight: [8,12,14]; title: ; notranslate">
@@ -143,7 +143,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">Since the service in this scenario is hosted under IIS, it is configured with a web<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636228197422383351">.</gwmw>config file. The following web<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636237574012731771">.</gwmw>config shows how to configure the&nbsp;<a href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wshttpbinding">WSHttpBinding</a><em>&nbsp;</em>to use transport security and X.509 client credentials.  To mimic a large binding, we define the timeout connection with<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636419893410174432"> </gwmw><em><strong>sending</strong></em><strong>, </strong><em><strong>receive</strong></em><strong>, as well in </strong><em><strong>open </strong></em><strong>and </strong><em><strong>close</strong> </em>tag attributes. Also, we define the maximum amount of memory allocated, in bytes, for the buffer manager in <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wshttpbindingbase.maxbufferpoolsize?view=netframework-4.8" target="_blank"><gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662636264933074664085">maxBufferPoolSize</gwmw></a> and&nbsp;for a message that can be received on a channel <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.basichttpbinding.maxreceivedmessagesize?view=netframework-4.0" target="_blank"><gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662636264939241772379">maxReceivedMessageSize</gwmw></a>. At <strong><em>security tag</em></strong>, we define a <strong><em>transport </em></strong>mode with <strong><code><gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662636305857561990755">clientCredentialType</gwmw>="Certificate"</code></strong> highlighted in line 21 of the code.</p>
+<p class="has-medium-font-size">Since the service in this scenario is hosted under IIS, it is configured with a web<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636228197422383351">.</gwmw>config file. The following web<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636237574012731771">.</gwmw>config shows how to configure the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.wshttpbinding">WSHttpBinding</a><em> </em>to use transport security and X.509 client credentials.  To mimic a large binding, we define the timeout connection with<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662636419893410174432"> </gwmw><em><strong>sending and receiving, as well as</strong></em><strong> open and close tag attributes. Also, we define the maximum amount of memory allocated, in bytes, for the buffer manager in maxBufferPoolSize and for a message that can be received on a channel maxReceivedMessageSize. At the <em>security tag</em></strong>, we define a <strong><em>transport </em></strong>mode with <strong><code><gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662636305857561990755">clientCredentialType</gwmw>="Certificate"</code></strong> highlighted in line 21 of the code.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; highlight: [5,6,7,8,12,13,20,21,22]; title: ; notranslate">
@@ -201,7 +201,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">Finally, at the <em><strong>services tag,</strong></em> we define our service, exposing two endpoints. One for <a rel="noreferrer noopener" aria-label="metadata exchange (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.description.imetadataexchange?view=netframework-4.8" target="_blank">metadata exchange</a> [<strong><code>&lt;endpoint address="mex"</code></strong><code> ...</code>] that allows exposes metadata about the service. It is useful to publish metadata about the service like <a rel="noreferrer noopener" aria-label="Web Services Description Language (WSDL) (opens in a new tab)" href="https://www.w3.org/TR/2001/NOTE-wsdl-20010315" target="_blank">Web Services Description Language (WSDL)</a><em> </em>document that describes all of the methods and data types employed by a service. Returning metadata about a WCF service allows consumers of service to easily create clients for the service. <gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
+<p class="has-medium-font-size">Finally, at the <em><strong>services tag,</strong></em> we define our service, exposing two endpoints. One for <a aria-label="metadata exchange (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.description.imetadataexchange?view=netframework-4.8" target="_blank" rel="noreferrer noopener">metadata exchange</a> [<strong><code>&lt;endpoint address="mex"</code></strong><code> ...</code>] that allows exposing metadata about the service. It is useful to publish metadata about the service like a <a aria-label="Web Services Description Language (WSDL) (opens in a new tab)" href="https://www.w3.org/TR/2001/NOTE-wsdl-20010315" target="_blank" rel="noreferrer noopener">Web Services Description Language (WSDL)</a><em> </em>document that describes all of the methods and data types employed by a service. Returning metadata about a WCF service allows consumers of the service to easily create clients for the service. <gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
 
 
 
@@ -240,7 +240,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">In&nbsp;<strong>SSL Settings</strong>&nbsp;page, first, select&nbsp;<strong>Require SSL</strong>&nbsp;checkbox and under&nbsp;<strong>Client&nbsp;certificates,&nbsp;</strong>select&nbsp;<strong>Require</strong>. To persist, under&nbsp;<gwmw class="ginger-module-highlighter-mistake-anim ginger-module-highlighter-mistake-type-3" id="gwmw-15663893751045090762685"><strong>Actions&nbsp;</strong>panel</gwmw> on the right, <gwmw class="ginger-module-highlighter-mistake-anim ginger-module-highlighter-mistake-type-3" id="gwmw-15663893751044881622032">apply</gwmw> these changes. </p>
+<p class="has-medium-font-size">In the<strong> SSL Settings</strong> page, first, select <strong>Require SSL</strong> checkbox and under <strong>Client Certificates, </strong>select <strong>Require</strong>. To persist, under th<gwmw class="ginger-module-highlighter-mistake-anim ginger-module-highlighter-mistake-type-3" id="gwmw-15663893751045090762685">e<strong> Actions </strong>panel</gwmw> on the right, <gwmw class="ginger-module-highlighter-mistake-anim ginger-module-highlighter-mistake-type-3" id="gwmw-15663893751044881622032">apply</gwmw> these changes. </p>
 
 
 
@@ -264,7 +264,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size"> The test project generates the WSDL document of our service describes as <strong><code>RepeatedStringReference</code></strong>. In the <em><strong>arrange</strong></em>, we instantiate the client object and we act <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662638815910938350029">cal</gwmw>l<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662638815910938350029">ing</gwmw> <strong><code>client<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662638815919565320928">.</gwmw>RepeatedString<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662638815916354022391">(</gwmw><gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662638815912043048600">repeatedString</gwmw>, number)</code></strong><em> </em>operation<em>. </em>To validate, we <em><strong>assert </strong></em>that the expected results have occurred.</p>
+<p class="has-medium-font-size"> The test project generates the WSDL document of our service described as <strong><code>RepeatedStringReference</code></strong>. In the <em><strong>arrange</strong></em><strong>ment</strong>, we instantiate the client object and we act <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662638815910938350029">cal</gwmw>l<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662638815910938350029">ing</gwmw> <strong><code>client<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662638815919565320928">.</gwmw>RepeatedString<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662638815916354022391">(repeatedString</gwmw>, number)</code></strong><em> </em>operation<em>. </em>To validate, we <em><strong>assert </strong></em>that the expected results have occurred.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; highlight: [7,8,9,10,14,16]; title: ; notranslate">
@@ -333,7 +333,7 @@ namespace UnitTest_TransportSecurity_W_CertificateAuth
 
 
 
-<p class="has-medium-font-size">At client behavior, we add a&nbsp;<a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcredentials"><code>&lt;clientCredentials&gt;</code></a>&nbsp;element to the&nbsp;<a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/behaviors"><code>&lt;behaviors&gt;</code></a>&nbsp;element. Bear in mind that it is crucial to set the required <em><strong>name</strong></em>&nbsp;attribute to an appropriate value. We also add a&nbsp;<a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials"><code>&lt;clientCertificate&gt;</code></a>&nbsp;element to the&nbsp;<a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcredentials"><code>&lt;clientCredentials&gt;</code></a>&nbsp;element setting these attributes <code>storeLocation, storeName, x509FindType, and findValue</code><em> </em>to appropriate values certificate information.<gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
+<p class="has-medium-font-size">At client behavior, we add an <a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcredentials"><code>&lt;clientCredentials></code></a> element to the <a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/behaviors"><code>&lt;behaviors></code></a> element. Bear in mind that it is crucial to set the required <em><strong>name</strong></em> attribute to an appropriate value. We also add an <a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials"><code>&lt;clientCertificate></code></a> element to the <a href="https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/wcf/clientcredentials"><code>&lt;clientCredentials></code></a> element setting these attributes <code>storeLocation, storeName, x509FindType, and findValue</code><em> </em>to appropriate values certificate information.<gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; highlight: [6,7,8,9]; title: ; notranslate">
@@ -374,7 +374,7 @@ namespace UnitTest_TransportSecurity_W_CertificateAuth
 
 
 
-<h2 class="wp-block-heading"> Run Unit test and download the source-code </h2>
+<h2 class="wp-block-heading"> Run the Unit test and download the source-code </h2>
 
 
 
@@ -394,7 +394,7 @@ namespace UnitTest_TransportSecurity_W_CertificateAuth
 
 
 
-<p class="has-medium-font-size">After the tests have completed, a green checkmark indicates that a test passed. A red &#8220;x&#8221; icon indicates that a test failed.</p>
+<p class="has-medium-font-size">After the tests have been completed, a green checkmark indicates that a test passed. A red &#8220;x&#8221; icon indicates that a test failed.</p>
 
 
 
@@ -429,11 +429,11 @@ namespace UnitTest_TransportSecurity_W_CertificateAuth
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 53/57 objects using disk
+Object Caching 54/56 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/7 queries in 0.009 seconds using disk
+Database Caching 2/6 queries in 0.007 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:19:03 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:53:21 by W3 Total Cache
 -->

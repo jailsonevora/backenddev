@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/category/microservices/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/category/microservices/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 12:07:37 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 22:05:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -37,15 +37,15 @@
 		<category><![CDATA[WCF]]></category>
 		<guid isPermaLink="false">https://www.jeevora.com/?p=1663</guid>
 
-					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create New SOAP project Firstly we need to [&#8230;]</p>
+					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project Firstly we need [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
+<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
 
 
 
-<h3 class="wp-block-heading">1-Basic WCF SOAP using SoapUI &#8211; Create New SOAP project</h3>
+<h3 class="wp-block-heading">1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project</h3>
 
 
 
@@ -61,7 +61,7 @@
 
 
 
-<p class="has-medium-font-size">After create successfully the new SoapUI project, collapse in until the request´s endpoint. Now double click the request or right-click of the mouse to open the <em><strong>&#8220;Show Request Editor&#8221;</strong></em>. Navigate to the <em><strong>&#8220;Auth (Basic)&#8221;</strong></em> tab in the bottom corner, surround toward a green circle.</p>
+<p class="has-medium-font-size">After create successfully the new SoapUI project, collapse until the request´s endpoint. Now double-click the request or right-click the mouse to open the &#8220;Show Request Editor&#8221;. Navigate to the &#8220;Auth (Basic)&#8221; tab in the bottom corner, surrounded by a green circle.</p>
 
 
 
@@ -69,7 +69,7 @@
 
 
 
-<p class="has-medium-font-size">In the <strong><em>&#8220;Authorization&#8221; </em></strong>dropdown list, select <em><strong>&#8220;Basic&#8221;</strong></em>. It is the same as the service created before. Following, SoapUI shows a form when we can insert the &#8220;Username&#8221; and the &#8220;Password&#8221; service credentials <strong><em>&#8220;AVeryBigSum&#8221;</em></strong>, <em><strong>&#8220;12345&#8221;</strong></em> respectively.</p>
+<p class="has-medium-font-size">In the <strong><em>&#8220;Authorization&#8221; </em></strong>dropdown list, select <em><strong>&#8220;Basic&#8221;</strong></em>. It is the same as the service created before. Following, SoapUI shows a form where we can insert the &#8220;Username&#8221; and the &#8220;Password&#8221; service credentials &#8220;AVeryBigSum&#8221;, and <em><strong>&#8220;12345&#8221;</strong></em> respectively.</p>
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-<p class="has-medium-font-size">Navigate to the <em><strong>&#8220;</strong></em><strong><em>WS-A&#8221;</em></strong> Configurations tab, and enable the <a rel="noreferrer noopener" href="https://www.w3.org/Submission/ws-addressing/" target="_blank">WS-A addressing</a>, that defines two interoperable constructs typically provided by transport protocols (<em>endpoint references</em>) and messaging systems (<em>message information headers</em>). These constructs normalize this underlying information into a uniform format that can be processed independently of transport or application.</p>
+<p class="has-medium-font-size">Navigate to the <em><strong>&#8220;</strong></em><strong><em>WS-A&#8221;</em></strong> Configurations tab, and enable the <a href="https://www.w3.org/Submission/ws-addressing/" target="_blank" rel="noreferrer noopener">WS-A addressing</a>, which defines two interoperable constructs typically provided by transport protocols (<em>endpoint references</em>) and messaging systems (<em>message information headers</em>). These constructs normalize this underlying information into a uniform format that can be processed independently of transport or application.</p>
 
 
 
@@ -89,15 +89,15 @@
 
 
 
-<p class="has-medium-font-size">This tool allows us to enable the <em><strong>&#8220;Add default wsa: </strong></em>To&#8221; and <em><strong>&#8220;Add default wsa: Action&#8221;</strong></em> configuration. The <em><strong>&#8220;Add default wsa: To&#8221;</strong></em> provides the value for the destination property. The default anonymous value for this property is &#8220;<a rel="noreferrer noopener" href="https://www.w3.org/TR/2006/REC-ws-addr-core-20060509/" target="_blank">http://www.w3.org/2005/08/addressing/anonymous</a>&#8220;. In the above example, the default <strong>wsa: Action</strong>, <strong>wsa: To</strong> and <strong>wsa: MessageId</strong> headers have been enabled, so when we send the request we can see them in the raw request view.</p>
+<p class="has-medium-font-size">This tool allows us to enable the <em><strong>&#8220;Add default wsa: </strong></em>To&#8221; and <em><strong>&#8220;Add default wsa: Action&#8221;</strong></em> configurations. The &#8220;Add default wsa: To&#8221; provides the value for the destination property. The default anonymous value for this property is &#8220;http://www.w3.org/2005/08/addressing/anonymous&#8221;. In the above example, the default wsa: Action, wsa: To, and <strong>wsa: MessageId</strong> headers have been enabled, so when we send the request we can see them in the raw request view.</p>
 
 
 
-<h3 class="wp-block-heading">4-Secure WCF SOAP using SoapUI &#8211; WS-Reliable message related settings tab</h3>
+<h3 class="wp-block-heading">4-Secure WCF SOAP using SoapUI &#8211; WS-Reliable message-related settings tab</h3>
 
 
 
-<p class="has-medium-font-size">To ensure reliable communication between two systems we enable the <em><strong>&#8220;WS-Reliable Message&#8221;</strong></em> specification. The aim of this is to ensure that messages are transferred properly from the sender to the receiver in the presence of network failures. As well we select the latest <strong>version </strong>of this specification for this demonstration.</p>
+<p class="has-medium-font-size">To ensure reliable communication between the two systems we enable the <em><strong>&#8220;WS-Reliable Message&#8221;</strong></em> specification. The aim of this is to ensure that messages are transferred properly from the sender to the receiver in the presence of network failures. As well we select the latest <strong>version </strong>of this specification for this demonstration.</p>
 
 
 
@@ -109,7 +109,7 @@
 
 
 
-<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -&gt; <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one to one relationship of user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
+<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -> <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service,&nbsp;we used the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this&nbsp;<a rel="noreferrer noopener" href="https://github.com/jeevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank">link</a>.</p>
+<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
 
 
 
@@ -157,7 +157,7 @@
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jeevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
+<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
 
 
 
@@ -165,7 +165,7 @@
 
 
 
-<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.jeevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
+<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
 
 
 
@@ -173,11 +173,11 @@
 
 
 
-<p class="has-medium-font-size">From Menu File, New, then Project or click on Start Page to start a new project. Let’s name the solution and the project to <strong>AVeryBigSum_BasicAuthentication</strong>. </p>
+<p class="has-medium-font-size">From Menu File, New, then Project, or click on Start Page to start a new project. Let’s name the solution and the project to <strong>AVeryBigSum_BasicAuthentication</strong>. </p>
 
 
 
-<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click in it -&gt; <em>View Markup</em> and change to that bellow.</p>
+<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -> <em>View Markup</em> and changing to that below.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -215,7 +215,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">In case you chose to delete those files you can add a new interface by right-clicking on the project and <em>Add new item</em>. Select the Interface template and rename it to IAvbs. As well you need to copy the code above and add it to the newly created interface.</p>
+<p class="has-medium-font-size">In case you chose to delete those files you can add a new interface by right-clicking on the project and <em>Add a new item</em>. Select the Interface template and rename it to IAvbs. As well you need to copy the code above and add it to the newly created interface.</p>
 
 
 
@@ -242,7 +242,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">So far we have defined a service contract, an operation with a sample definition. Now we have to define its endpoints. To add an endpoint, we need to change the configuration file (web.config). Apart from copying and paste, we need to understand the importance of each of these WCF tags. </p>
+<p class="has-medium-font-size">So far we have defined a service contract, an operation with a sample definition. Now we have to define its endpoints. To add an endpoint, we need to change the configuration file (web.config). Apart from copying and pasting, we need to understand the importance of each of these WCF tags. </p>
 
 
 
@@ -299,7 +299,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size"> Inside <i>service credential</i>s, another important property is defined to specifies the settings for username and password validation. The <em>userNamePasswordValidationMode </em>property sets how the credential is validated. Our service uses a custom class to validate the credentials. This class <em>AVeryBigSum.ServiceAuthenticator</em> can be found in the AVeryBigSum project.</p>
+<p class="has-medium-font-size"> Inside <i>service credential</i>s, another important property is defined to specify the settings for username and password validation. The <em>userNamePasswordValidationMode </em>property sets how the credential is validated. Our service uses a custom class to validate the credentials. This class <em>AVeryBigSum.ServiceAuthenticator</em> can be found in the AVeryBigSum project.</p>
 
 
 
@@ -311,7 +311,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">As we can see we are using WSHttpBinding. It represents an interoperable binding that supports distributed transactions, secure, reliable sessions. </p>
+<p class="has-medium-font-size">As we can see we are using WSHttpBinding. It represents an interoperable binding that supports distributed transactions, and secure, reliable sessions. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -337,7 +337,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">Inside the WSHttpBinding element, we define the security mode as TransportWithMessageCredential. The transport determines the actual mechanism that provides the transport-level security. For HTTP, the mechanism is Secure Sockets Layer (SSL) over HTTP (HTTPS); </p>
+<p class="has-medium-font-size">Inside the WSHttpBinding element, we define the security mode as TransportWithMessageCredential. The transport determines the actual mechanism that provides transport-level security. For HTTP, the mechanism is Secure Sockets Layer (SSL) over HTTP (HTTPS); </p>
 
 
 
@@ -365,7 +365,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">The custom validator extends the UserNamePasswordValidator class and overrides the method <em>Validate. </em>This validator is defined in Service Behaviors as default Authorization manager, as showed above in the behavior section. This class compares the information received by the client call to those defined in the AppsSetting element.</p>
+<p class="has-medium-font-size">The custom validator extends the UserNamePasswordValidator class and overrides the method <em>Validate. </em>This validator is defined in Service Behaviors as the default Authorization manager, as shown above in the behavior section. This class compares the information received by the client call to those defined in the AppsSetting element.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -398,7 +398,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -&gt; Manage NuGet Packages, browse for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
+<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -> Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
 
 
 
@@ -410,7 +410,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">1 &#8211; To host our service in IIS, right-click on the project and go to <em>Properties</em>. In properties window select Web tab.</p>
+<p class="has-medium-font-size">1 &#8211; To host our service in IIS, right-click on the project and go to <em>Properties</em>. In the properties, the window selects the Web tab.</p>
 
 
 
@@ -422,11 +422,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">3 &#8211; Now Click on Create Virtual Directory with Visual Studio running As Administrator. You’ll get a message <em>The Virtual directory was created successfully!</em> Otherwise, you’ll receive an error message and you need to launch Visual studio again as Administrator.</p>
+<p class="has-medium-font-size">3 &#8211; Now Click on Create Virtual Directory with Visual Studio running As Administrator. You’ll get a message <em>The Virtual directory was created successfully!</em> Otherwise, you’ll receive an error message and you need to launch Visual Studio again as Administrator.</p>
 
 
 
-<p class="has-medium-font-size">Now press F5 and your application will be up and running on the IIS server instead of your IIS express.</p>
+<p class="has-medium-font-size">Now press F5 and your application will be up and running on the IIS server instead of your IIS Express.</p>
 
 
 
@@ -438,11 +438,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> By the end of this demonstration,&nbsp;we have a secure service to be invoked by SoapUI. Our next post will demonstrate step by step how to do that.</p>
+<p class="has-medium-font-size"> By the end of this demonstration, we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
 
 
 
-<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a href="https://github.com/jeevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
+<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
@@ -512,7 +512,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> Queue provides the simplest message delivery option.&nbsp;Messages in a Queue are organized by first-in, first-out (FIFO) and each message is expected to be processed by a single consumer. However, Topics and Subscriptions constitute a publish/subscribe pattern allowing the same message to be processed by N number of consumers.</p>
+<p class="has-medium-font-size"> Queue provides the simplest message delivery option. Messages in a Queue are organized by first-in, first-out (FIFO), and each message is expected to be processed by a single consumer. However, Topics and Subscriptions constitute a publish/subscribe pattern allowing the same message to be processed by N number of consumers.</p>
 
 
 
@@ -524,11 +524,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">One of a reliable and mature project that is being utilized by industry leaders is Apache Kafka that provides us the capability to handling a huge number of messages per second, instead of traditional messaging systems that have been quite useful in traditional scenarios but not efficient and valuable in handling Big Data scenarios.</p>
+<p class="has-medium-font-size">One of the reliable and mature projects that are being utilized by industry leaders is Apache Kafka which provides us the capability to handle a huge number of messages per second, instead of traditional messaging systems that have been quite useful in traditional scenarios but not efficient and valuable in handling Big Data scenarios.</p>
 
 
 
-<p class="has-medium-font-size">Beyond messaging, Apache Kafka can be applied in stream processing, website activity tracking, log aggregation, metrics, time-based message storage, commit log and event sourcing. In the next section, we will cover in deep the components and characteristics of Apache Kafka.</p>
+<p class="has-medium-font-size">Beyond messaging, Apache Kafka can be applied in stream processing, website activity tracking, log aggregation, metrics, time-based message storage, commit log, and event sourcing. In the next section, we will cover in deep the components and characteristics of Apache Kafka.</p>
 
 
 
@@ -540,7 +540,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">Kafka is a distributed publish-subscribe messaging system that is fast, scalable and distributed in nature by its design, partitioned and replicated commit log service. It differs from a traditional messaging system to be very easy to scale out, to offer high throughput, to supports multi-subscribers and to automatically balances the consumers during failure and the ability to allow real-time applications or ETL to use it as batch consumption of persisted messages on disk.</p>
+<p class="has-medium-font-size">Kafka is a distributed publish-subscribe messaging system that is fast, scalable, and distributed in nature by its design, partitioned, and replicated commit log service. It differs from a traditional messaging system to be very easy to scale out, offers high throughput, to supports multi-subscribers and automatically balances the consumers during failure, and has the ability to allow real-time applications or ETL to use it as batch consumption of persisted messages on disk.</p>
 
 
 
@@ -579,7 +579,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 <ul>
-<li><strong>Broker</strong> &#8211; Kafka broker typically refers to a machine with Kafka installed on it. However, it is possible to set up more than one brokers on a single machine in a non-production setting. Kafka broker is responsible for managing the message logs and accepting the requests from producers/consumers. Kafka brokers are stateless. This means that the consumer has to maintain how much it has consumed. Consumer maintains it by itself and the broker would not do anything.</li>
+<li><strong>Broker</strong> &#8211; Kafka broker typically refers to a machine with Kafka installed on it. However, it is possible to set up more than one broker on a single machine in a non-production setting. The Kafka broker is responsible for managing the message logs and accepting the requests from producers/consumers. Kafka brokers are stateless. This means that the consumer has to maintain how much it has consumed. The consumer maintains it by himself and the broker would not do anything.</li>
 
 
 
@@ -600,7 +600,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">ZooKeeper is used to manage and coordinate the Kafka broker. Each Kafka broker is coordinated with other Kafka brokers using ZooKeeper. The producer and consumer are notified by the ZooKeeper service about the presence of a new broker or failure of the broker in the Kafka system. From the notification received by the Zookeeper regarding the presence or failure of the broker, producer and consumer takes the decision and start coordinating its work with some other broker.&nbsp; Also, it is responsible to choose the new leaders for the partitions. </p>
+<p class="has-medium-font-size">ZooKeeper is used to manage and coordinate the Kafka broker. Each Kafka broker is coordinated with other Kafka brokers using ZooKeeper. The producer and consumer are notified by the ZooKeeper service about the presence of a new broker or failure of the broker in the Kafka system. From the notification received by the Zookeeper regarding the presence or failure of the broker, the producer, and consumer takes the decision and start coordinating their work with some other broker.  Also, it is responsible to choose the new leaders for the partitions. </p>
 
 
 
@@ -612,7 +612,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> After a little state of art lets, focus on practice. So, our case study simulates the communication between two microservices built with Spring Boot micro-framework v2.1.8.RELEASE in publish-subscribe context, using Apache Kafka 2.3.1 as a message system. To validate our study we will be setting and execute an integration test that focuses on integrating different layers of the application in an end to end scenarios with the JUnit 4/5 testing framework.</p>
+<p class="has-medium-font-size"> After a little state of art lets, focus on practice. So, our case study simulates the communication between two microservices built with Spring Boot micro-framework v2.1.8.RELEASE in publish-subscribe context, using Apache Kafka 2.3.1 as a message system. To validate our study we will be setting and executing an integration test that focuses on integrating different layers of the application at an end to end scenarios with the JUnit 4/5 testing framework.</p>
 
 
 
@@ -620,11 +620,11 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">The Producer API is a module that implements the operation for a <a href="https://www.jeevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" target="_blank" rel="noreferrer noopener" aria-label="business entity service (opens in a new tab)">business entity service</a> with the intention to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. The Consumer API is another module in the same solution which aims to centralize all business entity statistics, receiving data input from a different source.</p>
+<p class="has-medium-font-size">The Producer API is a module that implements the operation for a <a href="https://www.jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" target="_blank" rel="noreferrer noopener">business entity service</a> with the intention to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. The Consumer API is another module in the same solution which aims to centralize all business entity statistics, receiving data input from a different source.</p>
 
 
 
-<p class="has-medium-font-size">For the sake of simplicity, the APIs use the H2 in-memory database. The project structure is composed of three modules. Both major modules, Producer, and Consumer have a dependency from the Common module, where it shares things like the error handling and auxiliary classes with the remaining part of the system. </p>
+<p class="has-medium-font-size">For the sake of simplicity, the APIs use the H2 in-memory database. The project structure is composed of three modules. Both major modules, Producer, and Consumer have a dependency on the Common module, which shares things like error handling and auxiliary classes with the remaining part of the system. </p>
 
 
 
@@ -652,7 +652,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">We need two steps to config a producer. The first one is the config class where we define the producer Map object, the producer factory, and the Kafka template. The second is respected to service class when we set the message builder to publish in Kafka broker.</p>
+<p class="has-medium-font-size">We need two steps to config a producer. The first one is the config class where we define the producer Map object, the producer factory, and the Kafka template. The second is respected to the service class when we set the message builder to publish in Kafka broker.</p>
 
 
 
@@ -660,7 +660,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">In configuration class, the constant  &#8220;<em>bootstrapServers&#8221;</em> which is the Kafka server is set in application.properties. Using the <a rel="noreferrer noopener" aria-label="@Value(&quot;${spring.kafka.bootstrap-servers}&quot;) (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html" target="_blank">@Value(&#8220;${spring.kafka.bootstrap-servers}&#8221;)</a> annotation indicates a default value expression for the affected argument. </p>
+<p class="has-medium-font-size">In the configuration class, the constant  &#8220;<em>bootstrapServers&#8221;</em> which is the Kafka server is set in application.properties. Using the <a aria-label="@Value(&quot;${spring.kafka.bootstrap-servers}&quot;) (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html" target="_blank" rel="noreferrer noopener">@Value(&#8220;${spring.kafka.bootstrap-servers}&#8221;)</a> annotation indicates a default value expression for the affected argument. </p>
 
 
 
@@ -712,7 +712,7 @@ public class KafkaProducerConfig {
 
 
 
-<p class="has-medium-font-size">In the Kafka Producer Service class, the <a rel="noreferrer noopener" aria-label="@Service (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html" target="_blank">@Service</a> annotation indicates that the annotated class is a &#8220;Service&#8221;. In this class we implement the method to send the messages to Kafka broker, declaring the topic attribute on the header predefined in the application.properties.</p>
+<p class="has-medium-font-size">In the Kafka Producer Service class, the <a aria-label="@Service (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html" target="_blank" rel="noreferrer noopener">@Service</a> annotation indicates that the annotated class is a &#8220;Service&#8221;. In this class we implement the method to send the messages to the Kafka broker, declaring the topic attribute on the header predefined in the application.properties.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -756,11 +756,11 @@ public class KafkaProducer {
 
 
 
-<p class="has-medium-font-size">As well, as we specify the KEY_SERIALIZER_CLASS_CONFIG,  VALUE_SERIALIZER_CLASS_CONFIG to serialize the message published by producer, we also need to inform the Spring Kafka about constant values for deserialization like KEY_DESERIALIZER_CLASS_CONFIG and  VALUE_DESERIALIZER_CLASS_CONFIG. Beyond the constants referenced above, we specify the GROUP_ID_CONFIG and AUTO_OFFSET_RESET_CONFIG as the earliest, allowing the consumer to read the last inserted message in the broker.</p>
+<p class="has-medium-font-size">As well, as we specify the KEY_SERIALIZER_CLASS_CONFIG, and VALUE_SERIALIZER_CLASS_CONFIG to serialize the message published by the producer, we also need to inform the Spring Kafka about constant values for deserialization like KEY_DESERIALIZER_CLASS_CONFIG and  VALUE_DESERIALIZER_CLASS_CONFIG. Beyond the constants referenced above, we specify the GROUP_ID_CONFIG and AUTO_OFFSET_RESET_CONFIG as the earliest, allowing the consumer to read the last inserted message in the broker.</p>
 
 
 
-<p class="has-medium-font-size"> To enable Kafka listeners, we use the <a rel="noreferrer noopener" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/EnableKafka.html" target="_blank">@EnableKafka</a> annotation.  This annotated endpoints that are created under the covers by an <a rel="noreferrer noopener" aria-label="AbstractListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.html" target="_blank">AbstractListenerContainerFactory</a>. The KafkaListenerContainerFactory is responsible to create the listener container for a particular endpoint. It enables the detection of&nbsp;<a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html">KafkaListener </a>annotations on any Spring-managed bean in the container. </p>
+<p class="has-medium-font-size"> To enable Kafka listeners, we use the <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/EnableKafka.html" target="_blank" rel="noreferrer noopener">@EnableKafka</a> annotation.  These annotated endpoints are created under the covers by an <a aria-label="AbstractListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.html" target="_blank" rel="noreferrer noopener">AbstractListenerContainerFactory</a>. The KafkaListenerContainerFactory is responsible to create the listener container for a particular endpoint. It enables the detection of <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html">KafkaListener </a>annotations on any Spring-managed bean in the container. </p>
 
 
 
@@ -809,7 +809,7 @@ public class KafkaConsumerConfig {
 </pre></div>
 
 
-<p class="has-medium-font-size">On the consumer factory, we have the possibility to disable the use of headers. this is achieved now by setting to false the second parameter in <em>new JsonDeserializer&lt;&gt;(BusinessEntity.class, false));</em>. This allows the consumer to trust messages that come from any packages.</p>
+<p class="has-medium-font-size">On the consumer factory, we have the possibility to disable the use of headers. this is achieved now by setting to false the second parameter in <em>new JsonDeserializer&lt;>(BusinessEntity.class, false));</em>. This allows the consumer to trust messages that come from any package.</p>
 
 
 
@@ -817,7 +817,7 @@ public class KafkaConsumerConfig {
 
 
 
-<p class="has-medium-font-size">For consuming messages, It is necessary to have configured the  ConsumerFactory and a KafkaListenerContainerFactory as we did above. Once these beans are available in the Spring bean factory, POJO based consumers can be configured using <a rel="noreferrer noopener" href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/annotation/KafkaListener.html" target="_blank">@KafkaListener</a> annotation.</p>
+<p class="has-medium-font-size">For consuming messages, It is necessary to have configured the  ConsumerFactory and a KafkaListenerContainerFactory as we did above. Once these beans are available in the Spring bean factory, POJO-based consumers can be configured using <a href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/annotation/KafkaListener.html" target="_blank" rel="noreferrer noopener">@KafkaListener</a> annotation.</p>
 
 
 
@@ -856,7 +856,7 @@ public class KafkaConsumer {
 
 
 
-<p class="has-medium-font-size">As you may have noticed, we had created the topic&nbsp;building&nbsp;with only one partition. However, for a topic with multiple partitions, a&nbsp;<em>@KafkaListener</em>&nbsp;can explicitly subscribe to a particular partition of a topic with an initial offset.</p>
+<p class="has-medium-font-size">As you may have noticed, we created the topic building with only one partition. However, for a topic with multiple partitions, a <em>@KafkaListener</em> can explicitly subscribe to a particular partition of a topic with an initial offset.</p>
 
 
 
@@ -868,7 +868,7 @@ public class KafkaConsumer {
 
 
 
-<p class="has-medium-font-size">Last but not least in our configuration, we specify some values related to the behavior of communication between Producer and Consumer.</p>
+<p class="has-medium-font-size">Last but not least in our configuration, we specify some values related to the behavior of communication between the Producer and Consumer.</p>
 
 
 
@@ -922,7 +922,7 @@ spring.kafka.template.default-topic=test
 
 
 
-<p class="has-medium-font-size">To make it work, we need to change the Zookeeper data directory location.<br>Open&nbsp;<em>kafka\config\zookeeper.properties</em>&nbsp;file and change the Zookeeper data /log directory location config to a valid windows directory location.</p>
+<p class="has-medium-font-size">To make it work, we need to change the Zookeeper data directory location.<br>Open the <em>kafka\config\zookeeper.properties</em> file and change the Zookeeper data /log directory location config to a valid windows directory location.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -934,7 +934,7 @@ dataDir=C:\\kafka\\zookeeper-logs
 
 
 
-<p class="has-medium-font-size"> We also need to make some changes to the Kafka configurations. Open&nbsp;<em>kafka\config\server.properties</em>&nbsp;and set topic defaults to one. We will be running a single node Kafka. Also to prevent Kafka to create unnecessary numbers of offset, we specify the replicas to 1. We faced this issue on the windows environment with the latest Kafka 2.3.1 version. This lead Kafka to stop because of insufficient memory to handling a bunch of data created automatically on the initial phase of starting the server.</p>
+<p class="has-medium-font-size"> We also need to make some changes to the Kafka configurations. Open <em>kafka\config\server.properties</em> and set topic defaults to one. We will be running a single-node, Kafka. Also to prevent Kafka to create unnecessary numbers of offset, we specify the replicas to 1. We faced this issue on the windows environment with the latest Kafka 2.3.1 version. This led Kafka to stop because of insufficient memory to handle a bunch of data created automatically on the initial phase of starting the server.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -972,11 +972,11 @@ default.replication.factor = 1
 
 
 
-<p class="has-medium-font-size">The first annotation @RunWith(SpringRunner.class) is used to provide a bridge between Spring Boot test features and JUnit. SpringRunner.class enables full support of spring context loading and dependency injection of the beans in the tests. <a rel="noreferrer noopener" aria-label="@SpringBootTest (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html" target="_blank">@SpringBootTest</a> create ApplicationContext tests through SpringApplication that will be utilized in our tests. It bootstraps the entire container since the embedded server and creates a web environment.</p>
+<p class="has-medium-font-size">The first annotation @RunWith(SpringRunner.class) is used to provide a bridge between Spring Boot test features and JUnit. SpringRunner.class enables full support of spring context loading and dependency injection of the beans in the tests. <a aria-label="@SpringBootTest (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html" target="_blank" rel="noreferrer noopener">@SpringBootTest</a> creates ApplicationContext tests through SpringApplication that will be utilized in our tests. It bootstraps the entire container from the embedded server and creates a web environment.</p>
 
 
 
-<p class="has-medium-font-size">In our test, we are mimicking the real web environment setting it as RANDOM_PORT that also loads WebServerApplicationContext. The embedded server is started and listen to on a random port.</p>
+<p class="has-medium-font-size">In our test, we are mimicking the real web environment setting it as RANDOM_PORT that also loads WebServerApplicationContext. The embedded server is started and listened to on a random port.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -993,11 +993,11 @@ class BusinessEntityIntegrationTest {
 </pre></div>
 
 
-<p class="has-medium-font-size"><a rel="noreferrer noopener" aria-label="@LocalServerPort (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/2.0.0.RC1/api/org/springframework/boot/web/server/LocalServerPort.html" target="_blank">@LocalServerPort</a> annotation provides us the injected HTTP port that got allocated at runtime. It is a convenient alternative for&nbsp;<code>@Value("${local.server.port}")</code>. </p>
+<p class="has-medium-font-size"><a aria-label="@LocalServerPort (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/2.0.0.RC1/api/org/springframework/boot/web/server/LocalServerPort.html" target="_blank" rel="noreferrer noopener">@LocalServerPort</a> annotation provides us with the injected HTTP port that got allocated at runtime. It is a convenient alternative for <code>@Value("${local.server.port}")</code>. </p>
 
 
 
-<p class="has-medium-font-size">To access a third-party REST service inside a Spring application we use the Spring&nbsp;<strong><a rel="noreferrer noopener" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank">RestTemplate</a></strong>&nbsp;or <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">TestRestTemplate </a>the convenient alternative that is suitable for integration tests by injecting it in our test class. With <strong>spring-boot-starter-test</strong>&nbsp;dependency in our project, we can access to&nbsp;&#8220;TestRestTemplate&#8221;&nbsp;class in runtime. </p>
+<p class="has-medium-font-size">To access a third-party REST service inside a Spring application we use the Spring <strong><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank" rel="noreferrer noopener">RestTemplate</a></strong> or <a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html" target="_blank" rel="noreferrer noopener">TestRestTemplate </a>the convenient alternative that is suitable for integration tests by injecting it into our test class. With <strong>spring-boot-starter-test</strong> dependency in our project, we can access to &#8220;TestRestTemplate&#8221; class in runtime. </p>
 
 
 
@@ -1005,11 +1005,11 @@ class BusinessEntityIntegrationTest {
 
 
 
-<p class="has-medium-font-size">In our test method, we are using the &#8220;<a rel="noreferrer noopener" aria-label="junit-json-params (opens in a new tab)" href="http://www.joshka.net/junit-json-params/" target="_blank">junit-json-params</a>&#8220;, a <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/current/user-guide/" target="_blank">Junit 5</a> library that provides annotations to load data from JSON Strings or files in parameterized tests. We also annotated the method with <a rel="noreferrer noopener" aria-label="@ParameterizedTest (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/ParameterizedTest.html" target="_blank">@ParameterizedTest</a> annotation to complement the library bellow. It is used to signal the annotated method is a parameterized test method. That method must not be private or static. They also must specify at least one&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsProvider.html" target="_blank"><code>ArgumentsProvider</code></a>&nbsp;via&nbsp;<a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a>&nbsp;or a corresponding composed annotation.</p>
+<p class="has-medium-font-size">In our test method, we are using the &#8220;<a aria-label="junit-json-params (opens in a new tab)" href="http://www.joshka.net/junit-json-params/" target="_blank" rel="noreferrer noopener">junit-json-params</a>&#8220;, a <a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noreferrer noopener">Junit 5</a> library that provides annotations to load data from JSON Strings or files in parameterized tests. We also annotated the method with <a aria-label="@ParameterizedTest (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/ParameterizedTest.html" target="_blank" rel="noreferrer noopener">@ParameterizedTest</a> annotation to complement the library below. It is used to signal the annotated method is a parameterized test method. That method must not be private or static. They also must specify at least one <a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsProvider.html" target="_blank" rel="noreferrer noopener"><code>ArgumentsProvider</code></a> via <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> or a corresponding composed annotation.</p>
 
 
 
-<p class="has-medium-font-size">Our  <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> a JSON file @JsonFileSource(resources = &#8220;/business-entity-test-param.json&#8221;) is inside the test.resource package.  <code>@JsonFileSource</code>&nbsp;lets you use JSON files from the classpath. It supports single objects, arrays of objects and JSON primitives. </p>
+<p class="has-medium-font-size">Our  <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> a JSON file @JsonFileSource(resources = &#8220;/business-entity-test-param.json&#8221;) is inside the test.resource package.  <code>@JsonFileSource</code> lets you use JSON files from the classpath. It supports single objects, arrays of objects, and JSON primitives. </p>
 
 
 
@@ -1048,7 +1048,7 @@ class BusinessEntityIntegrationTest {
 </pre></div>
 
 
-<p class="has-medium-font-size">After the arrange and acts we assert if our call to the rest API returns the desired result. </p>
+<p class="has-medium-font-size">After the arrangement and acts we assert if our call to the rest API returns the desired result. </p>
 
 
 
@@ -1072,7 +1072,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 </pre></div>
 
 
-<p class="has-medium-font-size"> It should start the zookeeper server. Minimize the command window and let the zookeeper running in that window. Start a new command window and start Kafka Broker using the below command.</p>
+<p class="has-medium-font-size"> It should start the zookeeper server. Minimize the command window and let the zookeeper run in that window. Start a new command window and start Kafka Broker using the below command.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: bash; title: ; notranslate">
@@ -1084,7 +1084,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size">Finally, we can execute the test class as a JUnit test. It will start the server and deploy the API as it will be done normally. Then It will execute the tests. You can verify the tests in JUnit tab.</p>
+<p class="has-medium-font-size">Finally, we can execute the test class as a JUnit test. It will start the server and deploy the API as it will be done normally. Then It will execute the tests. You can verify the tests in the JUnit tab.</p>
 
 
 
@@ -1096,7 +1096,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size">In this article, we have seen how we can use the publish-subscribe pattern to share data frequently, immediately, reliably, and asynchronously using customizable formats in a responsive way between two distinct microservices and validate it with an integration test through different layers in an end to end scenario.</p>
+<p class="has-medium-font-size">In this article, we have seen how we can use the publish-subscribe pattern to share data frequently, immediately, reliably, and asynchronously using customizable formats in a responsive way between two distinct microservices and validate it with an integration test through different layers at an end to end scenario.</p>
 
 
 
@@ -1145,7 +1145,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size"> Annotation can also be used in REST API. REST stands for Representational State Transfer and it is an architectural style for designing distributed applications. Brought by Roy Fielding in his Ph.D. dissertation where he proposed as its basis, six principles where, it should be separated between clients and servers; the communication between client and server should be stateless; multiple hierarchical layers can exist between them; the server responses must be declared as cacheable or noncacheable; the uniformity of their interfaces must be based in all interactions between client, server, and intermediary components and finally the clients can extend their functionality by using code on demand.</p>
+<p class="has-medium-font-size"> Annotation can also be used in REST API. REST stands for Representational State Transfer and it is an architectural style for designing distributed applications. Brought by Roy Fielding in his Ph.D. dissertation where he proposed as its basis, six principles that should be separated between clients and servers; the communication between client and server should be stateless; multiple hierarchical layers can exist between them; the server responses must be declared as cacheable or noncacheable; the uniformity of their interfaces must be based in all interactions between client, server, and intermediary components and finally the clients can extend their functionality by using code on demand.</p>
 
 
 
@@ -1157,7 +1157,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size"> The API is a simple module to implement CRUD operation of Business Entity from a more complex system with intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the API uses the H2 in-memory database. </p>
+<p class="has-medium-font-size"> The API is a simple module to implement CRUD operation of Business Entity from a more complex system intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the API uses the H2 in-memory database. </p>
 
 
 
@@ -1165,7 +1165,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size">The project structure is constituted by three modules, but this post will focus on the module to manage entities. That module has a dependency from the Common module, where it shares things like error handling and essential useful classes with the remaining part of the whole system.  The sample code is accessible from the GitHub repository, to download it, please follow this <a rel="noreferrer noopener" aria-label="link (opens in a new tab)" href="https://github.com/JERBEvora/spring-boot-api-communication-through-kafka" target="_blank">link</a>, let&#8217;s get started.</p>
+<p class="has-medium-font-size">The project structure is constituted of three modules, but this post will focus on the module to manage entities. That module has a dependency on the Common module, which shares things like error handling and essential useful classes with the remaining part of the whole system.  The sample code is accessible from the GitHub repository, to download it, please follow this <a href="https://github.com/jailsonevora/spring-boot-api-communication-through-kafka" target="_blank" rel="noreferrer noopener">link</a>, let&#8217;s get started.</p>
 
 
 
@@ -1177,7 +1177,7 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 
 
 
-<p class="has-medium-font-size">The great advantage of Spring Boot is that we can focus on the business rules avoiding some tedious development steps, boilerplate code and a more complex configuration improving the development and to ease the bootstrapping of new spring applications.</p>
+<p class="has-medium-font-size">The great advantage of Spring Boot is that we can focus on the business rules avoiding some tedious development steps, boilerplate code, and a more complex configuration improving the development and easing the bootstrapping of new spring applications.</p>
 
 
 
@@ -1211,11 +1211,11 @@ public class BusinessEntityManagementApplication {
 </pre></div>
 
 
-<p class="has-medium-font-size">Another annotation present in the code snippet is the @EnableJpaAuditing. The auditing allows the system to track and logging events related to persistent entities, or entity versioning. Also related to JPA configuration, we have the @EnableJpaRepositories. This annotation enables JPA repositories. It will scan the package of the annotated configuration class for Spring Data repositories by default. Inside this annotation we specify the base package to be scanned for annotated components. </p>
+<p class="has-medium-font-size">Another annotation present in the code snippet is the @EnableJpaAuditing. The auditing allows the system to track and log events related to persistent entities, or entity versioning. Also related to JPA configuration, we have the @EnableJpaRepositories. This annotation enables JPA repositories. It will scan the package of the annotated configuration class for Spring Data repositories by default. Inside this annotation, we specify the base package to be scanned for annotated components. </p>
 
 
 
-<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a rel="noreferrer noopener" aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank">@EntityScan</a>. To a specific scan, we can specify&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank">basePackageClasses()</a></code>,&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank">basePackages()</a></code>&nbsp;or its alias&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank">value()</a></code>&nbsp;to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
+<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank" rel="noreferrer noopener">@EntityScan</a>. For a specific scan, we can specify <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank" rel="noreferrer noopener">basePackageClasses()</a></code>, <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank" rel="noreferrer noopener">basePackages()</a></code> or its alias <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank" rel="noreferrer noopener">value()</a></code> to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
 
 
 
@@ -1267,7 +1267,7 @@ public class SwaggerConfig {
 </pre></div>
 
 
-<p class="has-medium-font-size">A specific annotation for Swagger is the <a rel="noreferrer noopener" aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring java config and should have an accompanying @Configuration annotation. The <a rel="noreferrer noopener" aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank">@Bean</a> is a method-level annotation and a direct analog of the XML&nbsp;<code>&lt;bean/&gt;</code>&nbsp;element.</p>
+<p class="has-medium-font-size">A specific annotation for Swagger is the <a aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank" rel="noreferrer noopener">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring Java config and should have an accompanying @Configuration annotation. The <a aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank" rel="noreferrer noopener">@Bean</a> is a method-level annotation and a direct analog of the XML <code>&lt;bean/></code> element.</p>
 
 
 
@@ -1291,11 +1291,11 @@ public class SwaggerConfig {
 
 
 
-<p class="has-medium-font-size"> In the model class, we use @Entity annotation that indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the&nbsp;<em>@Table</em>&nbsp;annotation. </p>
+<p class="has-medium-font-size"> In the model class, we use @Entity annotation which indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the <em>@Table</em> annotation. </p>
 
 
 
-<p class="has-medium-font-size">To handle the problem related to the serialization of the model using Jackson API when the model attributes have a lazy loading defined, we have to tell the serializer to ignore the chain or helpful garbage that Hibernate adds to classes, so it can manage lazy loading of data by declaring @JsonIgnoreProperties({&#8220;hibernateLazyInitializer&#8221;, &#8220;handler&#8221;}) annotation.</p>
+<p class="has-medium-font-size">To handle the problem related to the serialization of the model using Jackson API when the model attributes have a lazy loading defined, we have to tell the serializer to ignore the chain or helpful garbage that Hibernate adds to classes, so it can manage the lazy loading of data by declaring @JsonIgnoreProperties({&#8220;hibernateLazyInitializer&#8221;, &#8220;handler&#8221;}) annotation.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1332,15 +1332,15 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">To a class field, there are many kinds of annotations dependent on the type and purpose of that field. For example, @Id annotation must be declared in one of the class attributes. Every entity object stored in the database has a primary key. Once assigned, the primary key cannot be modified. @GeneratedValue indicating that the framework should generate the document key value using the specified generator type like  AUTO, IDENTITY, SEQUENCE, and TABLE. </p>
+<p class="has-medium-font-size">For a class field, there are many kinds of annotations dependent on the type and purpose of that field. For example, the @Id annotation must be declared in one of the class attributes. Every entity object stored in the database has a primary key. Once assigned, the primary key cannot be modified. @GeneratedValue indicates that the framework should generate the document key value using the specified generator type like  AUTO, IDENTITY, SEQUENCE, and TABLE. </p>
 
 
 
-<p class="has-medium-font-size">Another interesting annotation targeting domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be&nbsp;<code>null</code>.&nbsp; It can be used as well in a method or parameter. The @Column annotation specifies the name to the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
+<p class="has-medium-font-size">Another interesting annotation targeting the domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be null.  It can be used as well in a method or parameter. The @Column annotation specifies the name of the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
 
 
 
-<p class="has-medium-font-size">Sometimes most objects have a natural identifier, so Hibernate also allows to model this identifier as a natural identifier of an entity and provides an extra API for retrieving them from the database.  This is achieved using @NaturalId annotation.</p>
+<p class="has-medium-font-size">Sometimes most objects have a natural identifier, so Hibernate also allows modeling this identifier as a natural identifier of an entity and provides an extra API for retrieving them from the database.  This is achieved using @NaturalId annotation.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1369,7 +1369,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null nor empty, we can also annotate it with @NotEmpty. It target a vast kind of element, since {METHOD,FIELD,ANNOTATION_TYPE,CONSTRUCTOR,PARAMETER,TYPE_USE}. The @Size annotation delimits the boundaries to the element annotated. The boundaries are specified by two attributes, min, and max.</p>
+<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null nor empty, we can also annotate it with @NotEmpty. It targets a vast kind of element, since {METHOD,FIELD,ANNOTATION_TYPE,CONSTRUCTOR,PARAMETER,TYPE_USE}. The @Size annotation delimits the boundaries of the element annotated. The boundaries are specified by two attributes, min, and max.</p>
 
 
 
@@ -1377,7 +1377,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">One of the most important features of any ORM mechanism is how which one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as foreign-key in this relationship.</p>
+<p class="has-medium-font-size">One of the most important features of any ORM mechanism is how one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as a foreign key in this relationship.</p>
 
 
 
@@ -1414,7 +1414,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size"> Together with @ManyToMany annotation, we specify the @JoinTable annotation that allows us in a many to many relations to define the bridge table between two other related table, using two essential attributes, joincolumns for the class where we declare the @ManyToMany annotation and inverseJoinColumns for another table. </p>
+<p class="has-medium-font-size"> Together with the @ManyToMany annotation, we specify the @JoinTable annotation that allows us in many-to-many relations to define the bridge table between two other related tables, using two essential attributes, joincolumns for the class where we declare the @ManyToMany annotation and inverseJoinColumns for another table. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1433,7 +1433,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size"> In the other table, it is recommended to define also the inverse relation. This declaration is slightly different from the showed in the code related to the Bussines Entity model. The inverse relation declaration differentiates by the attribute &#8220;mappedBy&#8221;.  </p>
+<p class="has-medium-font-size"> In the other table, it is recommended to define also the inverse relation. This declaration is slightly different from the showed in code related to the Business Entity model. The inverse relation declaration differentiates by the attribute &#8220;mappedBy&#8221;.  </p>
 
 
 
@@ -1453,7 +1453,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. To serialize and deserialize the DTO object, we need to annotate these objects with Jackson annotation. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
+<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. To serialize and deserialize the DTO object, we need to annotate these objects with Jackson&#8217;s annotation. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method, or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1514,7 +1514,7 @@ public class BusinessEntity {
 
 
 
-<p class="has-medium-font-size">Controllers stand for C on the MVC pattern. Controllers are responsible for receiving requests from users and invoking back-end services for business processing. After processing, it may return some data for views to present. Controllers collect it and prepare models for views to present. Controllers are often referred to as a dispatcher servlet. It acts as the front controller of the Spring MVC framework, and every web request must go through it so that it can manage the entire request-handling process [3]. When a web request is sent to a Spring MVC application, a controller first receives the request. Then it organizes the different components configured in Spring’s web application context or annotations present in the controller itself, all needed to handle the request.</p>
+<p class="has-medium-font-size">Controllers stand for C on the MVC pattern. Controllers are responsible for receiving requests from users and invoking back-end services for business processing. After processing, it may return some data for views to present. Controllers collect it and prepare models for views to present. Controllers are often referred to as dispatcher servlets. It acts as the front controller of the Spring MVC framework, and every web request must go through it so that it can manage the entire request-handling process [3]. When a web request is sent to a Spring MVC application, a controller first receives the request. Then it organizes the different components configured in Spring’s web application context or annotations present in the controller itself, all needed to handle the request.</p>
 
 
 
@@ -1566,7 +1566,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">For Swagger documentation purposes, the&nbsp;<code><a rel="noreferrer noopener" aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank">@ApiOperation</a></code> annotation&nbsp;is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated with&nbsp;<code>@ApiOperation</code>&nbsp;will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
+<p class="has-medium-font-size">For Swagger documentation purposes, the <code><a aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank" rel="noreferrer noopener">@ApiOperation</a></code> annotation is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated <code>@ApiOperation</code> will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
 
 
 
@@ -1604,7 +1604,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Another useful annotation used in a well-designed system is&nbsp;<code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, lead us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
+<p class="has-medium-font-size">Another useful annotation used in a well-designed system is <code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, leading us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
 
 
 
@@ -1616,7 +1616,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Our class should validate incoming identifier requests before processes the soft delete. By simply adding the @Valid annotation to the method, Spring will ensure that the incoming identifier requests are run through our defined validation rules first.</p>
+<p class="has-medium-font-size">Our class should validate incoming identifier requests before processing the soft delete. By simply adding the @Valid annotation to the method, Spring will ensure that the incoming identifier requests are run through our defined validation rules first.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1661,7 +1661,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Repositories, or Data Access Objects (DAO), provide an abstraction for interacting with datastores. Repositories traditionally include an interface that provides a set of finder methods such as findById, findAll for retrieving data, and methods to persist and delete data. Repositories also include a class that implements this interface using datastore-specific technologies. It is also customary to have one Repository per domain object. Although this has been a popular approach, there is a lot of boilerplate code that gets duplicated in each repository implementation [1].</p>
+<p class="has-medium-font-size">Repositories, or Data Access Objects (DAO), provide an abstraction for interacting with data stores. Repositories traditionally include an interface that provides a set of finder methods such as findById, and findAll for retrieving data, and methods to persist and delete data. Repositories also include a class that implements this interface using datastore-specific technologies. It is also customary to have one Repository per domain object. Although this has been a popular approach, there is a lot of boilerplate code that gets duplicated in each repository implementation [1].</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -1684,7 +1684,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 </pre></div>
 
 
-<p class="has-medium-font-size">With <a rel="noreferrer noopener" aria-label="@NoRepositoryBean (opens in a new tab)" href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/NoRepositoryBean.html" target="_blank">@NoRepositoryBean</a> annotation, we can use it to exclude repository interfaces from being picked up and thus, in consequence, getting an instance being created. This will typically be used when providing an extended base interface for all repositories in combination with a custom repository base class to implement methods declared in that intermediate interface. In this case, we typically derive our concrete repository interfaces from the intermediate one but we don&#8217;t want to create a Spring bean for the intermediate interface.</p>
+<p class="has-medium-font-size">With <a aria-label="@NoRepositoryBean (opens in a new tab)" href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/NoRepositoryBean.html" target="_blank" rel="noreferrer noopener">@NoRepositoryBean</a> annotation, we can use it to exclude repository interfaces from being picked up and thus, in consequence, get an instance created. This will typically be used when providing an extended base interface for all repositories in combination with a custom repository base class to implement methods declared in that intermediate interface. In this case, we typically derive our concrete repository interfaces from the intermediate one but we don&#8217;t want to create a Spring bean for the intermediate interface.</p>
 
 
 
@@ -1737,11 +1737,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 		<category><![CDATA[Token-based]]></category>
 		<guid isPermaLink="false">https://www.jeevora.com/?p=866</guid>
 
-					<description><![CDATA[<p>Within the universe of microservices security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allowing third parties (a particular application or service) communicate with other applications or services, acting on behalf of, and not while the application or service. Authorization to third parties using the traditional model, where the client accesses a protected [&#8230;]</p>
+					<description><![CDATA[<p>Within the universe of microservices security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service. Authorization to third parties using the traditional model, where the client accesses a [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/">Microservices Security Mechanisms</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">Within the universe of <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666957602618843103249">microservice</gwmw>s security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allowing third parties (a particular application or service) communicate with other applications or services, acting on behalf of, and not while the application or service.</p>
+<p class="has-drop-cap has-medium-font-size">Within the universe of <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666957602618843103249">microservice</gwmw>s security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service.</p>
 
 
 
@@ -1750,7 +1750,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 <ul>
-<li>Credentials need to be stored in third party applications for future use.</li>
+<li>Credentials need to be stored in third-party applications for future use.</li>
 
 
 
@@ -1762,11 +1762,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<li>The resource owner cannot revoke access to a third party without revoking access to all others and is only possible by changing the password.</li>
+<li>The resource owner cannot revoke access to a third party without revoking access to all others and this is only possible by changing the password.</li>
 
 
 
-<li>The security breach in third party application results in exposure of credentials and all data protected in the third party.</li>
+<li>The security breach in third-party applications results in the exposure of credentials and all data protected by the third party.</li>
 </ul>
 
 
@@ -1787,7 +1787,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size">The problems and limitations identified in the traditional authorization model are addressed by this standard by introducing the authorization layer, separating the role of the client from the resource owner. The client requests access to resources owned by the resource owner hosted on the resource server and different credentials are issued than those of the resource owner. Instead of using the resource owner&#8217;s credentials to access protected resources, the client obtains an access token that indicates a specific scope, time, and other access attributes, which tokens are issued by with the approval of the resource owner. The client uses the access token to access protected resources hosted by the resource server (Figure 1) [1]. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">The problems and limitations identified in the traditional authorization model are addressed by this standard by introducing the authorization layer, separating the role of the client from the resource owner. The client requests access to resources owned by the resource owner hosted on the resource server and different credentials are issued than those of the resource owner. Instead of using the resource owner&#8217;s credentials to access protected resources, the client obtains an access token that indicates a specific scope, time, and other access attributes, which tokens are issued with the approval of the resource owner. The client uses the access token to access protected resources hosted by the resource server (Figure 1) [1]. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -1803,7 +1803,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size">OpenID Connect builds on top of OAuth2 and adds authentication. OpenID Connect adds some constraint to OAuth2 like <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666777153698581948814">UserInfo</gwmw> Endpoint, ID Token, discovery and dynamic registration of OpenID Connect providers and session management.</p>
+<p class="has-medium-font-size">OpenID Connect builds on top of OAuth2 and adds authentication. OpenID Connect adds some constraints to OAuth2 like UserInfo Endpoint, ID Token, discovery and dynamic registration of OpenID Connect providers, and session management.</p>
 
 
 
@@ -1811,7 +1811,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size">OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as encryption of identity data, the discovery of OpenID Providers, and session management.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as the encryption of identity data, the discovery of OpenID Providers, and session management.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -1827,7 +1827,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size">The client accesses the server by sending the access credentials, the service provider validates the credentials, saves an authorization token on success, associates the token with the client address and assigns the lifetime of this access token. The service sends a success message to the customer along with the token. The client starts to invoke the services on the server by sending the authorization token, where the server will validate each request, checking if the token is valid (Figure 2).<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+<p class="has-medium-font-size">The client accesses the server by sending the access credentials, the service provider validates the credentials, saves an authorization token on success, associates the token with the client address, and assigns the lifetime of this access token. The service sends a success message to the customer along with the token. The client starts to invoke the services on the server by sending the authorization token, where the server will validate each request, checking if the token is valid (Figure 2).<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
 
 
 
@@ -1843,7 +1843,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size">JWT tokens are JSON encoded data structures that contain information about the issuer, subject (claims), expiration time, access token, refresh token, id token and so on. </p>
+<p class="has-medium-font-size">JWT tokens are JSON-encoded data structures that contain information about the issuer, subject (claims), expiration time, access token, refresh token, id token, and so on. </p>
 
 
 
@@ -1907,11 +1907,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<p class="has-medium-font-size"> Java EE includes several specifications that serve different purposes, like generating web pages, reading and writing from a database in a transactional way, managing distributed queues and much more.</p>
+<p class="has-medium-font-size"> Java EE includes several specifications that serve different purposes, like generating web pages, reading and writing from a database in a transactional way, managing distributed queues, and much more.</p>
 
 
 
-<p class="has-medium-font-size">The Java EE APIs include several technologies that extend the functionality of the base SE APIs, such as Enterprise JavaBeans, connectors, servlets, JavaServer Pages and several web service technologies. </p>
+<p class="has-medium-font-size">The Java EE APIs include several technologies that extend the functionality of the base SE APIs, such as Enterprise JavaBeans, connectors, servlets, JavaServer Pages, and several web service technologies. </p>
 
 
 
@@ -1950,7 +1950,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 <ul>
-<li><strong>Java API for XML Web Services</strong> can be used to create <a href="https://www.jeevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener" aria-label="SOAP web services (opens in a new tab)">SOAP web services</a> JAX-WS; </li>
+<li><strong>Java API for XML Web Services</strong> can be used to create <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">SOAP web services</a> JAX-WS; </li>
 
 
 
@@ -1976,7 +1976,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<li><strong>Enterprise JavaBean (EJB)</strong> specification defines a set of lightweight APIs that an <strong>EJB </strong>container will support to provide transactions (<strong>JTA</strong>), remote procedure calls (<strong>RMI or RMI-IIOP</strong>), concurrency control, dependency injection and access control for business objects; </li>
+<li><strong>Enterprise JavaBean (EJB)</strong> specification defines a set of lightweight APIs that an <strong>EJB </strong>container will support to provide transactions (<strong>JTA</strong>), remote procedure calls (<strong>RMI or RMI-IIOP</strong>), concurrency control, dependency injection, and access control for business objects; </li>
 </ul>
 
 
@@ -1994,7 +1994,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<li><strong>Java Message Service</strong> provides a common way for Java programs to create, send, receive and read an enterprise messaging system&#8217;s messages. </li>
+<li><strong>Java Message Service</strong> provides a common way for Java programs to create, send, receive, and read an enterprise messaging system&#8217;s messages. </li>
 </ul>
 
 
@@ -2008,7 +2008,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<li><strong>Batch Applications</strong> provides the means to run long-running background tasks that possibly involve a large volume of data and which may need to be periodically executed; </li>
+<li><strong>Batch Applications</strong> provide the means to run long-running background tasks that possibly involve a large volume of data and which may need to be periodically executed; </li>
 
 
 
@@ -2030,7 +2030,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<li>Robust, modular and scalable;   </li>
+<li>Robust, modular, and scalable;   </li>
 
 
 
@@ -2110,11 +2110,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 121/184 objects using disk
+Object Caching 151/153 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/18 queries in 0.020 seconds using disk
+Database Caching 2/6 queries in 0.008 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:15:53 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:51:06 by W3 Total Cache
 -->

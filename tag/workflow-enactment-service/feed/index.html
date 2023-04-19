@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/workflow-enactment-service/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/workflow-enactment-service/</link>
 	<description></description>
-	<lastBuildDate>Wed, 19 Apr 2023 12:10:40 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Apr 2023 22:09:07 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -39,7 +39,7 @@
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/04/three-functional-areas-of-workflow-systems/">Three Functional Areas of Workflow Systems</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">The three functional areas of workflow systems were proposed by the <a rel="noreferrer noopener" aria-label="WfMC  (opens in a new tab)" href="https://www.jeevora.com/2019/07/28/process-automation/" target="_blank">WfMC </a>reference model, which describes a common model for building workflow systems. So, the <a rel="noreferrer noopener" href="https://www.jeevora.com/2019/07/28/process-automation/" target="_blank">WfMC </a>reference model identifies the relationship between the various alternative implementation approaches [1] as, <strong>Build time functions; Run-time Control Functions; Run-time Interactions.</strong></p>
+<p class="has-drop-cap has-medium-font-size">The three functional areas of workflow systems were proposed by the <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">WfMC </a>reference model, which describes a common model for building workflow systems. So, the <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">WfMC </a>reference model identifies the relationship between the various alternative implementation approaches [1] as, <strong>Build time functions; Run-time Control Functions; Run-time Interactions.</strong></p>
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-<p class="has-medium-font-size">Above all, these three main functional areas of a workflow system range from the<a rel="noreferrer noopener" aria-label=" process model (opens in a new tab)" href="https://www.jeevora.com/2019/07/30/business-process-modeling/" target="_blank"> process model</a> to human resources in organizations that leverage this kind of system.</p>
+<p class="has-medium-font-size">Above all, these three main functional areas of a workflow system range from the<a href="https://www.jailsonevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener"> process model</a> to human resources in organizations that leverage this kind of system.</p>
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-<figure class="wp-block-table has-fixed-layout is-style-regular"><table><tbody><tr><td><strong>Functional Areas</strong>                       </td><td><strong>Description</strong></td></tr><tr><td>Build time functions</td><td>During this phase, a business process is translated from the real world into a formal definition (called a process model, process metadata, or a process definition) that is computer understood by using one or more analysis techniques, modeling and system definition.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Run-time Control Functions                                                                               </td><td>At run-time, process definition is interpreted by the workflow engine, a core component of a WfMS, responsible for creating and controlling process instances, scheduling activities within the process and invoking the appropriate HR and IT resources.</td></tr><tr><td>Run-time Interactions</td><td>Interaction with the workflow engine is necessary for transferring control between activities, checking the status of process operations, invoking tools, and transferring the appropriate data to the processing system.</td></tr></tbody></table></figure>
+<figure class="wp-block-table has-fixed-layout is-style-regular"><table><tbody><tr><td><strong>Functional Areas</strong>                       </td><td><strong>Description</strong></td></tr><tr><td>Build time functions</td><td>During this phase, a business process is translated from the real world into a formal definition (called a process model, process metadata, or a process definition) that is computer understood by using one or more analysis techniques, modeling, and system definition.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Run-time Control Functions                                                                               </td><td>At run-time, process definition is interpreted by the workflow engine, a core component of a WfMS, responsible for creating and controlling process instances, scheduling activities within the process, and invoking the appropriate HR and IT resources.</td></tr><tr><td>Run-time Interactions</td><td>Interaction with the workflow engine is necessary for transferring control between activities, checking the status of process operations, invoking tools, and transferring the appropriate data to the processing system.</td></tr></tbody></table></figure>
 
 
 
@@ -71,7 +71,7 @@
 
 
 
-<p class="has-medium-font-size">Therefore Workflow Enactment Service is the center of all interactions in process automation. This is typically a service consisting of one or more workflow engines for creating, managing and running workflow instances. Consequently, it can be considered as a state transition machine where process instances or individual activities modify states in response to external events or specific control decisions made by a workflow engine [1]. </p>
+<p class="has-medium-font-size">Therefore Workflow Enactment Service is the center of all interactions in process automation. This is typically a service consisting of one or more workflow engines for creating, managing, and running workflow instances. Consequently, it can be considered as a state transition machine where process instances or individual activities modify states in response to external events or specific control decisions made by a workflow engine [1]. </p>
 
 
 
@@ -95,7 +95,7 @@
 
 
 
-<figure class="wp-block-table has-fixed-layout is-style-regular"><table><tbody><tr><td><strong>Execution State</strong></td><td><strong> Description </strong></td></tr><tr><td>Started</td><td>We create a process instance, including process state properties and relevant workflow data, but it still not meeting the conditions for it to start execution.</td></tr><tr><td> Running</td><td>The process instance has started running and any of its activities can be started</td></tr><tr><td> Active</td><td>One or more stream activities have started.</td></tr><tr><td> Suspended</td><td>The process instance is paused and no activity is started until the process has returned to the running state.<gwmw style="display:none;"></gwmw></td></tr><tr><td> Complete</td><td>The process instance fulfills the conditions for completion and the instance may be destroyed.</td></tr><tr><td> Finished</td><td>Process instance execution was interrupted before normal completion and instance could be destroyed</td></tr></tbody></table></figure>
+<figure class="wp-block-table has-fixed-layout is-style-regular"><table><tbody><tr><td><strong>Execution State</strong></td><td><strong> Description </strong></td></tr><tr><td>Started</td><td>We create a process instance, including process state properties and relevant workflow data, but it still not meeting the conditions for it to start execution.</td></tr><tr><td> Running</td><td>The process instance has started running and any of its activities can be started</td></tr><tr><td> Active</td><td>One or more stream activities have started.</td></tr><tr><td> Suspended</td><td>The process instance is paused and no activity is started until the process has returned to the running state.<gwmw style="display:none;"></gwmw></td></tr><tr><td> Complete</td><td>The process instance fulfills the conditions for completion and the instance may be destroyed.</td></tr><tr><td> Finished</td><td>Process instance execution was interrupted before normal completion and the instance could be destroyed</td></tr></tbody></table></figure>
 
 
 
@@ -107,7 +107,7 @@
 
 
 
-<p class="has-medium-font-size">However, <a rel="noreferrer noopener" aria-label="WfMC  (opens in a new tab)" href="https://www.jeevora.com/2019/07/28/process-automation/" target="_blank">WfMC </a>to address this problem has created unique run-time state transition patterns for activity instances, different from process instances. Therefore, if there is a need to suspend or terminate an activity, simply activate one of the execution states for the activities. Thus, workflow execution can have execution state information for process instances as well as for activity instances even though the activities are within a process.</p>
+<p class="has-medium-font-size">However, <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">WfMC </a>to address this problem has created unique run-time state transition patterns for activity instances, different from process instances. Therefore, if there is a need to suspend or terminate an activity, simply activate one of the execution states for the activities. Thus, workflow execution can have execution state information for process instances as well as for activity instances even though the activities are within a process.</p>
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-<figure class="wp-block-table has-fixed-layout"><table><tbody><tr><td><strong> Execution State </strong></td><td><strong> Description </strong><gwmw style="display:none;"></gwmw></td></tr><tr><td>Inactive</td><td>The activity within the instance was created but was not activated having any items to process<gwmw style="display:none;"></gwmw></td></tr><tr><td>Active </td><td>An item was created and assigned to the activity instance for processing.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Suspended</td><td>The instance has been paused and an item will not be allocated for processing until it returns to the running state. </td></tr><tr><td>Completed   </td><td>Instance execution has completed.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
+<figure class="wp-block-table has-fixed-layout"><table><tbody><tr><td><strong> Execution State </strong></td><td><strong> Description </strong><gwmw style="display:none;"></gwmw></td></tr><tr><td>Inactive</td><td>The activity within the instance was created but was not activated having any items to process<gwmw style="display:none;"></gwmw></td></tr><tr><td>Active </td><td>An item was created and assigned to the activity instance for processing.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Suspended</td><td>The instance has been paused and an item will not be allocated for processing until it returns to the running state. </td></tr><tr><td>Completed   </td><td>Instance execution has been completed.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
 
 
 
@@ -154,7 +154,7 @@ Object Caching 52/54 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 2/6 queries in 0.009 seconds using disk
+Database Caching 2/6 queries in 0.008 seconds using disk
 
-Served from: localhost @ 2023-04-19 13:19:44 by W3 Total Cache
+Served from: localhost @ 2023-04-19 22:53:46 by W3 Total Cache
 -->
