@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MSE Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/mse/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/mse/</link>
+	<description></description>
+	<lastBuildDate>Wed, 19 Apr 2023 21:08:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>Linear Regression under the hood using Matlab</title>
+		<link>https://jailsonevora.com/2020/08/11/linear-regression-under-the-hood-using-matlab/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 11 Aug 2020 11:00:00 +0000</pubDate>
+				<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Batch Gradient Descent]]></category>
+		<category><![CDATA[Cost Function]]></category>
+		<category><![CDATA[Feature Scaling]]></category>
+		<category><![CDATA[fmincg]]></category>
+		<category><![CDATA[fminunc]]></category>
+		<category><![CDATA[Linear Algebra]]></category>
+		<category><![CDATA[Linear Regression]]></category>
+		<category><![CDATA[Matlab]]></category>
+		<category><![CDATA[Matrix]]></category>
+		<category><![CDATA[Mean Normalization]]></category>
+		<category><![CDATA[Mean squared error]]></category>
+		<category><![CDATA[MSE]]></category>
+		<category><![CDATA[Normal Equation]]></category>
+		<category><![CDATA[Squared error]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=1994</guid>
+
+					<description><![CDATA[<p>Sometimes to choose the appropriate model, the right training algorithms, and the hyperparameter to best fit the task, as well as to debug issues and perform error analysis more efficiently, it is necessary to understand what is under the hood. Hence, in this post, we will dissect the implementation of linear regression using Matlab. Linear [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/08/11/linear-regression-under-the-hood-using-matlab/">Linear Regression under the hood using Matlab</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size">Sometimes to choose the appropriate model, the right training algorithms, and the hyperparameter to best fit the task, as well as to debug issues and perform error analysis more efficiently,  it is necessary to understand what is under the hood.</p>
+
+
+
+<p class="has-medium-font-size">Hence, in this post, we will dissect the implementation of linear regression using Matlab. Linear regression is known as a statistical algorithm used in machine learning, as a supervised learning technic to predict a real-valued output based on an input value. </p>
+
+
+
+<p class="has-medium-font-size">For this analysis, we selected a free and publicly available dataset from a well-known data <a href="http://kaggle.com">source</a>. It contains a house, lot area, year of build, bedroom avg, and many more features. Also, we use vectorization which is more efficient than for loops because of its parallel computation capability.</p>
+
+
+
+<h2 class="wp-block-heading">Linear Regression with One Variable</h2>
+
+
+
+<p class="has-medium-font-size">It is important to establish the notation for this analysis, where we’ll use&nbsp;\(x^{(i)}\) to denote the input features, and&nbsp;\(y^{(i)}\)<em> </em>to denote the target variable that we are trying to predict from a data set. A pair&nbsp;(\(x^{(i)} , y^{(i)}\))&nbsp;is the training example. The dataset used to learn as a list of m training examples&nbsp;\({(x^{(i)} , y^{(i)} ); i = 1, . . . , m}\) is a training set. </p>
+
+
+
+<p class="has-medium-font-size">Bear in mind that the superscript \({(i)}\) in the notation is an index of the training set instead of the exponentiation. We will also use X to denote the input values and Y as the output values, both as real numbers ℝ.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" src="../wp-content/uploads/2020/05/image-88.png" alt="" class="wp-image-2393" width="648" height="326" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-88.png 864w, https://jailsonevora.com/wp-content/uploads/2020/05/image-88-300x151.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-88-768x386.png 768w" sizes="(max-width: 648px) 100vw, 648px" /><figcaption class="wp-element-caption"><strong>x&#8217;s </strong>= input variable; <strong>y&#8217;s </strong>= output variable; <strong>m </strong>= # of training examples;</figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">Hypothesis and Cost Function (MSE) for <strong>One Feature</strong></h3>
+
+
+
+<p class="has-medium-font-size">In supervised learning problems, the goal is, given a training set, to learn the hypothesis \({h: X → Y}\) so that \({h(x)}\) is a valid predictor for the corresponding value of continuous y, known as a regression problem.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-66.png" alt="" class="wp-image-2344" width="256" height="70" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-66.png 511w, https://jailsonevora.com/wp-content/uploads/2020/05/image-66-300x82.png 300w" sizes="(max-width: 256px) 100vw, 256px" /></figure>
+
+
+
+<p class="has-medium-font-size">We can measure the accuracy of our hypothesis by using the &#8220;Squared error &#8220;/ &#8220;Mean squared error&#8221; <strong>cost function</strong>. The idea of this function is to choose <strong>$latex \theta_0$</strong> and <strong>$latex \theta_1$</strong> so that <strong>$latex {h_\theta(x)}$</strong> it is close to \({y}\) for the training example, where the value of $latex J(\theta_0, \theta_1)$ will be 0. The MSE is a convex function where we will have only a global optimum in contrast with other functions where we could end in local optima.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-67.png" alt="" class="wp-image-2346" width="452" height="88" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-67.png 1192w, https://jailsonevora.com/wp-content/uploads/2020/05/image-67-300x59.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-67-1024x200.png 1024w, https://jailsonevora.com/wp-content/uploads/2020/05/image-67-768x150.png 768w" sizes="(max-width: 452px) 100vw, 452px" /></figure>
+
+
+
+<p class="has-medium-font-size">Thus as a goal, we should try to minimize the cost function. To implement this cost function in Matlab, first, we need to get the size of the <strong>X</strong> matrix stored in variable <strong>m</strong>. In addition, it is necessary to pass additional hyperparameters. In this case, the <strong>X</strong> corresponds to the matrix containing all features input. </p>
+
+
+
+<p class="has-medium-font-size">The <strong>theta </strong>vector is the same size as the number of <strong>X</strong> input features, and finally the vector y correspondent to the labeled output values.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-13.png" alt="Linear Regression - MSE for One Variable" class="wp-image-2016" width="842" height="257" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-13.png 780w, https://jailsonevora.com/wp-content/uploads/2020/05/image-13-300x92.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-13-768x234.png 768w" sizes="(max-width: 842px) 100vw, 842px" /></figure>
+
+
+
+<p class="has-medium-font-size">Matlab is a computer numerical program, that interprets the operator &#8220;*&#8221; as the multiplicator for two matrices. So, if we want to multiply a scalar value to a matrix, vector, or another scalar, we need to add a &#8220;.*&#8221; before each operator as we did in the computation of the exponential of \({(h(x) &#8211; y)^2}\), while element-wise multiplication. Also, we can use a series of pre-built functions as we did use the <strong>sum()</strong> function.</p>
+
+
+
+<p>  </p>
+
+
+
+<h3 class="wp-block-heading">Batch Gradient Descent for One Variable </h3>
+
+
+
+<p class="has-medium-font-size">Now with the hypothesis function, we have a way of measuring how well it fits into the data. Therefore, we need to estimate the parameters in the hypothesis function. That&#8217;s where gradient descent comes in.</p>
+
+
+
+<p class="has-medium-font-size">When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. We can substitute our cost function and our hypothesis function and modify the default gradient descent equation to :</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-68.png" alt="" class="wp-image-2348" width="504" height="175" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-68.png 1150w, https://jailsonevora.com/wp-content/uploads/2020/05/image-68-300x104.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-68-1024x356.png 1024w, https://jailsonevora.com/wp-content/uploads/2020/05/image-68-768x267.png 768w" sizes="(max-width: 504px) 100vw, 504px" /></figure>
+
+
+
+<p class="has-medium-font-size">where <strong>m</strong> is the size of the training set,&nbsp;<strong>$latex \theta_0$</strong>​&nbsp;a constant that will be changing simultaneously with&nbsp;<strong>$latex \theta_1$</strong>​&nbsp;and&nbsp;\(x_{(i)}, y_{(i)}\) ​are values of the given training set.</p>
+
+
+
+<p class="has-medium-font-size">If we start with a guessing point for our hypothesis and then repeatedly apply these gradient descent equations, our hypothesis will become more and more accurate. So, this is simply gradient descent on the original cost function $latex J$. This method looks at every example in the entire training set on every step and is called&nbsp;<strong>batch gradient descent</strong>.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-33.png" alt="Linear Regression - Batch Gradient Descent for One Variable" class="wp-image-2237" width="923" height="450" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-33.png 888w, https://jailsonevora.com/wp-content/uploads/2020/05/image-33-300x146.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-33-768x374.png 768w" sizes="(max-width: 923px) 100vw, 923px" /></figure>
+
+
+
+<p class="has-medium-font-size">To compute the batch gradient descent, some additional useful hyperparameters are needed. Essentially the number of iterations and the learning rate alpha.</p>
+
+
+
+<p class="has-medium-font-size">You may want to adjust the number of iterations. Also, with a small learning rate, you should find that gradient descent takes a very long time to converge to the optimal value (underfitting the training set), on the other hand with a large learning rate, gradient descent might not converge or might even diverge (overfitting the training set).</p>
+
+
+
+<p class="has-medium-font-size">Also, bear in mind that <strong>theta </strong>should be updated simultaneously after the computation of temporary theta on each iteration.</p>
+
+
+
+<h2 class="wp-block-heading">Linear Regression with Multiple Variables</h2>
+
+
+
+<p class="has-medium-font-size">Linear regression with multiple variables is also known as multivariate linear regression. For multiple variables, our notation differentiates slightly from the initially presented one. Now we can have any number of input variables.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-87.png" alt="" class="wp-image-2389" width="985" height="433" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-87.png 985w, https://jailsonevora.com/wp-content/uploads/2020/05/image-87-300x132.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-87-768x338.png 768w" sizes="(max-width: 985px) 100vw, 985px" /><figcaption class="wp-element-caption">\(x^{(i)}_j\) = value of feature \({j}\) in the \(i^{th}\) training example; \(x^{(i)}\) = the input features of the \(i^{th}\) training example; \(y^{(i)}\) = the output features of the \(i^{th}\) training example; n = the number of features; <strong>m </strong>= # of training examples;</figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">Hypothesis and Cost Function (MSE) for Multiple Features</h3>
+
+
+
+<p class="has-medium-font-size">Using the definition of matrix multiplication, our multivariable hypothesis function can be concisely represented as:</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-69.png" alt="" class="wp-image-2350" width="407" height="114" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-69.png 951w, https://jailsonevora.com/wp-content/uploads/2020/05/image-69-300x84.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-69-768x216.png 768w" sizes="(max-width: 407px) 100vw, 407px" /></figure>
+
+
+
+<p class="has-medium-font-size">We can think about $latex \theta_0$​ as the basic price of a house, $latex \theta_1$​ as the price per lot area, $latex \theta_2$​ as the price per bedroom&#8230;. \({x_1}\) will be the number of lot area in the house, \({x_2}\)​ the number of bedrooms and so on.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-70.png" alt="" class="wp-image-2352" width="364" height="81" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-70.png 728w, https://jailsonevora.com/wp-content/uploads/2020/05/image-70-300x66.png 300w" sizes="(max-width: 364px) 100vw, 364px" /></figure>
+
+
+
+<p class="has-medium-font-size">The vectorized version is:</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-71.png" alt="" class="wp-image-2353" width="340" height="71" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-71.png 680w, https://jailsonevora.com/wp-content/uploads/2020/05/image-71-300x63.png 300w" sizes="(max-width: 340px) 100vw, 340px" /></figure>
+
+
+
+<p class="has-medium-font-size">where</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="https://jailsonevora.com/wp-content/uploads/2020/05/image-63.png" alt="" class="wp-image-2319" width="272" height="127"/></figure>
+
+
+
+<p class="has-medium-font-size">For convenience we assume&nbsp;$latex x_{0}^{(i)} =1 \text{ for } (i\in { 1,\dots, m } )$, allowing us to do matrix operations with $latex \theta$ and \(x\), making the two vectors match each other element-wise.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-83.png" alt="Linear Regression - MSE for Multiple Features" class="wp-image-2374" width="929" height="318" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-83.png 929w, https://jailsonevora.com/wp-content/uploads/2020/05/image-83-300x103.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-83-768x263.png 768w" sizes="(max-width: 929px) 100vw, 929px" /></figure>
+
+
+
+<p class="has-medium-font-size">As well in the linear regression with one variable, the only difference is the number of the input value features and the number of <strong>theta that is proportional to</strong> the number o feature X matrix.</p>
+
+
+
+<p class="has-medium-font-size">Notice too that in the vectorized version of the hypothesis, we need to transport the theta. We did this by inverting the order of the multiplication of X*theta. This is the same as theta&#8217;*X since suppose our matrix X is 10&#215;4 and the vector theta must be 4&#215;1. Thus we are multiplying matrices of compatible dimensions where collum X is equal to the row theta.</p>
+
+
+
+<h3 class="wp-block-heading">Batch Gradient Descent for Multiple Variables</h3>
+
+
+
+<p class="has-medium-font-size">The gradient descent equation for multiple variables is generally the same. We just have to repeat it for our <strong>n </strong>features.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-73.png" alt="" class="wp-image-2355" width="477" height="107" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-73.png 1140w, https://jailsonevora.com/wp-content/uploads/2020/05/image-73-300x67.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-73-1024x229.png 1024w, https://jailsonevora.com/wp-content/uploads/2020/05/image-73-768x172.png 768w" sizes="(max-width: 477px) 100vw, 477px" /></figure>
+
+
+
+<p class="has-medium-font-size">Vectorized matrix notation of the Gradient Descent:</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-75.png" alt="" class="wp-image-2359" width="232" height="32" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-75.png 464w, https://jailsonevora.com/wp-content/uploads/2020/05/image-75-300x41.png 300w" sizes="(max-width: 232px) 100vw, 232px" /></figure>
+
+
+
+<p class="has-medium-font-size">It has been proven that if the learning rate α is sufficiently small, then $latex J(\theta_0)$ will decrease on every iteration. For sufficiently small $latex \alpha$, $latex J(\theta)$ should decrease on every interaction otherwise If $latex \alpha$ is too small: gradient descent can slowly converge.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-80.png" alt="Linear Regression - Batch Gradient Descent for Multiple Variables" class="wp-image-2369" width="538" height="268" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-80.png 697w, https://jailsonevora.com/wp-content/uploads/2020/05/image-80-300x150.png 300w" sizes="(max-width: 538px) 100vw, 538px" /></figure>
+
+
+
+<h3 class="wp-block-heading">Feature Scaling and <strong>Mean Normalization</strong></h3>
+
+
+
+<p class="has-medium-font-size">Gradient descent works faster when each of our input values is in roughly the same range. This is because $latex \theta$ will descend quickly on small ranges and slowly on large ranges. </p>
+
+
+
+<p class="has-medium-font-size">We can normalize our set using <strong>Feature Scaling. </strong>It<strong> </strong>involves dividing the input values by the range of the input variable, resulting in a new range of just 1.</p>
+
+
+
+<p class="has-text-align-center"> −1 ≤&nbsp;$latex x_{(i)}$&nbsp;≤ 1</p>
+
+
+
+<p class="has-medium-font-size">Feature scaling can be used with Mean normalization. Mean normalization involves subtracting the average value for an input variable from the values for that input variable resulting in a new average value for the input variable of just zero. </p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-76.png" alt="" class="wp-image-2361" width="224" height="115"/></figure>
+
+
+
+<p class="has-medium-font-size">To implement both of these techniques, we need to adjust our input values where $latex μ_i$&nbsp;is the&nbsp;<strong>average</strong>&nbsp;of all the values for feature $latex {(i)}$ and&nbsp;$latex s_i$&nbsp;is the range of values or&nbsp;the standard deviation.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-82.png" alt="Linear Regression - Feature Scaling and Mean Normalization" class="wp-image-2372" width="1053" height="572" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-82.png 1071w, https://jailsonevora.com/wp-content/uploads/2020/05/image-82-300x163.png 300w, https://jailsonevora.com/wp-content/uploads/2020/05/image-82-1024x556.png 1024w, https://jailsonevora.com/wp-content/uploads/2020/05/image-82-768x417.png 768w" sizes="(max-width: 1053px) 100vw, 1053px" /></figure>
+
+
+
+<p class="has-medium-font-size">To perform these technics, first in MATLAB, we can use the mean and <strong>std</strong> functions to compute the mean and the standard deviation for all the features. The standard deviation is a way of measuring how much variation there is in the range of values of a particular feature. </p>
+
+
+
+<h3 class="wp-block-heading">Normal Equation as an alternative to Gradient Descent</h3>
+
+
+
+<p class="has-medium-font-size">Gradient descent gives one way of minimizing $latex J$. Another way to do this explicitly and without resorting to an iterative algorithm is by using the &#8220;Normal Equation&#8221; method. We minimize $latex J$ by explicitly taking its derivatives concerning the $latex \theta_j&#8217;s$, and setting them to zero. This allows us to find the optimum theta without iteration:</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-77.png" alt="" class="wp-image-2363" width="243" height="62" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-77.png 417w, https://jailsonevora.com/wp-content/uploads/2020/05/image-77-300x76.png 300w" sizes="(max-width: 243px) 100vw, 243px" /></figure>
+
+
+
+<p class="has-medium-font-size">When we are using the standard equation we do not need to do feature scaling. With the standard equation, computing the inversion requires much more big $latex {O}$ time. So if we have a very large number of features, the standard equation will be slow and we should choose the iterative process.</p>
+
+
+
+<p class="has-medium-font-size">We can tackle the problem of a non-invertible matrix by using regularization.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2020/05/image-85.png" alt="Linear Regression - Normal Equation" class="wp-image-2379" width="478" height="202" srcset="https://jailsonevora.com/wp-content/uploads/2020/05/image-85.png 402w, https://jailsonevora.com/wp-content/uploads/2020/05/image-85-300x127.png 300w" sizes="(max-width: 478px) 100vw, 478px" /></figure>
+
+
+
+<p class="has-medium-font-size">Also just for reference,  beyond using the normal equation we can use another more complex and advanced mechanism to minimize $latex J$. These are MATLAB built-in functions called <strong>fminunc </strong>and <strong>fmincg</strong>.</p>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="has-medium-font-size">In this article, we dissected the implementation of linear regression using Matlab since the importance of establishing a notation, and the use o linear regression for one variable, or multiple variables. We also reveal how <strong><em>Bacht Gradient Descent</em></strong> is used to estimate the parameters in the hypothesis function as well as the use of <strong><em>Feature Scaling</em></strong> and <strong><em>Mean Normalization</em></strong> to normalize our input values in roughly the same range.  </p>
+
+
+
+<p class="has-medium-font-size">Finally, we examine the use of&nbsp;<strong><em>Normal Equation</em></strong>&nbsp;as an alternative to Gradient Descent as well as a more complex and advanced mechanism like&nbsp;<strong><em>MATLAB&nbsp;</em></strong>built-in function&nbsp;<strong>fminunc&nbsp;</strong>and&nbsp;<strong>fmincg&nbsp;</strong>to minimize<strong>&nbsp;J</strong>.&nbsp;</p>
+
+
+
+<p>The sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a href="https://github.com/jeevora/machine-learning-linear-regression-using-matlab" rel="noreferrer noopener" target="_blank">link</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/08/11/linear-regression-under-the-hood-using-matlab/">Linear Regression under the hood using Matlab</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 91/95 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 2/7 queries in 0.009 seconds using disk
+
+Served from: localhost @ 2023-04-19 23:07:18 by W3 Total Cache
+-->

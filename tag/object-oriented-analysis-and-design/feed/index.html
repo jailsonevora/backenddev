@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Object-Oriented Analysis and Design Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/object-oriented-analysis-and-design/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/object-oriented-analysis-and-design/</link>
+	<description></description>
+	<lastBuildDate>Wed, 19 Apr 2023 22:29:21 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>Object-Oriented Analysis and Design &#8211; Design in the Software Process</title>
+		<link>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/</link>
+					<comments>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 24 Jul 2019 01:17:02 +0000</pubDate>
+				<category><![CDATA[Object-Oriented Programming]]></category>
+		<category><![CDATA[Software Design]]></category>
+		<category><![CDATA[Conceptual Design]]></category>
+		<category><![CDATA[CRC cards]]></category>
+		<category><![CDATA[Object-Oriented Analysis and Design]]></category>
+		<category><![CDATA[Object-Oriented-Programming]]></category>
+		<category><![CDATA[POCO]]></category>
+		<category><![CDATA[POJO]]></category>
+		<category><![CDATA[Software Process]]></category>
+		<category><![CDATA[Technical Design]]></category>
+		<category><![CDATA[UML]]></category>
+		<category><![CDATA[UML Class-Diagram]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=156</guid>
+
+					<description><![CDATA[<p>“Object-oriented” is associated with coding and software development. In general, this is true. The notion of being object-oriented can apply outside of the role of a developer. Object-oriented thinking at first glance involves examining the problems, breaking them down into parts, and thinking of those as objects. Translating object-oriented modeling involves representing key concepts through [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/">Object-Oriented Analysis and Design &#8211; Design in the Software Process</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size"> “Object-oriented” is associated with coding and software development. In general, this is true. The notion of being object-oriented can apply outside of the role of a developer. Object-oriented thinking at first glance involves examining the problems, breaking them down into parts, and thinking of those as objects. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">Translating <a rel="noreferrer noopener" aria-label="object-oriented modelling (opens in a new tab)" href="https://en.wikipedia.org/wiki/Object-oriented_analysis_and_design" target="_blank">object-oriented modeling</a> involves representing key concepts through objects in our software. Concepts have a wide range <gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15663048054640783078260">from</gwmw> even instances of people, places, or things that can be distinct objects in the software.  Objects may have specific details associated with them, which are relevant to users, regardless of might also have behaviors or responsibilities associated with them. </p>
+
+
+
+<p class="has-medium-font-size">By using object-oriented design our code stays organized, flexible, and reusable. In object-oriented thinking, often everything is considered an object, even if animated or live and they are all self-aware. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading"> Requirement</h2>
+
+
+
+<p class="has-medium-font-size">When software is developed, it generally goes through a process. A process takes a problem and creates a solution. These iterations consist of taking a set of requirements based on the identified problem(s) and using them to create <strong><a href="https://medium.com/omarelgabrys-blog/object-oriented-analysis-and-design-introduction-part-1-a93b0ca69d36">conceptual design</a></strong> mock-ups and <strong>technical design diagrams</strong>. </p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="320" height="192" src="../wp-content/uploads/2019/08/Object-Oriented-Design-Cycle.png" alt="" class="wp-image-349" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/Object-Oriented-Design-Cycle.png 320w, https://jailsonevora.com/wp-content/uploads/2019/08/Object-Oriented-Design-Cycle-300x180.png 300w" sizes="(max-width: 320px) 100vw, 320px" /><figcaption class="wp-element-caption">Software Process life cycle.</figcaption></figure>
+
+
+
+<p class="has-medium-font-size">Many projects fail when this process is skipped over, especially when work immediately begins with coding, and there is a lack of understanding of the requirements and design. So, we must bear in mind that it is important to allot time to form the requirements and design, even if they are not perfectly established. The coding process relies on certain assumptions, and it can be difficult to change those assumptions once coding has begun. Requirements and design activities help us understand what assumptions we need so that we can create the right product. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size"> When the initial set of requirements has been created, the next step in the process is to produce a <strong>conceptual design</strong> and <strong>technical design</strong>. This results in the creation of two different kinds of artifacts: <strong>conceptual mock-ups</strong> and <strong>technical diagrams</strong>.  <gwmw style="display:none;"></gwmw></p>
+
+
+
+<div style="height:72px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Design &#8211; Conceptual Design</h2>
+
+
+
+<p class="has-medium-font-size"> Conceptual designs are created with an initial set of requirements as a basis. It outlines the more high-level concepts of the final product. They are expressed or communicated through conceptual mock-ups. </p>
+
+
+
+<p class="has-medium-font-size"> Conceptual mock-ups are visual notations that provide initial thoughts for how requirements will be satisfied. They are often presented as wire-frames, which are a kind of blueprint or basic visual representation of the product, helping to clarify design decisions with clients and users by providing a simple way to illustrate and discuss how a product will work. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size"> Mock-ups illustrate major components and connections, or relations between the components, allowing us to easily see what components are missing or may not work. Also, every component has a responsibility it needs to perform. Mock-ups do not outline technical details, because that falls outside the scope of conceptual design. Technical detail is related to a technical design that we will cover in the techn<em>ical design section</em>.</p>
+
+
+
+<h3 class="wp-block-heading">Object-Oriented &#8211; Class, Responsibility, Collaborator (CRC)</h3>
+
+
+
+<p class="has-medium-font-size">  Class, Responsibility, Collaborator (CRC) cards are an important technique to help represent the components, responsibilities, and connections at a high level when forming the conceptual design. CRC cards help record and organize components into classes, identify component responsibilities, and determine how they collaborate. Therefore, they also help refine the components of our software design.</p>
+
+
+
+<p class="has-medium-font-size"> CRC cards are used also to refine the components of system design. They are designed with three sections: the class name at the top of the card, the responsibilities of the class on the left side of the card, and collaborators on the right side of the card.</p>
+
+
+
+<figure class="wp-block-image aligncenter"><img decoding="async" loading="lazy" width="289" height="171" src="../wp-content/uploads/2019/07/image-1.png" alt="Object-Oriented Analysis and Design - Class, Responsibility, Collaborator (CRC)" class="wp-image-162"/></figure>
+
+
+
+<p class="has-medium-font-size"> To keep track of each candidate component and its responsibilities using a CRC card, we place a component’s name in the class name section and the responsibilities in the responsibilities section. Connections are captured in the collaborator&#8217;s section. Connections indicate other classes that the class at the top of the card interacts with to fulfill its responsibilities. These steps are repeated iteratively and new cards are created until all the components of the cards are identified for a system. </p>
+
+
+
+<p class="has-medium-font-size">CRC cards have the purpose to coerce designers to keep breaking components down into smaller components and classes that can be individually described on a card.  They are cheap, editable, and widely available. They help sort information into manageable pieces and allow us to physically reorganize our design.</p>
+
+
+
+<p class="has-medium-font-size">So before we move on to technical design, bear in mind that the best practice is to form the conceptual design first. The clearer they are, the better will be the technical design, and the more likely our software will be built right </p>
+
+
+
+<div style="height:68px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Design &#8211; Technical Design</h2>
+
+
+
+<p class="has-medium-font-size"> Technical designs build on conceptual designs and requirements to define the technical details of the solution. In the conceptual design, the major components and connections, as well as their associated responsibilities for the software being developed, are outlined. </p>
+
+
+
+<p class="has-medium-font-size">The technical design uses the outline of conceptual design to describe how these responsibilities are met until each component has been refined to be specific enough to be designed in detail. To accomplish this, the components are split into smaller and smaller components that are specific enough to be designed in detail. By breaking down components into further components, we get down to a level where we can do a detailed design of a particular component with their technical details specified. </p>
+
+
+
+<p class="has-medium-font-size">To communicate technical design, technical diagrams are used. Technical diagrams visualize how to address specific issues for each component, once the conceptual mock-ups are generally not specific enough to capture this information. Many different technical diagrams can be used to describe the structure and behavior of components.</p>
+
+
+
+<h3 class="wp-block-heading">Object-Oriented &#8211; <a href="https://www.jeevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener" aria-label="UML Class Diagram (opens in a new tab)">UML Class Diagram</a></h3>
+
+
+
+<p class="has-medium-font-size">CRC cards make it easy to communicate with the client, and they allow us to create designs without the distraction of code. However, a more sophisticated technique to communicate our needs is needed. That is the UML class diagram, also known as the class diagram. These class diagrams provide more detail than CRC cards and allow for easier conversion to classes for coding and implementation.  </p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="464" height="152" src="../wp-content/uploads/2019/07/image.png" alt="Object-Oriented Analysis and Design - UML Class Diagram" class="wp-image-161" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/image.png 464w, https://jailsonevora.com/wp-content/uploads/2019/07/image-300x98.png 300w" sizes="(max-width: 464px) 100vw, 464px" /></figure>
+
+
+
+<p class="has-medium-font-size"> Every concept or class in a class diagram is represented with a box, as above. The <strong>class name</strong> is the same as the class name in our POJO or POCO class, the <strong>properties </strong>section is equivalent to member variables and the <strong>operations </strong>section is equivalent to methods in <a rel="noreferrer noopener" aria-label="Object-Oriented Programming (opens in a new tab)" href="https://www.tutorialspoint.com/object_oriented_analysis_design/" target="_blank">Object-Oriented Programming</a>. </p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/">Object-Oriented Analysis and Design &#8211; Design in the Software Process</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 56/60 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 2/7 queries in 0.010 seconds using disk
+
+Served from: localhost @ 2023-04-19 23:07:22 by W3 Total Cache
+-->

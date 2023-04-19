@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WSDL Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/wsdl/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/wsdl/</link>
+	<description></description>
+	<lastBuildDate>Wed, 19 Apr 2023 21:47:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>SOA and process services integration</title>
+		<link>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/</link>
+					<comments>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 09 Sep 2019 11:46:02 +0000</pubDate>
+				<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
+		<category><![CDATA[BPEL]]></category>
+		<category><![CDATA[CORBA]]></category>
+		<category><![CDATA[MOM]]></category>
+		<category><![CDATA[OASIS]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[SAML]]></category>
+		<category><![CDATA[SOA]]></category>
+		<category><![CDATA[SOAP]]></category>
+		<category><![CDATA[UDDI]]></category>
+		<category><![CDATA[Web Services]]></category>
+		<category><![CDATA[WS-Policy]]></category>
+		<category><![CDATA[WSDL]]></category>
+		<category><![CDATA[XML]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=1032</guid>
+
+					<description><![CDATA[<p>Service-oriented architectures (SOA) have brought significant gains for process automation. According to the official definition of OASIS [1], it is a paradigm for organizing and utilizing distributed resources that may be under the control of different domains of ownership. Although the official definition may be ambiguous, it is possible to define SOA as a paradigm [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/">SOA and process services integration</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size">Service-oriented architectures (SOA) have brought significant gains for process automation. According to the official definition of OASIS [1], it is a paradigm for organizing and utilizing distributed resources that may be under the control of different domains of ownership.</p>
+
+
+
+<p class="has-medium-font-size">Although the official definition may be ambiguous, it is possible to define SOA as a paradigm for designing software systems from reusable components designated by services [3], [2], with service being a set of code blocks that perform distinct functions [4], [5], [6]. The goal of SOA-based development is to enable organizations to build business systems from simple modules to obtain flexibility, agility, and productivity improvements in their business development [3], capable of relating <a href="https://www.jailsonevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener">business processes</a> to technical processes [7] and mapping <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">workflow </a>relationships between them [4]</p>
+
+
+
+<p class="has-medium-font-size">SOA is usually based on the principle of providing reusable business services that can be assembled from software sub-components in such a way that the provider (who makes the service available) [3] and the customer (who uses it) are considered loosely coupled [4] (definition of the neutral interface that is not strongly tied to a particular implementation) [6]. They do not need to have an in-depth knowledge of each other, from the technologies, platforms [8], location, or environments around them, and the code can be reused thanks to their neutral interface features, making it easy for developers who need only discovering the interfaces of already developed applications, rather than building new systems from scratch whenever new business rules are changed or added [9].</p>
+
+
+
+<p class="has-medium-font-size">SOA services have components that relate through well-defined interfaces and contracts. The interface is defined neutrally and independently of the hardware, operating system, and programming language [7] in which it is implemented, allowing these services to interact with one another uniformly and universally.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<p class="has-medium-font-size">The architecture&#8217;s ability to have loosely coupled services allows service providers with these characteristics to benefit from their agility and ability to survive the constant changes in the structure and internal implementation that make up the application [4]. In addition to having services such as a key component of architecture, SOA is also comprised of service interfaces that enable vendor-customer interaction. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<h2 class="wp-block-heading">SOA &#8211; Guiding principles for achieving SOA </h2>
+
+
+
+<p class="has-medium-font-size">Although there is no official standard for SOA composition, the community agrees with four fundamental principles as guiding principles for achieving SOA [10], where they are, <strong>service boundaries must be explicit</strong> [11]; <strong>services must be autonomous</strong> [7]; <strong>customers and services should share contracts and not code; and finally the possibility of policy-based compatibilities</strong>. Policy-based compatibility understands that two orthogonal requirements must be supported when interacting with a service. Vendor functionality, syntax, and semantics must meet consumer requirements; and the skills and technical needs must match. However, functional aspects are described in the service interface, but capabilities, orthogonal and nonfunctional needs are specified using policies [12].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">SOA architecture is also known as an evolution of client/server architecture, where business logic is broken down to lower levels of granularity, based on the ideas and technologies implemented in XML and WS [4]. WS is known as a software system designed to support interoperable machine-to-machine interactions with key elements [3], [6]:</p>
+
+
+
+<ul>
+<li><strong>Web Services Definition Language</strong> (WSDL), the standard for representing pieces of software;</li>
+
+
+
+<li> <strong>Simple Object Access Protocol </strong>(SOAP), a protocol for information exchange in a decentralized and distributed environment;</li>
+
+
+
+<li> <strong>Universal Description, Discovery, and Integration</strong> (UDDI), XML-based service registration engine. Allows services to be discovered on the web and make interoperable. It is compared to the yellow pages of a phone book, where companies can list themselves by name, product, location, or the services they offer.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Gains in the organization and software development when using SOA</h2>
+
+
+
+<p class="has-medium-font-size">Thus, communication with WS is done from the network using technologies such as XML (data fundamentals and protocol related), WSDL (service description related), SOAP, and UDDI (Figure 1), these are capable of providing a common approach to defining, publishing, and using WS accessible through a standard protocol, specifically SOAP [5]. A WS usually allows the discovery of the service, the customer makes a request to the provider, the provider processes the request, and sends the response to the customer [3],[6].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="1086" height="501" src="../wp-content/uploads/2019/09/image.png" alt="SOA and process service integration" class="wp-image-1035" srcset="https://jailsonevora.com/wp-content/uploads/2019/09/image.png 1086w, https://jailsonevora.com/wp-content/uploads/2019/09/image-300x138.png 300w, https://jailsonevora.com/wp-content/uploads/2019/09/image-768x354.png 768w, https://jailsonevora.com/wp-content/uploads/2019/09/image-1024x472.png 1024w" sizes="(max-width: 1086px) 100vw, 1086px" /><figcaption class="wp-element-caption">Figure 1: Patterns around WS plus process service integration [4]</figcaption></figure>
+
+
+
+<p class="has-medium-font-size">Parallel to the use of SOAP, WS also allows the use of Representational State Transfer (REST). REST is an architectural style that typically uses HTTP / HTTPS, while SOAP is network layer independent and can use a variety of network protocols. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">WS can be said to provide the base technology for implementing the SOA architecture, but it is not the only one. Common Object Request Broker Architecture (CORBA) vendor-independent architecture and infrastructure that enables systems to communicate over a network [13] and Message-Oriented Middleware (MOM) systems that support general-purpose messaging in environments distributed systems [14]) can also be used. SOA is not language-specific and services can be implemented in any programming language that allows generating and interacting with WSDL [4]. In this way, the use of SOA allows for obtaining circumstantial gains in the organization and the software development (Table 1):</p>
+
+
+
+<figure class="wp-block-table aligncenter"><table><tbody><tr><td><strong>Benefits</strong></td><td><strong>Description</strong></td></tr><tr><td>Business-centric </td><td>Business-centric software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>The lower long term cost</td><td>The lower incremental cost for development<gwmw style="display:none;"></gwmw></td></tr><tr><td>Reduced Skills</td><td>Lower requirement for training and technical knowledge<gwmw style="display:none;"></gwmw></td></tr><tr><td>Low costs</td><td>Lower costs in software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Speed</td><td>The faster software development cycle<gwmw style="display:none;"></gwmw></td></tr><tr><td>Platform independent</td><td>The lower long-term cost</td></tr><tr><td>Focused developer roles</td><td>Developers can focus completely on implementing and maintaining their services without having to worry about the services of others as long as the default contract is respected.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Regardless of location</td><td>Regardless of location, it is possible for the service consumer to search for and discover it<gwmw style="display:none;"></gwmw></td></tr><tr><td>Code Reuse</td><td>Dividing applications into small separated parts helps to reuse in various other systems, thereby reducing the cost of development</td></tr><tr><td>Greater testability</td><td>Small, standalone services are easier to test and debug than monolithic applications, allowing you to have more reliable software<gwmw style="display:none;"></gwmw></td></tr><tr><td>Parallel development</td><td>Independence between services with pre-defined contracts helps parallel development by greatly reducing the software development lifecycle.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Better scalability</td><td>Possibility to have multiple instances of the service running on different servers, allowing you to move the service transparently to more resourceful servers<gwmw style="display:none;"></gwmw></td></tr><tr><td>Greater availability</td><td>The ability to have multiple instances of a service and not care about its location ensures high availability.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1] C. M. Mackenzie, K. Laskey, F. Mccabe, R. Metz, and A. Hamilton, “Reference Model for Service Oriented Architecture 1.0 Committee Specification 1, 2 August 2006,” no. August, pp. 1–31, 2006.<br> [2] P. Desfray and G. Raymon, Modeling Enterprise Architecture with TOGAF: A Practical Guide Using UML and BPMN. 2014.<br> [3] M. Liu, WCF 4.5 Multi-Layer Services Development with Entity Framework Third Edition. 2012.<br> [4] D. Minoli, Enterprise Architecture A to Z: Frameworks, Business Process Modeling, SOA, and Infrastructure Technology. 2008.<br> [5] M. Gousset, B. Keller, A. Krishnamoorthy, and M. Woodward, “Professional WCF 4 Windows Communication Foundation with NET 4,” 2010.<br> [6] M. Liu, WCF 4.0 Multi-tier Services Development with LINQ to Entities, no. 4. 2010.<br> [7] N. Pathak, “Pro WCF 4,” pp. 3–24, 2011.<br> [8] J. Lowy, Programming WCF Services. 2010.<br> [9] Microsoft IC, “Introducing Windows Communication Foundation in .NET Framework 4.” [Online]. Available: <a href="https://msdn.microsoft.com/en-us/library/ee958158.aspx">https://msdn.microsoft.com/en-us/library/ee958158.aspx</a><br> [10] M. L. Bustamante, Learning WCF, Master Windows Communication Foundation and SOA Fundamentals. 2007.<br> [11] Scott Klein, Professional WCF Programming. 2007.<br> [12] “10 Principles of SOA,” 2007. [Online]. Available:  <a href="https://www.infoq.com/articles/tilkov-10-soa-principles/">https://www.infoq.com/articles/tilkov-10-soa-principles/</a>.<br> [13] C. Interfaces, “Common Object Request Broker Architecture (CORBA) Specification, Version 3.3,” no. November 2012.<br> [14] B. S. of I. University of California, “Distributed Computing Applications and Infrastructure.” [Online]. Available: <a href="http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html">http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html</a></p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/">SOA and process services integration</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 52/56 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 2/7 queries in 0.009 seconds using disk
+
+Served from: localhost @ 2023-04-19 23:08:09 by W3 Total Cache
+-->

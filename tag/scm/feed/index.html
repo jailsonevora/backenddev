@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SCM Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/scm/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/scm/</link>
+	<description></description>
+	<lastBuildDate>Wed, 19 Apr 2023 22:02:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>Workflow Systems &#8211; Integrated and Independent Systems</title>
+		<link>https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/</link>
+					<comments>https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 Aug 2019 05:32:26 +0000</pubDate>
+				<category><![CDATA[Software Architecture]]></category>
+		<category><![CDATA[Workflow]]></category>
+		<category><![CDATA[DBMS]]></category>
+		<category><![CDATA[ERP]]></category>
+		<category><![CDATA[Independent Workflow Systems]]></category>
+		<category><![CDATA[Integrated Workflow Systems]]></category>
+		<category><![CDATA[SCM]]></category>
+		<category><![CDATA[WfMS]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=278</guid>
+
+					<description><![CDATA[<p>Traditionally, systems are designed and implemented not only by procedural codes but also by the processing logic performed by the application, expressed as workflow. Having a system where business logic is implemented using procedural or functional codes has consequences, wherein increasing complexity and demand to adapt them to new requirements, any process modification requires code [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/">Workflow Systems &#8211; Integrated and Independent Systems</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size">Traditionally, systems are designed and implemented not only by procedural codes but also by the processing logic performed by the application, expressed as workflow. Having a system where business logic is implemented using procedural or functional codes has consequences, wherein increasing complexity and demand to adapt them to new requirements, any process modification requires code modification. In this case, the code will need to be modified, tested, and maintained, so each modification consumes considerable resources. Using <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">workflow systems</a> facilitates the task of modifying business logic, as one can visually perceive the impact of changes and no need to change functional code.</p>
+
+
+
+<h2 class="wp-block-heading">
+
+Integrated Workflow Systems
+
+</h2>
+
+
+
+<p class="has-medium-font-size">As a result, software systems increasingly integrate a workflow component that facilitates <a href="https://www.jailsonevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener">business process modelin</a>g. These components are not autonomous systems, they are incorporated into the application, known as Integrated Workflow Systems (Figure 1), which consist of activities and their causal and temporal ordering, performed by a common system [1],[2].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="490" height="462" src="../wp-content/uploads/2019/08/WFIntegrated.png" alt="Workflow" class="wp-image-281" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/WFIntegrated.png 490w, https://jailsonevora.com/wp-content/uploads/2019/08/WFIntegrated-300x283.png 300w" sizes="(max-width: 490px) 100vw, 490px" /><figcaption class="wp-element-caption">Figure 1: Conceptual architecture of integrated WfMS [1], [2].</figcaption></figure>
+
+
+
+<p class="has-medium-font-size">Integrated <a href="http://www.wfmc.org/2-uncategorised/53-reference-model" target="_blank" rel="noreferrer noopener" aria-label="WfMS  (opens in a new tab)">WfMS </a>contain a dedicated workflow component that is fed with visual models that capture process logic as well as execution information using the functions performed by the application.</p>
+
+
+
+<h2 class="wp-block-heading"> Independent Workflow Systems </h2>
+
+
+
+<p class="has-medium-font-size">If there is more than one system, the so-called application-independent workflow system (Figure 2) arises, it is nothing more than dedicated <a aria-label="WfMS (opens in a new tab)" href="http://www.wfmc.org/2-uncategorised/53-reference-model" target="_blank" rel="noreferrer noopener">WfMS</a>, which ensures the invocation of applications as specified in the process model, as well as the transfer between these systems [1], [2]. It interacts with other applications such as ERP, inventory manager, and others, playing a driving role in the exchange of information between them, managing all the logic within organizations.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="684" height="357" src="../wp-content/uploads/2019/08/WFIndependented.png" alt="Workflow" class="wp-image-282" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/WFIndependented.png 684w, https://jailsonevora.com/wp-content/uploads/2019/08/WFIndependented-300x157.png 300w" sizes="(max-width: 684px) 100vw, 684px" /><figcaption class="wp-element-caption">Figure 2: Conceptual architecture of application-independent WfMS [1], [2].</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">References<gwmw style="display:none;"></gwmw></h2>
+
+
+
+<p>[1] M. Weske, Business Process Management: Concepts, Languages, Architectures 2nd Edition. 2012.<br> [2] M. Weske, Business Process Management: Concepts, Languages, Architectures. 2007.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/">Workflow Systems &#8211; Integrated and Independent Systems</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 50/54 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 2/7 queries in 0.009 seconds using disk
+
+Served from: localhost @ 2023-04-19 23:07:38 by W3 Total Cache
+-->
