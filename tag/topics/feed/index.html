@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Topics Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/topics/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/topics/</link>
+	<description></description>
+	<lastBuildDate>Wed, 19 Apr 2023 11:32:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>Microservices in Publish-Subscribe communication using Apache Kafka as a Messaging Systems and validated through Integration Test.</title>
+		<link>https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/</link>
+					<comments>https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 18 Nov 2019 23:00:00 +0000</pubDate>
+				<category><![CDATA[Event Driven Architecture]]></category>
+		<category><![CDATA[Microservices]]></category>
+		<category><![CDATA[Brokers]]></category>
+		<category><![CDATA[Integration Test]]></category>
+		<category><![CDATA[Junit]]></category>
+		<category><![CDATA[Kafka]]></category>
+		<category><![CDATA[Micro Framework]]></category>
+		<category><![CDATA[Partition]]></category>
+		<category><![CDATA[Publish Subscribe pattern]]></category>
+		<category><![CDATA[Queue]]></category>
+		<category><![CDATA[Topics]]></category>
+		<category><![CDATA[Zookeeper]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=1028</guid>
+
+					<description><![CDATA[<p>Publish-Subscribe Messaging systems play an important role in any enterprise architecture as it enables reliable integration without tightly coupling the applications. The ability to share data between decoupled systems is not a problem that is easily tackled. Consider an enterprise with multiple applications that are being built independently, with different languages and platforms. It needs [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/">Microservices in Publish-Subscribe communication using Apache Kafka as a Messaging Systems and validated through Integration Test.</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size"> Publish-Subscribe Messaging systems play an important role in any enterprise architecture as it enables reliable integration without tightly coupling the applications. The ability to share data between decoupled systems is not a problem that is easily tackled.</p>
+
+
+
+<p class="has-medium-font-size"> Consider an enterprise with multiple applications that are being built independently, with different languages and platforms. It needs to share data and processes in a responsive way. We can achieve this using Messaging to transfer packets of data frequently, immediately, reliably, and asynchronously, using customizable formats. Asynchronous messaging is fundamentally a pragmatic reaction to the problems of distributed systems. Sending a message does not require both systems to be up and ready at the same time.</p>
+
+
+
+<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading"> Publish-Subscribe Channel </h2>
+
+
+
+<p class="has-medium-font-size">  From a simple perspective, the understanding of this pattern relies on its expands upon the Observer pattern by adding the notion of an event channel for communicating event notifications. The Observer pattern describes the need to decouple observers from their subject so that the subject can easily provide event notification to all interested observers no matter how many observers there are.  </p>
+
+
+
+<p class="has-medium-font-size"> Each subscriber needs to be notified of a particular event once, but should not be notified repeatedly of the same event. The event cannot be considered consumed until all of the subscribers have been notified. But once all of the subscribers have been notified, the event can be considered consumed and should disappear from the channel [2]. </p>
+
+
+
+<div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Broker, Queues, Topics, and Subscriptions</h2>
+
+
+
+<p class="has-medium-font-size">Brokered messaging supports the scenario of truly temporal decoupled systems where either message producer or consumer availability is not guaranteed.&nbsp;With Brokered messaging, the queue is the broker that retains a message created by a producer and where the consumer can retrieve the message when ready. </p>
+
+
+
+<p class="has-medium-font-size"> Queue provides the simplest message delivery option.&nbsp;Messages in a Queue are organized by first-in, first-out (FIFO) and each message is expected to be processed by a single consumer. However, Topics and Subscriptions constitute a publish/subscribe pattern allowing the same message to be processed by N number of consumers.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="522" height="192" src="../wp-content/uploads/2019/11/image-4.png" alt="Publish-Subscribe Messaging System" class="wp-image-1374" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-4.png 522w, https://jailsonevora.com/wp-content/uploads/2019/11/image-4-300x110.png 300w" sizes="(max-width: 522px) 100vw, 522px" /></figure>
+
+
+
+<p class="has-medium-font-size"> A single message can be added to a topic and for every subscription rule that is satisfied, a copy of the message will be added to that subscription.&nbsp;In this case, each subscription becomes the queue, where consumers can process the messages on a subscription individually. </p>
+
+
+
+<p class="has-medium-font-size">One of a reliable and mature project that is being utilized by industry leaders is Apache Kafka that provides us the capability to handling a huge number of messages per second, instead of traditional messaging systems that have been quite useful in traditional scenarios but not efficient and valuable in handling Big Data scenarios.</p>
+
+
+
+<p class="has-medium-font-size">Beyond messaging, Apache Kafka can be applied in stream processing, website activity tracking, log aggregation, metrics, time-based message storage, commit log and event sourcing. In the next section, we will cover in deep the components and characteristics of Apache Kafka.</p>
+
+
+
+<div style="height:62px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Kafka</h2>
+
+
+
+<p class="has-medium-font-size">Kafka is a distributed publish-subscribe messaging system that is fast, scalable and distributed in nature by its design, partitioned and replicated commit log service. It differs from a traditional messaging system to be very easy to scale out, to offer high throughput, to supports multi-subscribers and to automatically balances the consumers during failure and the ability to allow real-time applications or ETL to use it as batch consumption of persisted messages on disk.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="563" height="484" src="../wp-content/uploads/2019/11/Kafka-1.png" alt="Publish-Subscribe Messaging System" class="wp-image-1534" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/Kafka-1.png 563w, https://jailsonevora.com/wp-content/uploads/2019/11/Kafka-1-300x258.png 300w" sizes="(max-width: 563px) 100vw, 563px" /></figure>
+
+
+
+<h3 class="wp-block-heading"> Components [1]&nbsp; </h3>
+
+
+
+<ul>
+<li><strong>Producers </strong>&#8211; Producers are any applications/programs that publish messages to Kafka brokers.</li>
+</ul>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="434" height="259" src="../wp-content/uploads/2019/11/image-2.png" alt="Publish-Subscribe Messaging System" class="wp-image-1365" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-2.png 434w, https://jailsonevora.com/wp-content/uploads/2019/11/image-2-300x179.png 300w" sizes="(max-width: 434px) 100vw, 434px" /></figure>
+
+
+
+<ul>
+<li><strong>Consumers </strong>&#8211; Consumers are applications that consume messages from Kafka brokers. These consumers can be a simple application, a real-time stream processing engine, etc. </li>
+</ul>
+
+
+
+<ul>
+<li><strong>Topics and Partitions</strong> &#8211; Apache Kafka supports the concepts of message Topics that allow categorizing the messages. It enables us to create different Topics for different types of messages and has different consumers consuming messages. Apache Kafka moreover allows creating multiple partitions in a Topic to concede the parallel consumption of messages as we can have separate consumers consuming from different partitions at the same time. Each partition has a leader node that is responsible for accepting the read/write requests from consumers/producers for that partition.</li>
+</ul>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="450" height="260" src="../wp-content/uploads/2019/11/image-3.png" alt="Publish-Subscribe Messaging System" class="wp-image-1366" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-3.png 450w, https://jailsonevora.com/wp-content/uploads/2019/11/image-3-300x173.png 300w" sizes="(max-width: 450px) 100vw, 450px" /></figure>
+
+
+
+<ul>
+<li><strong>Broker</strong> &#8211; Kafka broker typically refers to a machine with Kafka installed on it. However, it is possible to set up more than one brokers on a single machine in a non-production setting. Kafka broker is responsible for managing the message logs and accepting the requests from producers/consumers. Kafka brokers are stateless. This means that the consumer has to maintain how much it has consumed. Consumer maintains it by itself and the broker would not do anything.</li>
+
+
+
+<li><strong>Storage </strong>&#8211;  Kafka has a very simple storage layout. Each partition of a topic corresponds to a logical log. Physically, a log is implemented as a set of segment files of equal sizes. Every time a producer publishes a message to a partition, the broker simply appends the message to the last segment file. Segment file is flushed to disk after configurable numbers of messages have been published or after a certain amount of time elapsed. Messages are exposed to the consumer after it gets flushed.   </li>
+
+
+
+<li><strong>Cluster </strong>&#8211; Kafka cluster is a collection of Kafka brokers. All the Kafka brokers in a cluster work collectively to manage the messages and their copies as configured.</li>
+</ul>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="527" height="266" src="../wp-content/uploads/2019/11/image-1.png" alt="Publish-Subscribe Messaging System" class="wp-image-1364" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-1.png 527w, https://jailsonevora.com/wp-content/uploads/2019/11/image-1-300x151.png 300w" sizes="(max-width: 527px) 100vw, 527px" /></figure>
+
+
+
+<h3 class="wp-block-heading">Zookeeper </h3>
+
+
+
+<p class="has-medium-font-size">ZooKeeper is used to manage and coordinate the Kafka broker. Each Kafka broker is coordinated with other Kafka brokers using ZooKeeper. The producer and consumer are notified by the ZooKeeper service about the presence of a new broker or failure of the broker in the Kafka system. From the notification received by the Zookeeper regarding the presence or failure of the broker, producer and consumer takes the decision and start coordinating its work with some other broker.&nbsp; Also, it is responsible to choose the new leaders for the partitions. </p>
+
+
+
+<div style="height:70px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Case Study</h2>
+
+
+
+<p class="has-medium-font-size"> After a little state of art lets, focus on practice. So, our case study simulates the communication between two microservices built with Spring Boot micro-framework v2.1.8.RELEASE in publish-subscribe context, using Apache Kafka 2.3.1 as a message system. To validate our study we will be setting and execute an integration test that focuses on integrating different layers of the application in an end to end scenarios with the JUnit 4/5 testing framework.</p>
+
+
+
+<figure class="wp-block-image alignleft size-full"><img decoding="async" loading="lazy" width="576" height="391" src="../wp-content/uploads/2019/11/image-13.png" alt="Publish-Subscribe Messaging System" class="wp-image-1492" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-13.png 576w, https://jailsonevora.com/wp-content/uploads/2019/11/image-13-300x204.png 300w" sizes="(max-width: 576px) 100vw, 576px" /></figure>
+
+
+
+<p class="has-medium-font-size">The Producer API is a module that implements the operation for a <a href="https://www.jeevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" target="_blank" rel="noreferrer noopener" aria-label="business entity service (opens in a new tab)">business entity service</a> with the intention to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. The Consumer API is another module in the same solution which aims to centralize all business entity statistics, receiving data input from a different source.</p>
+
+
+
+<p class="has-medium-font-size">For the sake of simplicity, the APIs use the H2 in-memory database. The project structure is composed of three modules. Both major modules, Producer, and Consumer have a dependency from the Common module, where it shares things like the error handling and auxiliary classes with the remaining part of the system. </p>
+
+
+
+<p class="has-medium-font-size">The sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a rel="noreferrer noopener" href="https://github.com/JERBEvora/spring-boot-api-communication-through-kafka" target="_blank">link</a>. </p>
+
+
+
+<p>Let&#8217;s get started.</p>
+
+
+
+<div style="height:67px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Integrating Spring Kafka with Apache Kafka Message System</h2>
+
+
+
+<p class="has-medium-font-size">The Spring for Apache Kafka project applies core Spring concepts to the development of Kafka-based messaging solutions. It provides a &#8220;template&#8221; as a high-level abstraction for sending messages. It also provides support for Message-driven POJOs with @KafkaListener annotations and a &#8220;listener container&#8221;. These libraries promote the use of dependency injection and declarative [3].</p>
+
+
+
+<h3 class="wp-block-heading">Producer API</h3>
+
+
+
+<p class="has-medium-font-size">We need two steps to config a producer. The first one is the config class where we define the producer Map object, the producer factory, and the Kafka template. The second is respected to service class when we set the message builder to publish in Kafka broker.</p>
+
+
+
+<h4 class="wp-block-heading">Producer Config</h4>
+
+
+
+<p class="has-medium-font-size">In configuration class, the constant  &#8220;<em>bootstrapServers&#8221;</em> which is the Kafka server is set in application.properties. Using the <a rel="noreferrer noopener" aria-label="@Value(&quot;${spring.kafka.bootstrap-servers}&quot;) (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html" target="_blank">@Value(&#8220;${spring.kafka.bootstrap-servers}&#8221;)</a> annotation indicates a default value expression for the affected argument. </p>
+
+
+
+<p class="has-medium-font-size">To create a Kafka producer, we define certain properties that we pass to the constructor of a Kafka producer. In &#8220;<em>producerconfigs</em>&#8221; @Bean we set the BOOTSTRAP_SERVERS_CONFIG property to the list of broker addresses we defined earlier in application.properties. BOOTSTRAP_SERVERS_CONFIG value is a comma-separated list of host/port pairs that the Producer uses to establish an initial connection to the Kafka cluster.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+package com.BusinessEntityManagementSystem;
+
+import ...
+
+@Configuration
+public class KafkaProducerConfig {
+
+    @Value(&quot;${spring.kafka.bootstrap-servers}&quot;)
+    private String bootstrapServers;
+
+    @Bean
+    public Map&lt;String, Object&gt; producerConfigs() {
+        Map&lt;String, Object&gt; props = new HashMap&lt;&gt;();
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        return props;
+    }
+
+    @Bean
+    public ProducerFactory&lt;String, BusinessEntity&gt; producerFactory() {
+        return new DefaultKafkaProducerFactory&lt;&gt;(producerConfigs());
+    }
+
+    @Bean
+    public KafkaTemplate&lt;String, BusinessEntity&gt; kafkaTemplate() {
+        return new KafkaTemplate&lt;String, BusinessEntity&gt;(producerFactory());
+    }
+}
+</pre></div>
+
+
+<p class="has-medium-font-size">The KEY_SERIALIZER_CLASS_CONFIG is a Kafka Serializer class for Kafka record keys that implements the Kafka Serializer interface. Notice that we set this to StringSerializer.class as the message ids. The VALUE_SERIALIZER_CLASS_CONFIG is a Kafka Serializer class that we set it to JsonSerializer.class as the message body.</p>
+
+
+
+<p class="has-medium-font-size">To create messages, first, we need to configure a ProducerFactory which sets the strategy for creating Kafka Producer instances. Then we need a KafkaTemplate which wraps a Producer instance and provides convenience methods for sending messages to Kafka topics using our data transfer object &#8220;<em>BusinessEntity</em>&#8220;.</p>
+
+
+
+<h4 class="wp-block-heading">Producer Service</h4>
+
+
+
+<p class="has-medium-font-size">In the Kafka Producer Service class, the <a rel="noreferrer noopener" aria-label="@Service (opens in a new tab)" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html" target="_blank">@Service</a> annotation indicates that the annotated class is a &#8220;Service&#8221;. In this class we implement the method to send the messages to Kafka broker, declaring the topic attribute on the header predefined in the application.properties.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+package com.BusinessEntityManagementSystem.kafka;
+
+import ...
+
+@Service
+public class KafkaProducer {
+
+    @Autowired
+    private KafkaTemplate&lt;String, BusinessEntity&gt; kafkaTemplate;
+
+    @Value(&quot;${statistics.kafka.topic}&quot;)
+    String kafkaTopic;
+
+    public void send(BusinessEntity payload) {
+        Message&lt;BusinessEntity&gt; message = MessageBuilder
+                .withPayload(payload)
+                .setHeader(KafkaHeaders.TOPIC, kafkaTopic)
+                .build();
+        kafkaTemplate.send(message);
+    }
+}
+</pre></div>
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading">Consumer API</h3>
+
+
+
+<p class="has-medium-font-size">In consumer, we need to add the appropriate Deserializer which can convert JSON byte[] into a Java Object. To set it, we need the class config and the class annotated with @components that will autodetect this class for dependency injection when annotation-based configuration and classpath scanning is used.</p>
+
+
+
+<h4 class="wp-block-heading">Consumer Config</h4>
+
+
+
+<p class="has-medium-font-size">As well, as we specify the KEY_SERIALIZER_CLASS_CONFIG,  VALUE_SERIALIZER_CLASS_CONFIG to serialize the message published by producer, we also need to inform the Spring Kafka about constant values for deserialization like KEY_DESERIALIZER_CLASS_CONFIG and  VALUE_DESERIALIZER_CLASS_CONFIG. Beyond the constants referenced above, we specify the GROUP_ID_CONFIG and AUTO_OFFSET_RESET_CONFIG as the earliest, allowing the consumer to read the last inserted message in the broker.</p>
+
+
+
+<p class="has-medium-font-size"> To enable Kafka listeners, we use the <a rel="noreferrer noopener" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/EnableKafka.html" target="_blank">@EnableKafka</a> annotation.  This annotated endpoints that are created under the covers by an <a rel="noreferrer noopener" aria-label="AbstractListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.html" target="_blank">AbstractListenerContainerFactory</a>. The KafkaListenerContainerFactory is responsible to create the listener container for a particular endpoint. It enables the detection of&nbsp;<a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html">KafkaListener </a>annotations on any Spring-managed bean in the container. </p>
+
+
+
+<p class="has-text-align-left has-medium-font-size"> As typical implementations, the <a rel="noreferrer noopener" aria-label="ConcurrentKafkaListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/ConcurrentKafkaListenerContainerFactory.html" target="_blank">ConcurrentKafkaListenerContainerFactory</a> provides the necessary configuration options that are supported by the underlying <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/listener/MessageListenerContainer.html" target="_blank" rel="noreferrer noopener" aria-label="MessageListenerContainer (opens in a new tab)">MessageListenerContainer</a>.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+package com.BusinessStatisticsUnitFiles;
+
+import ...
+
+@Configuration
+@EnableKafka
+public class KafkaConsumerConfig {
+
+    @Value(&quot;${spring.kafka.bootstrap-servers}&quot;)
+    private String bootstrapServers;
+
+    @Bean
+    public Map&lt;String, Object&gt; consumerConfigs() {
+        Map&lt;String, Object&gt; props = new HashMap&lt;&gt;();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, &quot;statistics-BusinessStatisticsUnitFiles-group&quot;);
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, &quot;earliest&quot;);
+        return props;
+    }
+
+    @Bean
+    public ConsumerFactory&lt;String, BusinessEntity&gt; consumerFactory() {
+        return new DefaultKafkaConsumerFactory&lt;&gt;(
+                consumerConfigs(),
+                new StringDeserializer(),
+                new JsonDeserializer&lt;&gt;(BusinessEntity.class, false));
+    }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory&lt;String, BusinessEntity&gt; kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory&lt;String, BusinessEntity&gt; factory =
+                new ConcurrentKafkaListenerContainerFactory&lt;&gt;();
+        factory.setConsumerFactory(consumerFactory());
+        return factory;
+    }
+}
+</pre></div>
+
+
+<p class="has-medium-font-size">On the consumer factory, we have the possibility to disable the use of headers. this is achieved now by setting to false the second parameter in <em>new JsonDeserializer&lt;&gt;(BusinessEntity.class, false));</em>. This allows the consumer to trust messages that come from any packages.</p>
+
+
+
+<h4 class="wp-block-heading">Consumer &#8220;Service&#8221;</h4>
+
+
+
+<p class="has-medium-font-size">For consuming messages, It is necessary to have configured the  ConsumerFactory and a KafkaListenerContainerFactory as we did above. Once these beans are available in the Spring bean factory, POJO based consumers can be configured using <a rel="noreferrer noopener" href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/annotation/KafkaListener.html" target="_blank">@KafkaListener</a> annotation.</p>
+
+
+
+<p class="has-medium-font-size"><a rel="noreferrer noopener" aria-label="@KafkaHandler (opens in a new tab)" href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/annotation/KafkaHandler.html" target="_blank">@KafkaHandler </a>also is necessary to mark a method to be the target of a Kafka message listener within a class that is annotated with @KafkaListener. It is important to understand that when a message arrives, the method selected depends on the payload type. The type is matched with a single non-annotated parameter or one that is annotated with @Payload. There must be no ambiguity &#8211; the system must be able to select exactly one method based on the payload type.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+package com.BusinessStatisticsUnitFiles.kafka;
+
+import ...
+
+@Component
+public class KafkaConsumer {
+
+    @Autowired
+    IBusinessEntityRepository businessEntityRepository;
+
+    private static final Logger LOG = LoggerFactory.getLogger(BusinessEntity.class);
+
+
+    @KafkaListener(topics = &quot;${statistics.kafka.topic.create.entity}&quot;, groupId = &quot;statistics-BusinessEntityManagementSystem-group&quot;)
+    @KafkaHandler
+    public void receiveCreatedEntity(@Payload BusinessEntity data,
+                                    @Headers MessageHeaders headers) {
+     businessEntityRepository.save(RetrieveConsumerFromReceivedProducerObject.Binding(new BusinessEntityModel(), data));
+    }
+}
+</pre></div>
+
+
+<p class="has-medium-font-size">  The <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/messaging/handler/annotation/Payload.html" target="_blank">@Payload</a> annotation binds a method parameter to the payload of a message. It can also be used to associate a payload to a method invocation. The payload may be passed through a <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/messaging/converter/MessageConverter.html" target="_blank" rel="noreferrer noopener" aria-label="MessageConverter (opens in a new tab)">MessageConverter</a>&nbsp;to convert it from serialized form with a specific MIME type to an Object matching the target method parameter. Our class annotated with <a rel="noreferrer noopener" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/messaging/handler/annotation/Payload.html" target="_blank">@Payload</a> is the <em>&#8220;BusinessEntity&#8221;</em> DTO.</p>
+
+
+
+<p class="has-medium-font-size">Spring Boot also supports retrieval of one or more message headers using the @Headers annotation in the listener. Multiple listeners can be implemented for a topic, each with a different group Id. Furthermore, one consumer can listen to messages from various topics.</p>
+
+
+
+<p class="has-medium-font-size">As you may have noticed, we had created the topic&nbsp;building&nbsp;with only one partition. However, for a topic with multiple partitions, a&nbsp;<em>@KafkaListener</em>&nbsp;can explicitly subscribe to a particular partition of a topic with an initial offset.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading">Application.properties</h3>
+
+
+
+<p class="has-medium-font-size">Last but not least in our configuration, we specify some values related to the behavior of communication between Producer and Consumer.</p>
+
+
+
+<h4 class="wp-block-heading">Producer/ Consumer  </h4>
+
+
+
+<p class="has-medium-font-size">On each Producer and Consumer API, we define the Kafka cluster we want our microservices to connect with, using the spring.kafka.bootstrap-servers=localhost:9092. Also, it is necessary to define the topic name to produce and receive messages, the key as well as the group-id.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: r; title: ; notranslate">
+...
+## Application.properties Kafka config
+spring.kafka.bootstrap-servers=localhost:9092
+statistics.kafka.topic=test
+statistics.kafka.key=test
+statistics.kafka.topic.create.entity=test
+spring.kafka.producer.group-id=statistics-BusinessStatisticsUnitFiles-group
+spring.kafka.template.default-topic=test
+...
+</pre></div>
+
+
+<div style="height:59px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Preparing the Kafka and Zookeeper for Integration Test </h2>
+
+
+
+<p class="has-medium-font-size">The steps defined below demonstrate how to run and test Kafka on Windows 10 operating system.</p>
+
+
+
+<h3 class="wp-block-heading">Download Kafka with embedded Zookeeper</h3>
+
+
+
+<ol>
+<li>Download the&nbsp;<a rel="noreferrer noopener" href="https://kafka.apache.org/downloads" target="_blank">Kafka binaries</a>. This post is based on Kafka 2.3.1, and hence we assume that you are downloading a 2.3.1 version for Scala 2.12.</li>
+
+
+
+<li>Un-zip the&nbsp;<em>kafka_2.12-2.3.1.tgz&nbsp;</em>file.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">Setting zookeeper.properties</h3>
+
+
+
+<p class="has-medium-font-size">To make it work, we need to change the Zookeeper data directory location.<br>Open&nbsp;<em>kafka\config\zookeeper.properties</em>&nbsp;file and change the Zookeeper data /log directory location config to a valid windows directory location.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
+dataDir=C:\\kafka\\zookeeper-logs
+</pre></div>
+
+
+<h3 class="wp-block-heading">Setting server.properties</h3>
+
+
+
+<p class="has-medium-font-size"> We also need to make some changes to the Kafka configurations. Open&nbsp;<em>kafka\config\server.properties</em>&nbsp;and set topic defaults to one. We will be running a single node Kafka. Also to prevent Kafka to create unnecessary numbers of offset, we specify the replicas to 1. We faced this issue on the windows environment with the latest Kafka 2.3.1 version. This lead Kafka to stop because of insufficient memory to handling a bunch of data created automatically on the initial phase of starting the server.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
+############################# Log Basics #############################
+
+log.dirs=C:\\kafka\\kafka-logs
+
+####################### Internal Topic Settings  #####################
+
+offsets.topic.replication.factor=1
+offsets.topic.num.partitions = 1 
+min.insync.replicas=1 
+default.replication.factor = 1
+...
+</pre></div>
+
+
+<p class="has-medium-font-size">To finish the Kafka configuration, add Kafka&nbsp;<em>bin\windows</em>&nbsp;directory to the PATH environment variable.</p>
+
+
+
+<div style="height:42px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Create and Executing Integration Test</h2>
+
+
+
+<p class="has-medium-font-size">As the name suggests, integration tests focus on integrating different layers of the application, where no mocking is involved. The integration tests need to start up a container to execute the test cases. Hence, some additional setup is required for this, but with spring boot these steps are easy using some annotations and libraries.</p>
+
+
+
+<h3 class="wp-block-heading">Test Class</h3>
+
+
+
+<p class="has-medium-font-size">The first annotation @RunWith(SpringRunner.class) is used to provide a bridge between Spring Boot test features and JUnit. SpringRunner.class enables full support of spring context loading and dependency injection of the beans in the tests. <a rel="noreferrer noopener" aria-label="@SpringBootTest (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html" target="_blank">@SpringBootTest</a> create ApplicationContext tests through SpringApplication that will be utilized in our tests. It bootstraps the entire container since the embedded server and creates a web environment.</p>
+
+
+
+<p class="has-medium-font-size">In our test, we are mimicking the real web environment setting it as RANDOM_PORT that also loads WebServerApplicationContext. The embedded server is started and listen to on a random port.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = {BusinessEntityManagementApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class BusinessEntityIntegrationTest {
+
+    @LocalServerPort
+    private int port;
+
+    @Autowired
+    TestRestTemplate restTemplate;
+    HttpHeaders headers = new HttpHeaders();
+</pre></div>
+
+
+<p class="has-medium-font-size"><a rel="noreferrer noopener" aria-label="@LocalServerPort (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/2.0.0.RC1/api/org/springframework/boot/web/server/LocalServerPort.html" target="_blank">@LocalServerPort</a> annotation provides us the injected HTTP port that got allocated at runtime. It is a convenient alternative for&nbsp;<code>@Value("${local.server.port}")</code>. </p>
+
+
+
+<p class="has-medium-font-size">To access a third-party REST service inside a Spring application we use the Spring&nbsp;<strong><a rel="noreferrer noopener" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank">RestTemplate</a></strong>&nbsp;or <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">TestRestTemplate </a>the convenient alternative that is suitable for integration tests by injecting it in our test class. With <strong>spring-boot-starter-test</strong>&nbsp;dependency in our project, we can access to&nbsp;&#8220;TestRestTemplate&#8221;&nbsp;class in runtime. </p>
+
+
+
+<h3 class="wp-block-heading">Test Method</h3>
+
+
+
+<p class="has-medium-font-size">In our test method, we are using the &#8220;<a rel="noreferrer noopener" aria-label="junit-json-params (opens in a new tab)" href="http://www.joshka.net/junit-json-params/" target="_blank">junit-json-params</a>&#8220;, a <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/current/user-guide/" target="_blank">Junit 5</a> library that provides annotations to load data from JSON Strings or files in parameterized tests. We also annotated the method with <a rel="noreferrer noopener" aria-label="@ParameterizedTest (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/ParameterizedTest.html" target="_blank">@ParameterizedTest</a> annotation to complement the library bellow. It is used to signal the annotated method is a parameterized test method. That method must not be private or static. They also must specify at least one&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsProvider.html" target="_blank"><code>ArgumentsProvider</code></a>&nbsp;via&nbsp;<a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a>&nbsp;or a corresponding composed annotation.</p>
+
+
+
+<p class="has-medium-font-size">Our  <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> a JSON file @JsonFileSource(resources = &#8220;/business-entity-test-param.json&#8221;) is inside the test.resource package.  <code>@JsonFileSource</code>&nbsp;lets you use JSON files from the classpath. It supports single objects, arrays of objects and JSON primitives. </p>
+
+
+
+<p class="has-medium-font-size">The JSON object retrieved from the file is bound to the method params &#8220;object&#8221; that it is converted to a POJO object, in this case, our entity model.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
+    @ParameterizedTest
+    @JsonFileSource(resources = &quot;/business-entity-test-param.json&quot;)
+    @DisplayName(&quot;create business entity with json parameter&quot;)
+    void createBusinessEntity(JsonObject object) throws IOException, URISyntaxException {
+
+        BusinessEntityModel businessEntityModel;
+        businessEntityModel = new BusinessEntityModel();
+
+        ObjectMapper mapper = new ObjectMapper();
+        businessEntityModel = mapper.readValue(object.toString(), BusinessEntityModel.class);
+
+        HttpEntity&lt;BusinessEntityModel&gt; request = new HttpEntity&lt;&gt;(businessEntityModel, headers);
+
+        try {
+
+            ResponseEntity&lt;String&gt; response = this.restTemplate.postForEntity(createURLWithPort(&quot;/api/businessEntityManagementSystem/v1/businessEntity&quot;), request, String.class);
+            assertAll(
+                    () -&gt; assertThat(response.getStatusCodeValue()).isEqualTo(HttpStatus.CREATED.value()),
+                    () -&gt; assertThat(response.getHeaders().getLocation().getPath()).contains(&quot;/v1&quot;)
+            );
+        }
+        catch(HttpClientErrorException ex) {
+            assertAll(
+                    () -&gt; Assert.assertEquals(HttpStatus.BAD_REQUEST.value(), ex.getRawStatusCode()),
+                    () -&gt; Assert.assertEquals(true, ex.getResponseBodyAsString().contains(&quot;Missing request header&quot;))
+            );
+        }
+    }
+</pre></div>
+
+
+<p class="has-medium-font-size">After the arrange and acts we assert if our call to the rest API returns the desired result. </p>
+
+
+
+<h3 class="wp-block-heading">Run Integration Test</h3>
+
+
+
+<figure class="wp-block-image alignright size-full"><img decoding="async" loading="lazy" width="738" height="508" src="../wp-content/uploads/2019/11/image-14.png" alt="Intellij Integration test" class="wp-image-1516" srcset="https://jailsonevora.com/wp-content/uploads/2019/11/image-14.png 738w, https://jailsonevora.com/wp-content/uploads/2019/11/image-14-300x207.png 300w" sizes="(max-width: 738px) 100vw, 738px" /></figure>
+
+
+
+<p class="has-medium-font-size">In our development environment, we need to grant that our Kafka and Zookeeper are up and running in two different consoles as described in the figure. </p>
+
+
+
+<p class="has-medium-font-size"> Kafka needs Zookeeper, so we will first start Zookeeper using the below command. </p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: bash; title: ; notranslate">
+c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+</pre></div>
+
+
+<p class="has-medium-font-size"> It should start the zookeeper server. Minimize the command window and let the zookeeper running in that window. Start a new command window and start Kafka Broker using the below command.</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: bash; title: ; notranslate">
+ c:\kafka&gt;.\bin\windows\kafka-server-start.bat .\config\server.properties
+</pre></div>
+
+
+<p>Next, we will run our Consumer API in our IDE or we can also deploy it.</p>
+
+
+
+<p class="has-medium-font-size">Finally, we can execute the test class as a JUnit test. It will start the server and deploy the API as it will be done normally. Then It will execute the tests. You can verify the tests in JUnit tab.</p>
+
+
+
+<div style="height:54px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="has-medium-font-size">In this article, we have seen how we can use the publish-subscribe pattern to share data frequently, immediately, reliably, and asynchronously using customizable formats in a responsive way between two distinct microservices and validate it with an integration test through different layers in an end to end scenario.</p>
+
+
+
+<div style="height:59px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1] <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://kafka.apache.org/documentation/#uses" target="_blank">Kafka 2.3 Documentation</a>;<br>[2] Gregor Hohpe, Bobby Woolf, Enterprise Integration Patterns Designing, Building, and Deploying Messaging Solutions, 2003;<br>[3] <a rel="noreferrer noopener" aria-label="Spring for Apache Kafka (opens in a new tab)" href="https://spring.io/projects/spring-kafka" target="_blank">Spring for Apache Kafka</a> 2.3.3.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/">Microservices in Publish-Subscribe communication using Apache Kafka as a Messaging Systems and validated through Integration Test.</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 64/68 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 2/7 queries in 0.014 seconds using disk
+
+Served from: localhost @ 2023-04-19 13:19:14 by W3 Total Cache
+-->

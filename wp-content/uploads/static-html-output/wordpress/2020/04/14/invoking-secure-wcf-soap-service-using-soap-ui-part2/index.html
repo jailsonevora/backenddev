@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="https://jailsonevora.github.io/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	
+	<title>Invoking Different Secure WCF SOAP Services using SoapUI - Basic Authentication, Part II - BackendDev</title>
+	<meta name="description" content="In this second post, I will demonstrate step by step how to successfully invoke a Basic WCF SOAP service using SoapUI...">
+	
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Invoking Different Secure WCF SOAP Services using SoapUI - Basic Authentication, Part II - BackendDev">
+	<meta property="og:description" content="In this second post, I will demonstrate step by step how to successfully invoke a Basic WCF SOAP service using SoapUI...">
+	<meta property="og:url" content="https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">
+	<meta property="og:site_name" content="BackendDev">
+	<meta property="article:published_time" content="2020-04-14T20:19:00+00:00">
+	<meta property="article:modified_time" content="2020-06-07T23:00:48+00:00">
+	<meta property="og:image" content="https://i0.wp.com/www.jailsonevora.com/wp-content/uploads/2020/03/SOAP-2-2.png?fit=2529%2C1616&ssl=1">
+	<meta property="og:image:width" content="2529">
+	<meta property="og:image:height" content="1616">
+	<meta property="og:image:type" content="image/png">
+	<meta name="author" content="admin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="admin">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="3 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{
+	    "@context": "https://schema.org",
+	    "@graph": [
+	        {
+	            "@type": "WebPage",
+	            "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/",
+	            "url": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/",
+	            "name": "Invoking Different Secure WCF SOAP Services using SoapUI - Basic Authentication, Part II - BackendDev",
+	            "isPartOf": {
+	                "@id": "https://www.jailsonevora.com/#website"
+	            },
+	            "primaryImageOfPage": {
+	                "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#primaryimage"
+	            },
+	            "image": {
+	                "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#primaryimage"
+	            },
+	            "thumbnailUrl": "https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2.png",
+	            "datePublished": "2020-04-14T20:19:00+00:00",
+	            "dateModified": "2020-06-07T23:00:48+00:00",
+	            "author": {
+	                "@id": "https://www.jailsonevora.com/#/schema/person/dbc135529fc61a4826e3aa4d6eda9ad6"
+	            },
+	            "description": "In this second post, I will demonstrate step by step how to successfully invoke a Basic WCF SOAP service using SoapUI...",
+	            "breadcrumb": {
+	                "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#breadcrumb"
+	            },
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "ReadAction",
+	                    "target": [
+	                        "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "ImageObject",
+	            "inLanguage": "en-US",
+	            "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#primaryimage",
+	            "url": "https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2.png",
+	            "contentUrl": "https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2.png",
+	            "width": 2529,
+	            "height": 1616
+	        },
+	        {
+	            "@type": "BreadcrumbList",
+	            "@id": "https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#breadcrumb",
+	            "itemListElement": [
+	                {
+	                    "@type": "ListItem",
+	                    "position": 1,
+	                    "name": "Home",
+	                    "item": "https://jailsonevora.github.io/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 2,
+	                    "name": "Blog",
+	                    "item": "https://www.jailsonevora.com/j-e-evora-blog/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 3,
+	                    "name": "Invoking Different Secure WCF SOAP Services using SoapUI – Basic Authentication, Part II"
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "WebSite",
+	            "@id": "https://www.jailsonevora.com/#website",
+	            "url": "https://www.jailsonevora.com/",
+	            "name": "BackendDev",
+	            "description": "",
+	            "potentialAction": [
+	                {
+	                    "@type": "SearchAction",
+	                    "target": {
+	                        "@type": "EntryPoint",
+	                        "urlTemplate": "https://www.jailsonevora.com/?s={search_term_string}"
+	                    },
+	                    "query-input": "required name=search_term_string"
+	                }
+	            ],
+	            "inLanguage": "en-US"
+	        },
+	        {
+	            "@type": "Person",
+	            "@id": "https://www.jailsonevora.com/#/schema/person/dbc135529fc61a4826e3aa4d6eda9ad6",
+	            "name": "admin",
+	            "image": {
+	                "@type": "ImageObject",
+	                "inLanguage": "en-US",
+	                "@id": "https://www.jailsonevora.com/#/schema/person/image/",
+	                "url": "http://2.gravatar.com/avatar/2518d0f940f3d960d2215bd59dccff53?s=96&d=mm&r=g",
+	                "contentUrl": "http://2.gravatar.com/avatar/2518d0f940f3d960d2215bd59dccff53?s=96&d=mm&r=g",
+	                "caption": "admin"
+	            },
+	            "sameAs": [
+	                "https://jailsonevora.github.io"
+	            ],
+	            "url": "https://jailsonevora.github.io/author/admin/"
+	        }
+	    ]
+	}</script>
+	
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://jailsonevora.github.io/wp-includes/css/dist/block-library/style.min.css?ver=6.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://jailsonevora.github.io/wp-includes/css/classic-themes.min.css?ver=6.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--light-blue: #d3e9f3;--wp--preset--color--material-green: #4CAF50;--wp--preset--color--light-gray: #eee;--wp--preset--color--dark-gray: #111;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--vivid-green-cyan-to-vivid-cyan-blue: linear-gradient(135deg,rgba(0,208,132,1) 0%,rgba(6,147,227,1) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 12px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--regular: 16px;--wp--preset--font-size--huge: 50px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="SFSImainCss-css" href="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/css/sfsi-style.css?ver=2.8.1" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-style-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/style.css?ver=6.2" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-fontawesome-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/assets/fonts/font-awesome.css?ver=4.7.0" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo_google_fonts-css" href="//fonts.googleapis.com/css?family=Raleway:300,400%7CSource+Sans:300,600,latin-ext" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-custom-style-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/style.css?ver=6.2" type="text/css" media="all">
+<style id="portfolioo-custom-style-inline-css" type="text/css">
+
+                #masthead{
+                        background-image: url();
+                        background-size:cover;
+                        background-repeat:no-repeat;
+                }
+</style>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/jquery.min.js?ver=3.6.3" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+
+
+
+
+
+    <style type="text/css">
+
+      #masthead {background-color: #000;}
+      .menu-toggle i.fa.fa-bars {color: #fff;}
+      .site-title a {color: #fff;}
+      .pad_menutitle i.fa.fa-times {background-color: #2196F3;}
+      body {font-family: "Raleway Light", "Source Sans", sans-serif;}
+      body {font-size: 13px;}
+
+    </style>
+    </head>
+
+<body class="post-template-default single single-post postid-1663 single-format-standard wp-embed-responsive sfsi_actvite_theme_default">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header " role="banner">
+		<div class="site-branding">
+
+			<div class="site-logo">
+					  
+
+									<p class="site-title"><a href="https://jailsonevora.github.io/" rel="home">BackendDev</a></p>
+				  	 
+				
+			</div>
+
+			
+
+					</div>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button href="#sidr" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+				<div id="menu" class="menu"><ul>
+<li class="page_item page-item-12"><a href="https://jailsonevora.github.io/">Home</a></li>
+<li class="page_item page-item-32"><a href="https://jailsonevora.github.io/about-j-e-evora/">About Me</a></li>
+<li class="page_item page-item-42 current_page_parent"><a href="https://jailsonevora.github.io/j-e-evora-blog/">Blog</a></li>
+<li class="page_item page-item-34"><a href="https://jailsonevora.github.io/contact-j-e-evora/">Contact Me</a></li>
+</ul></div>
+			</nav>
+	</header>
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area single_post_page">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-1663" class="post-1663 post type-post status-publish format-standard has-post-thumbnail hentry category-microservices category-soa tag-authentication tag-csharp tag-service tag-soap tag-soapui tag-testing tag-wcf">
+	
+		<div class="post-entry-meta">
+			<span class="posted-on">Posted on <a href="https://jailsonevora.github.io/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" rel="bookmark"><time class="entry-date published" datetime="2020-04-14T20:19:00+00:00">April 14, 2020</time><time class="updated" datetime="2020-06-07T23:00:48+00:00">June 7, 2020</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://jailsonevora.github.io/author/admin/">admin</a></span></span>		</div>
+		
+	<div class="entry-content">
+
+		<div class="featured__image">
+			<img width="2529" height="1616" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%202529%201616'%3E%3C/svg%3E" data-src="https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="" decoding="async" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2.png 2529w, https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2-300x192.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2-1024x654.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2-768x491.png 768w, https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2-1536x981.png 1536w, https://jailsonevora.github.io/wp-content/uploads/2020/03/SOAP-2-2-2048x1309.png 2048w" data-sizes="(max-width: 2529px) 100vw, 2529px">	</div>
+
+	
+	<div class="post_wrap">
+
+		<div class="post_others">
+
+			
+			<header class="entry-header">
+				<h1 class="entry-title">Invoking Different Secure WCF SOAP Services using SoapUI – Basic Authentication, Part II</h1>				
+									
+							</header>
+			
+
+			
+			<div class="entry">
+				
+<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
+
+
+
+<h3 class="wp-block-heading">1-Basic WCF SOAP using SoapUI – Create New SOAP project</h3>
+
+
+
+<p class="has-medium-font-size">Firstly we need to create a SoapUI project and in<strong><em> </em></strong>the <strong><em>“Initial WSDL”, </em></strong>add the URL of the WSDL service created in the first post. Also, add your desired project name. A new project is generated with a sample request for the service.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="576" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201024%20576'%3E%3C/svg%3E" data-src="https://www.jeevora.com/wp-content/uploads/2020/04/image-2-1024x576.png" alt="Basic WCF SOAP using SoapUI" class="wp-image-1901 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/04/image-2-1024x576.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/04/image-2-300x169.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/04/image-2-768x432.png 768w, https://jailsonevora.github.io/wp-content/uploads/2020/04/image-2.png 1366w" data-sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<h3 class="wp-block-heading">2-Basic WCF SOAP using SoapUI – Authentication and Security-related settings tab</h3>
+
+
+
+<p class="has-medium-font-size">After create successfully the new SoapUI project, collapse in until the request´s endpoint. Now double click the request or right-click of the mouse to open the <em><strong>“Show Request Editor”</strong></em>. Navigate to the <em><strong>“Auth (Basic)”</strong></em> tab in the bottom corner, surround toward a green circle.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1366" height="768" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201366%20768'%3E%3C/svg%3E" data-src="https://i0.wp.com/www.jeevora.com/wp-content/uploads/2020/03/image-13.png?fit=640%2C360&ssl=1" alt="Basic WCF SOAP using SoapUI" class="wp-image-1684 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/03/image-13.png 1366w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-13-300x169.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-13-1024x576.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-13-768x432.png 768w" data-sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p class="has-medium-font-size">In the <strong><em>“Authorization” </em></strong>dropdown list, select <em><strong>“Basic”</strong></em>. It is the same as the service created before. Following, SoapUI shows a form when we can insert the “Username” and the “Password” service credentials <strong><em>“AVeryBigSum”</em></strong>, <em><strong>“12345”</strong></em> respectively.</p>
+
+
+
+<h3 class="wp-block-heading"> 3-Basic WCF SOAP using SoapUI – WS-Addressing related settings tab</h3>
+
+
+
+<p class="has-medium-font-size">Navigate to the <em><strong>“</strong></em><strong><em>WS-A”</em></strong> Configurations tab, and enable the <a rel="noreferrer noopener" href="https://www.w3.org/Submission/ws-addressing/" target="_blank">WS-A addressing</a>, that defines two interoperable constructs typically provided by transport protocols (<em>endpoint references</em>) and messaging systems (<em>message information headers</em>). These constructs normalize this underlying information into a uniform format that can be processed independently of transport or application.</p>
+
+
+
+<p class="has-medium-font-size">To instruct the service to process the crucial element in the header, we need to specify to <strong>TRUE </strong>the <strong><em>“Must understand”</em></strong>  configuration. The header contains crucial data to process, and the recipient must process the headers. If the service, can’t process the header or didn’t receive the header, an error will be raised.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1366" height="768" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201366%20768'%3E%3C/svg%3E" data-src="https://i1.wp.com/www.jeevora.com/wp-content/uploads/2020/03/image-14.png?fit=640%2C360&ssl=1" alt="Basic WCF SOAP using SoapUI" class="wp-image-1686 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/03/image-14.png 1366w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-14-300x169.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-14-1024x576.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-14-768x432.png 768w" data-sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p class="has-medium-font-size">This tool allows us to enable the <em><strong>“Add default wsa: </strong></em>To” and <em><strong>“Add default wsa: Action”</strong></em> configuration. The <em><strong>“Add default wsa: To”</strong></em> provides the value for the destination property. The default anonymous value for this property is “<a rel="noreferrer noopener" href="https://www.w3.org/TR/2006/REC-ws-addr-core-20060509/" target="_blank">http://www.w3.org/2005/08/addressing/anonymous</a>“. In the above example, the default <strong>wsa: Action</strong>, <strong>wsa: To</strong> and <strong>wsa: MessageId</strong> headers have been enabled, so when we send the request we can see them in the raw request view.</p>
+
+
+
+<h3 class="wp-block-heading">4-Secure WCF SOAP using SoapUI – WS-Reliable message related settings tab</h3>
+
+
+
+<p class="has-medium-font-size">To ensure reliable communication between two systems we enable the <em><strong>“WS-Reliable Message”</strong></em> specification. The aim of this is to ensure that messages are transferred properly from the sender to the receiver in the presence of network failures. As well we select the latest <strong>version </strong>of this specification for this demonstration.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1366" height="768" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201366%20768'%3E%3C/svg%3E" data-src="https://i2.wp.com/www.jeevora.com/wp-content/uploads/2020/03/image-15.png?fit=640%2C360&ssl=1" alt="Basic WCF SOAP using SoapUI" class="wp-image-1688 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/03/image-15.png 1366w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-15-300x169.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-15-1024x576.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-15-768x432.png 768w" data-sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<h3 class="wp-block-heading">5- Request properties</h3>
+
+
+
+<p class="has-medium-font-size">Finally in the left corner <strong><em>“Request Properties”</em></strong> -> <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one to one relationship of user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1366" height="768" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201366%20768'%3E%3C/svg%3E" data-src="https://i1.wp.com/www.jeevora.com/wp-content/uploads/2020/03/image-16.png?fit=640%2C360&ssl=1" alt="" class="wp-image-1689 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2020/03/image-16.png 1366w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-16-300x169.png 300w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-16-1024x576.png 1024w, https://jailsonevora.github.io/wp-content/uploads/2020/03/image-16-768x432.png 768w" data-sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://www.jeevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a rel="noreferrer noopener" href="https://github.com/jeevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank">link</a>.</p>
+
+
+
+<p class="has-medium-font-size">Our last and final demonstration in this series will show how to invoke another WCF service secured by Certificate Authentication.</p>
+ 
+					<section class="color-1">
+									
+			</section>
+						
+					
+			</div>
+			
+
+			
+			<footer class="entry-footer">
+				<span class="cat-links">Posted in <a href="https://jailsonevora.github.io/category/microservices/" rel="category tag">Microservices</a>, <a href="https://jailsonevora.github.io/category/soa/" rel="category tag">Service-Oriented Architecture (SOA)</a></span><p class="tags-links">Tagged <a href="https://jailsonevora.github.io/tag/authentication/" rel="tag">Authentication</a>, <a href="https://jailsonevora.github.io/tag/csharp/" rel="tag">C#</a>, <a href="https://jailsonevora.github.io/tag/service/" rel="tag">Service</a>, <a href="https://jailsonevora.github.io/tag/soap/" rel="tag">SOAP</a>, <a href="https://jailsonevora.github.io/tag/soapui/" rel="tag">SoapUI</a>, <a href="https://jailsonevora.github.io/tag/testing/" rel="tag">Testing</a>, <a href="https://jailsonevora.github.io/tag/wcf/" rel="tag">WCF</a></p>			</footer>
+			
+
+		</div>
+	</div>
+	
+
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://jailsonevora.github.io/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" rel="prev">Invoking Different Secure WCF SOAP Services using SoapUI – Basic Authentication, Part I</a></div><div class="nav-next"><a href="https://jailsonevora.github.io/2020/08/11/linear-regression-under-the-hood-using-matlab/" rel="next">Linear Regression under the hood using Matlab</a></div></div>
+	</nav>
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://jailsonevora.github.io/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://jailsonevora.github.io/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="1663" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+
+
+</div>
+
+		
+	</div>
+
+<div class="clearfix"></div>
+    <section class="footer-widget">
+                <div class="clearfix"></div>
+  	</section>
+  	
+
+	</article></main></div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: portfolioo by <a href="https://asphaltthemes.com/">Asphalt Themes</a>		</div>
+		<a href="#" class="scrolltotop"><i class="fa fa-chevron-up"></i></a>
+	</footer>
+</div>
+
+			
+			<div id="fb-root"></div>
+			<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+		<script>
+window.addEventListener('sfsi_functions_loaded', function() {
+    if (typeof sfsi_responsive_toggle == 'function') {
+        sfsi_responsive_toggle(0);
+        // console.log('sfsi_responsive_toggle');
+
+    }
+})
+</script>
+    <script>
+        window.addEventListener('sfsi_functions_loaded', function() {
+            if (typeof sfsi_plugin_version == 'function') {
+                sfsi_plugin_version(2.77);
+            }
+        });
+
+        function sfsi_processfurther(ref) {
+            var feed_id = '';
+            var feedtype = 8;
+            var email = jQuery(ref).find('input[name="email"]').val();
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if ((email != "Enter your email") && (filter.test(email))) {
+                if (feedtype == "8") {
+                    var url = "https://api.follow.it/subscription-form/" + feed_id + "/" + feedtype;
+                    window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+                    return true;
+                }
+            } else {
+                alert("Please enter email address");
+                jQuery(ref).find('input[name="email"]').focus();
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css" aria-selected="true">
+        .sfsi_subscribe_Popinner {
+            width: 100% !important;
+
+            height: auto !important;
+
+            padding: 18px 0px !important;
+
+            background-color: #ffffff !important;
+        }
+        .sfsi_subscribe_Popinner form {
+            margin: 0 20px !important;
+        }
+        .sfsi_subscribe_Popinner h5 {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-weight: bold !important;
+
+            color: #000000 !important;
+
+            font-size: 16px !important;
+
+            text-align: center !important;
+            margin: 0 0 10px !important;
+            padding: 0 !important;
+        }
+        .sfsi_subscription_form_field {
+            margin: 5px 0 !important;
+            width: 100% !important;
+            display: inline-flex;
+            display: -webkit-inline-flex;
+        }
+
+        .sfsi_subscription_form_field input {
+            width: 100% !important;
+            padding: 10px 0px !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email] {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+        .sfsi_subscribe_Popinner input[type=email]:-moz-placeholder {
+            /* Firefox 18- */
+
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-moz-placeholder {
+            /* Firefox 19+ */
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]:-ms-input-placeholder {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=submit] {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-weight: bold !important;
+
+            color: #000000 !important;
+
+            font-size: 16px !important;
+
+            text-align: center !important;
+
+            background-color: #dedede !important;
+        }
+
+        .sfsi_shortcode_container {
+            float: left;
+        }
+
+        .sfsi_shortcode_container .norm_row .sfsi_wDiv {
+            position: relative !important;
+        }
+
+        .sfsi_shortcode_container .sfsi_holders {
+            display: none;
+        }
+
+            </style>
+
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/modernizr.custom.min.js?ver=6.2" id="SFSIjqueryModernizr-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/jquery.shuffle.min.js?ver=6.2" id="SFSIjqueryShuffle-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/random-shuffle-min.js?ver=6.2" id="SFSIjqueryrandom-shuffle-js"></script>
+<script type="text/javascript" id="SFSICustomJs-js-extra">
+/* <![CDATA[ */
+var sfsi_icon_ajax_object = {"ajax_url":"https:\/\/jailsonevora.github.io\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/jailsonevora.github.io\/wp-content\/plugins\/ultimate-social-media-icons\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/custom.js?ver=2.8.1" id="SFSICustomJs-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/sidr.js?ver=0.0.1" id="portfolioo-sidr-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/portfolioo.js?ver=0.0.1" id="portfolioo-jquery-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/skip-link-focus-fix.js?ver=20151215" id="portfolioo-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=default&ver=1.3.12" id="mathjax-js"></script>
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="https://jailsonevora.github.io/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></div></body>
+</html>

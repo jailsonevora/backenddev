@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="https://jailsonevora.github.io/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	
+	<title>SOA and process services integration - BackendDev</title>
+	<meta name="description" content="Service oriented architectures (SOA) has brought significant gains for process automation. According to the official definition of OASIS [1]..">
+	
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="SOA and process services integration - BackendDev">
+	<meta property="og:description" content="Service oriented architectures (SOA) has brought significant gains for process automation. According to the official definition of OASIS [1]..">
+	<meta property="og:url" content="https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/">
+	<meta property="og:site_name" content="BackendDev">
+	<meta property="article:published_time" content="2019-09-09T11:46:02+00:00">
+	<meta property="article:modified_time" content="2020-03-31T02:53:52+00:00">
+	<meta property="og:image" content="https://www.jailsonevora.com/wp-content/uploads/2019/09/SOA-1024x648.png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="648">
+	<meta property="og:image:type" content="image/png">
+	<meta name="author" content="admin">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="admin">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="6 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{
+	    "@context": "https://schema.org",
+	    "@graph": [
+	        {
+	            "@type": "WebPage",
+	            "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/",
+	            "url": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/",
+	            "name": "SOA and process services integration - BackendDev",
+	            "isPartOf": {
+	                "@id": "https://www.jailsonevora.com/#website"
+	            },
+	            "primaryImageOfPage": {
+	                "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/#primaryimage"
+	            },
+	            "image": {
+	                "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/#primaryimage"
+	            },
+	            "thumbnailUrl": "https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA.png",
+	            "datePublished": "2019-09-09T11:46:02+00:00",
+	            "dateModified": "2020-03-31T02:53:52+00:00",
+	            "author": {
+	                "@id": "https://www.jailsonevora.com/#/schema/person/dbc135529fc61a4826e3aa4d6eda9ad6"
+	            },
+	            "description": "Service oriented architectures (SOA) has brought significant gains for process automation. According to the official definition of OASIS [1]..",
+	            "breadcrumb": {
+	                "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/#breadcrumb"
+	            },
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "ReadAction",
+	                    "target": [
+	                        "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "ImageObject",
+	            "inLanguage": "en-US",
+	            "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/#primaryimage",
+	            "url": "https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA.png",
+	            "contentUrl": "https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA.png",
+	            "width": 2550,
+	            "height": 1614
+	        },
+	        {
+	            "@type": "BreadcrumbList",
+	            "@id": "https://www.jailsonevora.com/2019/09/09/soa-and-process-service-integration/#breadcrumb",
+	            "itemListElement": [
+	                {
+	                    "@type": "ListItem",
+	                    "position": 1,
+	                    "name": "Home",
+	                    "item": "https://jailsonevora.github.io/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 2,
+	                    "name": "Blog",
+	                    "item": "https://www.jailsonevora.com/j-e-evora-blog/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 3,
+	                    "name": "SOA and process services integration"
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "WebSite",
+	            "@id": "https://www.jailsonevora.com/#website",
+	            "url": "https://www.jailsonevora.com/",
+	            "name": "BackendDev",
+	            "description": "",
+	            "potentialAction": [
+	                {
+	                    "@type": "SearchAction",
+	                    "target": {
+	                        "@type": "EntryPoint",
+	                        "urlTemplate": "https://www.jailsonevora.com/?s={search_term_string}"
+	                    },
+	                    "query-input": "required name=search_term_string"
+	                }
+	            ],
+	            "inLanguage": "en-US"
+	        },
+	        {
+	            "@type": "Person",
+	            "@id": "https://www.jailsonevora.com/#/schema/person/dbc135529fc61a4826e3aa4d6eda9ad6",
+	            "name": "admin",
+	            "image": {
+	                "@type": "ImageObject",
+	                "inLanguage": "en-US",
+	                "@id": "https://www.jailsonevora.com/#/schema/person/image/",
+	                "url": "http://2.gravatar.com/avatar/2518d0f940f3d960d2215bd59dccff53?s=96&d=mm&r=g",
+	                "contentUrl": "http://2.gravatar.com/avatar/2518d0f940f3d960d2215bd59dccff53?s=96&d=mm&r=g",
+	                "caption": "admin"
+	            },
+	            "sameAs": [
+	                "https://jailsonevora.github.io"
+	            ],
+	            "url": "https://jailsonevora.github.io/author/admin/"
+	        }
+	    ]
+	}</script>
+	
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://jailsonevora.github.io/wp-includes/css/dist/block-library/style.min.css?ver=6.2" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://jailsonevora.github.io/wp-includes/css/classic-themes.min.css?ver=6.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--light-blue: #d3e9f3;--wp--preset--color--material-green: #4CAF50;--wp--preset--color--light-gray: #eee;--wp--preset--color--dark-gray: #111;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--vivid-green-cyan-to-vivid-cyan-blue: linear-gradient(135deg,rgba(0,208,132,1) 0%,rgba(6,147,227,1) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 12px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--regular: 16px;--wp--preset--font-size--huge: 50px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="SFSImainCss-css" href="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/css/sfsi-style.css?ver=2.8.1" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-style-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/style.css?ver=6.2" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-fontawesome-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/assets/fonts/font-awesome.css?ver=4.7.0" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo_google_fonts-css" href="//fonts.googleapis.com/css?family=Raleway:300,400%7CSource+Sans:300,600,latin-ext" type="text/css" media="all">
+<link rel="stylesheet" id="portfolioo-custom-style-css" href="https://jailsonevora.github.io/wp-content/themes/portfolioo/style.css?ver=6.2" type="text/css" media="all">
+<style id="portfolioo-custom-style-inline-css" type="text/css">
+
+                #masthead{
+                        background-image: url();
+                        background-size:cover;
+                        background-repeat:no-repeat;
+                }
+</style>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/jquery.min.js?ver=3.6.3" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+
+
+
+
+
+    <style type="text/css">
+
+      #masthead {background-color: #000;}
+      .menu-toggle i.fa.fa-bars {color: #fff;}
+      .site-title a {color: #fff;}
+      .pad_menutitle i.fa.fa-times {background-color: #2196F3;}
+      body {font-family: "Raleway Light", "Source Sans", sans-serif;}
+      body {font-size: 13px;}
+
+    </style>
+    </head>
+
+<body class="post-template-default single single-post postid-1032 single-format-standard wp-embed-responsive sfsi_actvite_theme_default">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header " role="banner">
+		<div class="site-branding">
+
+			<div class="site-logo">
+					  
+
+									<p class="site-title"><a href="https://jailsonevora.github.io/" rel="home">BackendDev</a></p>
+				  	 
+				
+			</div>
+
+			
+
+					</div>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button href="#sidr" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+				<div id="menu" class="menu"><ul>
+<li class="page_item page-item-12"><a href="https://jailsonevora.github.io/">Home</a></li>
+<li class="page_item page-item-32"><a href="https://jailsonevora.github.io/about-j-e-evora/">About Me</a></li>
+<li class="page_item page-item-42 current_page_parent"><a href="https://jailsonevora.github.io/j-e-evora-blog/">Blog</a></li>
+<li class="page_item page-item-34"><a href="https://jailsonevora.github.io/contact-j-e-evora/">Contact Me</a></li>
+</ul></div>
+			</nav>
+	</header>
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area single_post_page">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-1032" class="post-1032 post type-post status-publish format-standard has-post-thumbnail hentry category-soa tag-bpel tag-corba tag-mom tag-oasis tag-rest tag-saml tag-soa tag-soap tag-uddi tag-web-services tag-ws-policy tag-wsdl tag-xml">
+	
+		<div class="post-entry-meta">
+			<span class="posted-on">Posted on <a href="https://jailsonevora.github.io/2019/09/09/soa-and-process-service-integration/" rel="bookmark"><time class="entry-date published" datetime="2019-09-09T11:46:02+00:00">September 9, 2019</time><time class="updated" datetime="2020-03-31T02:53:52+00:00">March 31, 2020</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://jailsonevora.github.io/author/admin/">admin</a></span></span>		</div>
+		
+	<div class="entry-content">
+
+		<div class="featured__image">
+			<img width="2550" height="1614" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%202550%201614'%3E%3C/svg%3E" data-src="https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="" decoding="async" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA.png 2550w, https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA-300x190.png 300w, https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA-768x486.png 768w, https://jailsonevora.github.io/wp-content/uploads/2019/09/SOA-1024x648.png 1024w" data-sizes="(max-width: 2550px) 100vw, 2550px">	</div>
+
+	
+	<div class="post_wrap">
+
+		<div class="post_others">
+
+			
+			<header class="entry-header">
+				<h1 class="entry-title">SOA and process services integration</h1>				
+									
+							</header>
+			
+
+			
+			<div class="entry">
+				
+<p class="has-drop-cap has-medium-font-size">Service-oriented architectures (SOA) has brought significant gains for process automation. According to the official definition of OASIS [1], it is a paradigm for organizing and utilizing distributed resources that may be under the control of different domains of ownership.</p>
+
+
+
+<p class="has-medium-font-size">Although the official definition may be ambiguous, it is possible to define SOA as a paradigm for designing software systems from reusable components designated by services [3], [2], with service being a set of code blocks that perform distinct functions [4], [5], [6]. The goal of SOA-based development is to enable organizations to build business systems from simple modules to obtain flexibility, agility, and productivity improvements in their business development [3], capable of relating <a rel="noreferrer noopener" aria-label="business processes (opens in a new tab)" href="https://www.jeevora.com/2019/07/30/business-process-modeling/" target="_blank">business processes</a> to technical processes [7] and mapping <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.jeevora.com/2019/07/28/process-automation/" target="_blank">workflow </a>relationships between them [4]</p>
+
+
+
+<p class="has-medium-font-size">SOA is usually based on the principle of providing reusable business services that can be assembled from software sub-components in such a way that the provider (who makes the service available) [3] and the customer (who uses it) are considered loosely coupled [4] (definition of the neutral interface that is not strongly tied to a particular implementation) [6]. They do not need to have an in-depth knowledge of each other, from the technologies, platforms [8], location or environments around them, and the code can be reused thanks to their neutral interface features, making it easy for developers who need only discovering the interfaces of already developed applications, rather than building new systems from scratch whenever new business rules are changed or added [9].</p>
+
+
+
+<p class="has-medium-font-size">SOA services have components that relate through well-defined interfaces and contracts. The interface is defined neutrally and independently of the hardware, operating system and programming language [7] in which it is implemented, allowing these services to interact with one another uniformly and universally.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<p class="has-medium-font-size">The architecture’s ability to have loosely coupled services allows service providers with these characteristics to benefit from their agility and ability to survive the constant changes in the structure and internal implementation that make up the application [4]. In addition to having services such as a key component of architecture, SOA is also comprised of service interfaces that enable vendor-customer interaction. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<h2 class="wp-block-heading">SOA – Guiding principles for achieving SOA </h2>
+
+
+
+<p class="has-medium-font-size">Although there is no official standard for SOA composition, the community agrees with four fundamental principles as guiding principles for achieving SOA [10], where they are, <strong>service boundaries must be explicit</strong> [11]; <strong>services must be autonomous</strong> [7]; <strong>customers and services should share contracts and not code; and finally the possibility of policy-based compatibilities</strong>. Policy-based compatibility understands that two orthogonal requirements must be supported when interacting with a service. Vendor functionality, syntax, and semantics must meet consumer requirements; and the skills and technical needs must match. However, functional aspects are described in the service interface, but capabilities, orthogonal and nonfunctional needs are specified using policies [12].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">SOA architecture is also known as an evolution of client/server architecture, where business logic is broken down to lower levels of granularity, based on the ideas and technologies implemented in XML and WS [4]. WS is known as a software system designed to support interoperable machine-to-machine interactions with key elements [3], [6]:</p>
+
+
+
+<ul><li><strong>Web Services Definition Language</strong> (WSDL), standard for representing pieces of software;</li><li> <strong>Simple Object Access Protocol </strong>(SOAP), a protocol for information exchange in a decentralized and distributed environment;</li><li> <strong>Universal Description, Discovery, and Integration</strong> (UDDI), XML-based service registration engine. Allows services to be discovered on the web and make interoperable. It is compared to the yellow pages of a phone book, where companies can list themselves by name, product, location or the services they offer.</li></ul>
+
+
+
+<h2 class="wp-block-heading">Gains in the organization and software development when using SOA</h2>
+
+
+
+<p class="has-medium-font-size">Thus, communication with WS is done from the network using technologies such as XML (data fundamentals and protocol related), WSDL (service description related), SOAP and UDDI (Figure 1), these are capable of providing a common approach to defining, publishing, and using WS accessible through a standard protocol, specifically SOAP [5]. A WS usually allows the discovery of the service, the customer makes a request to the provider, the provider processes the request and sends the response to the customer [3],[6].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img decoding="async" width="1086" height="501" src="data:image/svg+xml,%3Csvg%20xmlns='https://www.w3.org/2000/svg'%20viewBox='0%200%201086%20501'%3E%3C/svg%3E" data-src="https://www.jeevora.com/wp-content/uploads/2019/09/image.png" alt="SOA and process service integration" class="wp-image-1035 lazy" data-srcset="https://jailsonevora.github.io/wp-content/uploads/2019/09/image.png 1086w, https://jailsonevora.github.io/wp-content/uploads/2019/09/image-300x138.png 300w, https://jailsonevora.github.io/wp-content/uploads/2019/09/image-768x354.png 768w, https://jailsonevora.github.io/wp-content/uploads/2019/09/image-1024x472.png 1024w" data-sizes="(max-width: 1086px) 100vw, 1086px"><figcaption>Figure 1: Patterns around WS plus process service integration [4]</figcaption></figure></div>
+
+
+
+<p class="has-medium-font-size">Parallel to the use of SOAP, WS also allows the use of Representational State Transfer (REST). REST is an architectural style that typically uses HTTP / HTTPS, while SOAP is network layer independent and can use a variety of network protocols. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">WS can be said to provide the base technology for implementing the SOA architecture, but it is not the only one. Common Object Request Broker Architecture (CORBA) vendor-independent architecture and infrastructure that enables systems to communicate over a network [13] and Message-Oriented Middleware (MOM) systems that support general-purpose messaging in environments distributed systems [14]) can also be used. SOA is not language-specific and services can be implemented in any programming language that allows generating and interacting with WSDL [4]. In this way the use of SOA allows to obtain circumstantial gains in the organization and the software development (Table 1):</p>
+
+
+
+<figure class="wp-block-table aligncenter"><table class=""><tbody><tr><td><strong>Benefits</strong></td><td><strong>Description</strong></td></tr><tr><td>Business-centric </td><td>Business-centric software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>The lower long term cost</td><td>The lower incremental cost for development<gwmw style="display:none;"></gwmw></td></tr><tr><td>Reduced Skills</td><td>Lower requirement for training and technical knowledge<gwmw style="display:none;"></gwmw></td></tr><tr><td>Low costs</td><td>Lower costs in software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Speed</td><td>The faster software development cycle<gwmw style="display:none;"></gwmw></td></tr><tr><td>Platform independent</td><td>Helps integrate applications across multiple parts, can leverage legacy systems and create additional functionality without having to rebuild the entire system<gwmw style="display:none;"></gwmw></td></tr><tr><td>Focused developer roles</td><td>Developers can focus completely on implementing and maintaining their services without having to worry about the services of others as long as the default contract is respected.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Regardless of location</td><td>Regardless of location, it is possible for the service consumer to search for and discover it<gwmw style="display:none;"></gwmw></td></tr><tr><td>Code Reuse</td><td>Dividing applications into small separated parts helps to reuse in various other systems, thereby reducing the cost of development</td></tr><tr><td>Greater testability</td><td>Small, standalone services are easier to test and debug than monolithic applications, allowing you to have more reliable software<gwmw style="display:none;"></gwmw></td></tr><tr><td>Parallel development</td><td>Independence between services with pre-defined contracts helps parallel development by greatly reducing the software development lifecycle.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Better scalability</td><td>Possibility to have multiple instances of the service running on different servers, allowing you to move the service transparently to more resourceful servers<gwmw style="display:none;"></gwmw></td></tr><tr><td>Greater availability</td><td>The ability to have multiple instances of a service and not care about its location ensures high availability.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
+
+
+
+<div style="height:41px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1] C. M. Mackenzie, K. Laskey, F. Mccabe, R. Metz, and A. Hamilton, “Reference Model for Service Oriented Architecture 1.0 Committee Specification 1, 2 August 2006,” no. August, pp. 1–31, 2006.<br> [2] P. Desfray and G. Raymon, Modeling Enterprise Architecture with TOGAF: A Practical Guide Using UML and BPMN. 2014.<br> [3] M. Liu, WCF 4.5 Multi-Layer Services Development with Entity Framework Third Edition. 2012.<br> [4] D. Minoli, Enterprise Architecture A to Z: Frameworks, Business Process Modeling, SOA, and Infrastructure Technology. 2008.<br> [5] M. Gousset, B. Keller, A. Krishnamoorthy, and M. Woodward, “Professional WCF 4 Windows Communication Foundation with NET 4,” 2010.<br> [6] M. Liu, WCF 4.0 Multi-tier Services Development with LINQ to Entities, no. 4. 2010.<br> [7] N. Pathak, “Pro WCF 4,” pp. 3–24, 2011.<br> [8] J. Lowy, Programming WCF Services. 2010.<br> [9] Microsoft IC, “Introducing Windows Communication Foundation in .NET Framework 4.” [Online]. Available: <a href="https://msdn.microsoft.com/en-us/library/ee958158.aspx">https://msdn.microsoft.com/en-us/library/ee958158.aspx</a><br> [10] M. L. Bustamante, Learning WCF, Master Windows Communication Foundation and SOA Fundamentals. 2007.<br> [11] Scott Klein, Professional WCF Programming. 2007.<br> [12] “10 Principles of SOA,” 2007. [Online]. Available:  <a href="https://www.infoq.com/articles/tilkov-10-soa-principles/">https://www.infoq.com/articles/tilkov-10-soa-principles/</a>.<br> [13] C. Interfaces, “Common Object Request Broker Architecture (CORBA) Specification, Version 3.3,” no. November 2012.<br> [14] B. S. of I. University of California, “Distributed Computing Applications and Infrastructure.” [Online]. Available: <a href="http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html">http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html</a></p>
+ 
+					<section class="color-1">
+									
+			</section>
+						
+					
+			</div>
+			
+
+			
+			<footer class="entry-footer">
+				<span class="cat-links">Posted in <a href="https://jailsonevora.github.io/category/soa/" rel="category tag">Service-Oriented Architecture (SOA)</a></span><p class="tags-links">Tagged <a href="https://jailsonevora.github.io/tag/bpel/" rel="tag">BPEL</a>, <a href="https://jailsonevora.github.io/tag/corba/" rel="tag">CORBA</a>, <a href="https://jailsonevora.github.io/tag/mom/" rel="tag">MOM</a>, <a href="https://jailsonevora.github.io/tag/oasis/" rel="tag">OASIS</a>, <a href="https://jailsonevora.github.io/tag/rest/" rel="tag">REST</a>, <a href="https://jailsonevora.github.io/tag/saml/" rel="tag">SAML</a>, <a href="https://jailsonevora.github.io/tag/soa/" rel="tag">SOA</a>, <a href="https://jailsonevora.github.io/tag/soap/" rel="tag">SOAP</a>, <a href="https://jailsonevora.github.io/tag/uddi/" rel="tag">UDDI</a>, <a href="https://jailsonevora.github.io/tag/web-services/" rel="tag">Web Services</a>, <a href="https://jailsonevora.github.io/tag/ws-policy/" rel="tag">WS-Policy</a>, <a href="https://jailsonevora.github.io/tag/wsdl/" rel="tag">WSDL</a>, <a href="https://jailsonevora.github.io/tag/xml/" rel="tag">XML</a></p>			</footer>
+			
+
+		</div>
+	</div>
+	
+
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://jailsonevora.github.io/2019/08/24/microservices-security-mechanisms/" rel="prev">Microservices Security Mechanisms</a></div><div class="nav-next"><a href="https://jailsonevora.github.io/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" rel="next">Key Java @Annotations to build full Spring Boot Rest API</a></div></div>
+	</nav>
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://jailsonevora.github.io/wordpress/2019/09/09/soa-and-process-service-integration/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://jailsonevora.github.io/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="1032" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+
+
+</div>
+
+		
+	</div>
+
+<div class="clearfix"></div>
+    <section class="footer-widget">
+                <div class="clearfix"></div>
+  	</section>
+  	
+
+	</article></main></div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: portfolioo by <a href="https://asphaltthemes.com/">Asphalt Themes</a>		</div>
+		<a href="#" class="scrolltotop"><i class="fa fa-chevron-up"></i></a>
+	</footer>
+</div>
+
+			
+			<div id="fb-root"></div>
+			<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+		<script>
+window.addEventListener('sfsi_functions_loaded', function() {
+    if (typeof sfsi_responsive_toggle == 'function') {
+        sfsi_responsive_toggle(0);
+        // console.log('sfsi_responsive_toggle');
+
+    }
+})
+</script>
+    <script>
+        window.addEventListener('sfsi_functions_loaded', function() {
+            if (typeof sfsi_plugin_version == 'function') {
+                sfsi_plugin_version(2.77);
+            }
+        });
+
+        function sfsi_processfurther(ref) {
+            var feed_id = '';
+            var feedtype = 8;
+            var email = jQuery(ref).find('input[name="email"]').val();
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if ((email != "Enter your email") && (filter.test(email))) {
+                if (feedtype == "8") {
+                    var url = "https://api.follow.it/subscription-form/" + feed_id + "/" + feedtype;
+                    window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+                    return true;
+                }
+            } else {
+                alert("Please enter email address");
+                jQuery(ref).find('input[name="email"]').focus();
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css" aria-selected="true">
+        .sfsi_subscribe_Popinner {
+            width: 100% !important;
+
+            height: auto !important;
+
+            padding: 18px 0px !important;
+
+            background-color: #ffffff !important;
+        }
+        .sfsi_subscribe_Popinner form {
+            margin: 0 20px !important;
+        }
+        .sfsi_subscribe_Popinner h5 {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-weight: bold !important;
+
+            color: #000000 !important;
+
+            font-size: 16px !important;
+
+            text-align: center !important;
+            margin: 0 0 10px !important;
+            padding: 0 !important;
+        }
+        .sfsi_subscription_form_field {
+            margin: 5px 0 !important;
+            width: 100% !important;
+            display: inline-flex;
+            display: -webkit-inline-flex;
+        }
+
+        .sfsi_subscription_form_field input {
+            width: 100% !important;
+            padding: 10px 0px !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email] {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+        .sfsi_subscribe_Popinner input[type=email]:-moz-placeholder {
+            /* Firefox 18- */
+
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-moz-placeholder {
+            /* Firefox 19+ */
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]:-ms-input-placeholder {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-style: normal !important;
+
+            color: #000000 !important;
+
+            font-size: 14px !important;
+
+            text-align: center !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=submit] {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+            font-weight: bold !important;
+
+            color: #000000 !important;
+
+            font-size: 16px !important;
+
+            text-align: center !important;
+
+            background-color: #dedede !important;
+        }
+
+        .sfsi_shortcode_container {
+            float: left;
+        }
+
+        .sfsi_shortcode_container .norm_row .sfsi_wDiv {
+            position: relative !important;
+        }
+
+        .sfsi_shortcode_container .sfsi_holders {
+            display: none;
+        }
+
+            </style>
+
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/modernizr.custom.min.js?ver=6.2" id="SFSIjqueryModernizr-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/jquery.shuffle.min.js?ver=6.2" id="SFSIjqueryShuffle-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/shuffle/random-shuffle-min.js?ver=6.2" id="SFSIjqueryrandom-shuffle-js"></script>
+<script type="text/javascript" id="SFSICustomJs-js-extra">
+/* <![CDATA[ */
+var sfsi_icon_ajax_object = {"ajax_url":"https:\/\/jailsonevora.github.io\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/jailsonevora.github.io\/wp-content\/plugins\/ultimate-social-media-icons\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/plugins/ultimate-social-media-icons/js/custom.js?ver=2.8.1" id="SFSICustomJs-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/sidr.js?ver=0.0.1" id="portfolioo-sidr-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/portfolioo.js?ver=0.0.1" id="portfolioo-jquery-js"></script>
+<script type="text/javascript" src="https://jailsonevora.github.io/wp-content/themes/portfolioo/js/skip-link-focus-fix.js?ver=20151215" id="portfolioo-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=default&ver=1.3.12" id="mathjax-js"></script>
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="https://jailsonevora.github.io/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></div></body>
+</html>
