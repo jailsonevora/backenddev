@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.com/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.com//wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://jailsonevora.com/</loc>
+		<loc>https://jailsonevora.com//</loc>
 		<lastmod>2023-04-18T22:20:05+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/about-j-e-evora/</loc>
+		<loc>https://jailsonevora.com//about-j-e-evora/</loc>
 		<lastmod>2020-11-19T15:43:03+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/contact-j-e-evora/</loc>
+		<loc>https://jailsonevora.com//contact-j-e-evora/</loc>
 		<lastmod>2022-03-26T14:56:47+00:00</lastmod>
 	</url>
 </urlset>
