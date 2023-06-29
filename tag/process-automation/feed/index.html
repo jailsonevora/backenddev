@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Process Automation Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/process-automation/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/process-automation/</link>
+	<description>Backend development blog</description>
+	<lastBuildDate>Wed, 19 Apr 2023 22:26:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Process Automation &#8211; Historical retrospective and basic concepts</title>
+		<link>https://jailsonevora.com/2019/07/28/process-automation/</link>
+					<comments>https://jailsonevora.com/2019/07/28/process-automation/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sun, 28 Jul 2019 01:03:17 +0000</pubDate>
+				<category><![CDATA[Workflow]]></category>
+		<category><![CDATA[activity]]></category>
+		<category><![CDATA[BPMS]]></category>
+		<category><![CDATA[DBMS]]></category>
+		<category><![CDATA[deadline]]></category>
+		<category><![CDATA[event]]></category>
+		<category><![CDATA[instance]]></category>
+		<category><![CDATA[participant]]></category>
+		<category><![CDATA[process]]></category>
+		<category><![CDATA[Process Automation]]></category>
+		<category><![CDATA[role]]></category>
+		<category><![CDATA[task]]></category>
+		<category><![CDATA[task list]]></category>
+		<category><![CDATA[timing]]></category>
+		<category><![CDATA[transition]]></category>
+		<category><![CDATA[trigger]]></category>
+		<category><![CDATA[WfMC]]></category>
+		<category><![CDATA[WfMS]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=187</guid>
+
+					<description><![CDATA[<p>Process automation can be approached from different perspectives and may refer to the intention to automate any conceivable part of procedural work within a business process [1]. This ranges from simple operations that are part of a single process activity to coordinating automated whole and complex processes [2]. This intention to automate any conceivable part [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/28/process-automation/">Process Automation &#8211; Historical retrospective and basic concepts</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size">Process automation can be approached from different perspectives and may refer to the intention to automate any conceivable part of procedural work within a business process [1]. This ranges from simple operations that are part of a single process activity to coordinating automated whole and complex processes [2].</p>
+
+
+
+<p class="has-medium-font-size"> This intention to automate any conceivable part of procedural work leads to the Workflow concept. Workflow is understood as a process that is fully or partially automated by software, which transmits information from one participant to another according to the time and logic defined in the underlying process model [2].</p>
+
+
+
+<p class="has-medium-font-size"> This post addresses key concepts associated with process automation from the definition of a workflow to the presentation of its concepts and characteristics.  </p>
+
+
+
+<div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Process Automation &#8211; Historical retrospective</h2>
+
+
+
+<p class="has-medium-font-size">Before going into detail about the concept, it is important to make a temporal survey to fit the concept with the current reality, as well as understand the origins and emergence of this “new” approach in the world of organizations and IT.</p>
+
+
+
+<p class="has-medium-font-size">Thus, in the 1990s arose the <strong><a aria-label=" (opens in a new tab)" href="https://www.wfmc.org/" target="_blank" rel="noreferrer noopener">Workflow Management Collation</a> (WfMC)</strong>, was founded to set standards related to workflows, it was created by IT and business companies, as well as users and academics. This organization felt the need to define and standardize the term Workflow Management System (WfMS), understanding it as a system that defines, creates, and manages the execution of workflows through the use of software, capable of interpreting the process, interacting with participants as well as when necessary to invoke the use of IT tools and applications [3], [4].</p>
+
+
+
+<p class="has-medium-font-size">Looking back, it can be seen that over the years there have been several milestones around the development of information systems. From a historical summary, the following stand out [5]:</p>
+
+
+
+<ul>
+<li><strong><em>1965-1975</em></strong>: <strong>the decomposition of applications</strong>, which comprised applications separated by layers, unlike previous monolithic applications, each with its own databases and definitions;</li>
+
+
+
+<li><em><strong>1975-1985</strong></em>: <strong>database management</strong>, removal of data management from the application, increasing by large scale the emergence of DBMS;</li>
+
+
+
+<li><strong><em>1985-1995</em></strong>: <strong>user interface</strong>, removal of  interface management from  applications; </li>
+
+
+
+<li><strong><em>1995-2005</em></strong>: <strong>workflow</strong>, the removal of <a rel="noreferrer noopener" aria-label="business processes (opens in a new tab)" href="https://en.wikipedia.org/wiki/Business_process_automation" target="_blank">business processes</a> from applications.</li>
+</ul>
+
+
+
+<p class="has-medium-font-size">Given the evolution of information systems in recent decades, especially with the removal of business processes from within applications, [5] W. M. P. Van Der Aalst et al makes an analogy, comparing WfMS to DBMS, in the sense that just as databases are developed and used with the help of DBMS, WfMS can also be used to define and use workflow systems.<gwmw style="display:none;"></gwmw></p>
+
+
+
+<div style="height:61px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Process Automation &#8211; Workflow Definition<gwmw style="display:none;"></gwmw></h2>
+
+
+
+<p class="has-medium-font-size">The term workflow, which is the focus of WfMS, is often placed in the relationship of dependency between process management and analysis, and can also be understood as the way workflows through the process, the activities that are performed on it, the people involved, and the information necessary for their conclusion.</p>
+
+
+
+<p class="has-medium-font-size">It is common to find references to process management as workflow management and information systems that support workflow management as being called WfMS [6]. The term workflow management is often referred to as being the controller of actions taken on documents moving through a business process. Specifically, WfMS is used to determine and control who can access which document, what operations employees can perform on a given document, which sequence of operations are performed [6], and is able to integrate between a set of systems. Similarly, these can also be used to implement business processes in which people are actively involved, thereby improving collaboration between stakeholders [4], [3] and systematization in the sense that all workers can perform a task following the same steps previously modeled.</p>
+
+
+
+<p class="has-medium-font-size">In the face of new needs, this type of system has been and is subject to the constant insertion of new features, making it flexible so that it can cope with the increasing complexity of modern processes. Due to this scope and the expansion of flexibility, it has evolved to incorporate more capabilities and is no longer focused solely on process automation. In the present times, it is common to find references to WfMS as Business Process Management Systems (BPMS). WfMS is understood to be the embryo of BPMS. It is also important to highlight that currently the term WfMS is little used and ends up falling out in favor of BPMS, which is the natural evolution of it.</p>
+
+
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Process Automation &#8211; Workflow basics</h2>
+
+
+
+<p class="has-medium-font-size"> After the definition and historical retrospective, it is already possible to understand a little more about the term workflow and the associated technologies. </p>
+
+
+
+<p class="has-medium-font-size">It is now pertinent to present some key concepts and descriptions, defined by the WfMC [7]: </p>
+
+
+
+<ul>
+<li><strong><a rel="noreferrer noopener" aria-label="Activity  (opens in a new tab)" href="https://www.jeevora.com/2019/08/04/three-functional-areas-of-workflow-systems/" target="_blank">Activity </a></strong>&#8211; Set of events that occur under the responsibility of an actor;</li>
+
+
+
+<li><strong>Deadline</strong> &#8211; Based on the wait time each rule in an activity or to-do list needs to complete its goals;</li>
+
+
+
+<li><strong>Event </strong>&#8211; Occurrence of a condition causing one or more actions within the system;</li>
+
+
+
+<li><strong>Trigger </strong>&#8211; Allows the awakening of activity from an event;</li>
+
+
+
+<li><strong>Instance </strong>&#8211; Represents association or addition of data to a particular phase of a process or activity;</li>
+
+
+
+<li><strong>Task List </strong>&#8211; Associated to a participant, or group of participants in a workflow, who can share a common list;</li>
+
+
+
+<li><strong>Role </strong>&#8211; Actors who have qualifications and rights that enable them to perform an activity;</li>
+
+
+
+<li><strong>Participant </strong>&#8211; Resource that performs the work represented by an activity instance, which may be human, equipment, rules, or an organizational unit;</li>
+
+
+
+<li><strong><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.jeevora.com/2019/07/30/business-process-modeling/" target="_blank">Process </a></strong>&#8211; A set of procedures or activities related to the goal of achieving a goal within an organizational context;</li>
+
+
+
+<li><strong>Timing</strong>&#8211; Formal representation of the interaction of activities, establishing the dependency between them, and specifying which tasks should be performed in parallel, or which may be delayed until another activity is completed;</li>
+
+
+
+<li><strong>Task </strong>&#8211; Represents the work done by a participant in a process instance within the context of workflows;</li>
+
+
+
+<li><strong>Transition </strong>&#8211;  the process or a period of changing from one state to the other. </li>
+</ul>
+
+
+
+<div style="height:65px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1] P. Harmon, Business Process Change: A Business Process Management Guide for Managers and Process Professionals 3rd Edition, vol. 53. 2014.<br>[2] M. Dumas, M. La Rosa, J. Mendling, and H. A. Reijers, Fundamentals of Business Process Management. 2012.<br>[3] M. Weske, Business Process Management: Concepts, Languages, Architectures 2nd Edition. 2012<br>[4] M. Weske, Business Process Management: Concepts, Languages, Architectures. 2007.<br>[5] W. M. P. Van Der Aalst and K. M. van Hee, Workflow Management Models, Methods, and Systems. 2004<br>[6] M. Laguna and J. Marklund, Business Process Modeling, Simulation, And Design 2nd Edition. 2013.<br>[7] D. Hollingsworth, “Workflow Management Coalition: The Workflow Reference Model,” WfMC Specif., no. 1, pp. 1–55, 1994.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/28/process-automation/">Process Automation &#8211; Historical retrospective and basic concepts</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/07/28/process-automation/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 4/126 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 17/39 queries in 0.040 seconds using disk
+
+Served from: localhost @ 2023-06-29 00:55:20 by W3 Total Cache
+-->

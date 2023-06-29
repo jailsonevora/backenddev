@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<?xml version="1.0" encoding="UTF-8"?><html><body><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+
+<channel>
+	<title>UML Archives - Backend-Dev</title>
+	<link href="https://jailsonevora.com/tag/uml/feed/" rel="self" type="application/rss+xml">
+	<link>https://jailsonevora.com/tag/uml/
+	<description></description>
+	<lastbuilddate>Wed, 19 Apr 2023 22:29:21 +0000</lastbuilddate>
+	<language>en-US</language>
+	<updateperiod>
+	hourly	</updateperiod>
+	<updatefrequency>
+	1	</updatefrequency>
+	<generator>https://wordpress.org/?v=6.2</generator>
+	<item>
+		<title>Business Process Modeling – Techniques and Notations</title>
+		<link>https://jailsonevora.com/2019/07/30/business-process-modeling/
+					<comments>https://jailsonevora.com/2019/07/30/business-process-modeling/#comments</comments>
+		
+		<creator></creator>
+		<pubdate>Tue, 30 Jul 2019 21:49:03 +0000</pubdate>
+				<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<guid ispermalink="false">https://www.jeevora.com/?p=207</guid>
+
+					<description>Business Process Modeling – In organizations and IT, the process can often be understood as a limited set of activities that are performed in response to an event, to generate output [1] and can be very simple or extremely complex [2]. It is a somewhat more ambiguous concept with different meanings, depending on the context […]
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/30/business-process-modeling/">Business Process Modeling – Techniques and Notations</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<encoded>Business Process Modeling – In organizations and IT, the process can often be understood as a limited set of activities that are performed in response to an event, to generate output [1] and can be very simple or extremely complex [2]. It is a somewhat more ambiguous concept with different meanings, depending on the context in which it is used [3].<gwmw style="display:none;"></gwmw>
+
+
+
+<p class="has-medium-font-size">Thus, when contextualizing within organizations and IT, it is important to understand that having an input event be turned into output is often referred to as a simple transformation model. This simple transformation model forms the basis for the so-called process view of an organization. </p>
+
+
+
+<p class="has-medium-font-size">At first glance, this simplistic model hides the details of the transformation, so it is necessary to achieve a detailed analysis and design, needing to go beyond, entering the so-called “black box”, to be able to know the types of processes, the hierarchies and the determinants of the highlighted architecture (Figure 2) [3].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="629" height="176" src="../wp-content/uploads/2019/07/image-3.png" alt="Business Process Modeling - Process transformation model" class="wp-image-237" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/image-3.png 629w,https://jailsonevora.com/wp-content/uploads/2019/07/image-3-300x84.png 300w" sizes="(max-width: 629px) 100vw, 629px"><figcaption class="wp-element-caption">Figure 1: Process transformation model</figcaption></figure>
+
+
+
+<p class="has-medium-font-size">The transformation model receives input and in the “black box” the transformations are performed for an indefinite number of tasks or activities, eventually triggering the output of the transformations performed by the process, as previously mentioned in the process definition.</p>
+
+
+
+<h2 class="wp-block-heading"> Different kinds of processes </h2>
+
+
+
+<p class="has-medium-font-size">That alone is not enough to understand the full meaning and constitution of a process, so by exploring in more detail the constitution of the “black box”, it turns out that it can be constituted by different types of processes, where they are often divided into three different types  [3], [4]: </p>
+
+
+
+<ul>
+<li>the<strong> individual</strong> ends up being performed by separate individuals; </li>
+
+
+
+<li><strong>vertical or functional processes</strong> that are contained within a given functional unit; </li>
+
+
+
+<li>and finally, <strong>horizontal functional processes</strong>, which cross several units.</li>
+</ul>
+
+
+
+<p class="has-medium-font-size">Equally importantly, process structures can be characterized into five main components or elements, <strong>inputs and outputs, flow units, activity network, and buffers, resources, and information structure</strong>.</p>
+
+
+
+<div style="height:67px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading"> Business Process </h2>
+
+
+
+<p class="has-medium-font-size">The term business can be understood as an organizational entity that inserts resources to provide customers with the desired products or services, encompassing companies and others. Thus, a business process (BP) describes how something is done in an organization [3]. This can be thought of as a set of short or long-term activities, invoked in a specific sequence to achieve a specific business objective [5], [6], [7], involving steps performed by machines and people [8], [9]</p>
+
+
+
+<p class="has-medium-font-size">Exploring the concept applied to IT, a metalanguage is often used to describe a business process and may invoke other support services or contain other service components such as state machines, human tasks, business rules, or business map data [9].</p>
+
+
+
+<p class="has-medium-font-size">Therefore, just as business processes have their principles and concepts, it is important to make a separation between <strong>business processes</strong> and <strong><a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">workflows</a></strong>. It is common to encounter confusion around these two concepts. <strong>BP </strong>should not be confused with the workflow. <strong>Workflow </strong>is the way work is done, being dependent on business process support, yet driven by process logic and orchestration rules [9].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<div style="height:68px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading"> Business Process Modeling </h2>
+
+
+
+<p class="has-medium-font-size">In process modeling, there is a specific discipline known as <strong>Business Process Modeling (BPModeling)</strong>. This is understood as the discipline that defines and outlines business practices, processes [10], information flows, and data storage [9], [11]. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size">It involves using a notation such as <strong>Unified Modeling Language (UML)</strong> or <strong>Business Process Model and Notation (BPMN)</strong> to capture graphical representations of key processes, workflows, and other aspects related to business logic. </p>
+
+
+
+<p class="has-medium-font-size">Its main objective is to develop the process model, which will define the existing process flow in detail, and it will be necessary to answer the following questions in its implementation [7]:</p>
+
+
+
+<ul>
+<li>What is the result of the business process?</li>
+
+
+
+<li>What activities are performed within the business process?</li>
+
+
+
+<li>What is the order of activities?</li>
+
+
+
+<li>Who performs the activities?</li>
+
+
+
+<li>What documents are exchanged within the process?</li>
+
+
+
+<li>What are the weaknesses of the process, and how can it be extended in the future?</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">  Traits for a good model  </h3>
+
+
+
+<p class="has-medium-font-size">Keeping in mind these issues outlined in the specification, it is crucial to ensure the following traits to list, to obtain a good model. It is recommended that the template be [12]:</p>
+
+
+
+<ul>
+<li><strong>Salient</strong>– should selectively represent aspects relevant to the task at hand;</li>
+
+
+
+<li> <strong>Accurate </strong>– must accurately systematize the current state of affairs and avoid erroneous or biased views;</li>
+
+
+
+<li><strong>Complete yet cautious</strong> – as simple as possible;</li>
+
+
+
+<li><strong>Understandable </strong>– Once you perceive the model, you must be able to understand it.</li>
+</ul>
+
+
+
+<div style="height:69px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">  Business Process Modeling  – Techniques and <a href="https://en.wikipedia.org/wiki/Business_process_modeling" target="_blank" rel="noreferrer noopener">Notations</a> </h2>
+
+
+
+<p class="has-medium-font-size">As well as talking about the issues and traits portrayed above, which should be followed in the implementation of this discipline, it is imperative also to present the most used techniques in process modeling. </p>
+
+
+
+<p class="has-medium-font-size">Many techniques have been tested over the years and are sometimes considered a little confusing, due to the many definitions and various ways to reach the proposed end.</p>
+
+
+
+<p class="has-medium-font-size">It is important to know the various techniques available so that the choice fits and adapts the characteristics of the processes to be modeled, facilitating the modeling task and meeting the needs [5], [6], [11], [13]. </p>
+
+
+
+<h3 class="wp-block-heading"> BPMN </h3>
+
+
+
+<p class="has-medium-font-size">BPMN’s intention in business process modeling is very similar to UML’s for object-oriented design and analysis. This aims to identify best practices from existing approaches and combine them into a new, generally accepted language [5], [6], [10].</p>
+
+
+
+<p class="has-medium-font-size">Predecessor languages to BPMN included not only graph and Petri-net based languages but also UML and Event-Driven Process Chain (EPC) activity diagrams [8]. While these modeling languages focus on different levels of abstraction, ranging from one business level to a more technical level, BPMN aims to support the full range of abstraction levels, including business levels and software technology levels [8], [27], [15].</p>
+
+
+
+<figure class="wp-block-image aligncenter is-resized"><img decoding="async" loading="lazy" src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/seo/bpmn/featured.svg" alt="Diagram" width="350" height="127"></figure>
+
+
+
+<p></p>
+
+
+
+<p>This is set out in the standards document, which states: “BPMN’s primary goal is to provide a notation that is easily understandable by all business users, from business analysts who create initial process drafts to programmers responsible for implementing technology that will execute these processes and ultimately for business people who will manage and monitor these processes ”[7], [8], [16], [14], [15], [17].</p>
+
+
+
+<h3 class="wp-block-heading"> Colored Petri-nets </h3>
+
+
+
+<p class="has-medium-font-size">The graphic language provides basic primitives for building models for concurrent systems [18]. It has the characteristic of modeling discrete events as well as communication and synchronization, combining the capabilities of Petri-nets with those of a high-level programming language [5], [6], [14], [19].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="1024" height="900" src="../wp-content/uploads/2019/07/PN-NonNestedLocking.png" alt="Business Process Modeling - Colered Petri Nets" class="wp-image-264" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/PN-NonNestedLocking.png 1024w,https://jailsonevora.com/wp-content/uploads/2019/07/PN-NonNestedLocking-300x264.png 300w,https://jailsonevora.com/wp-content/uploads/2019/07/PN-NonNestedLocking-768x675.png 768w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<h3 class="wp-block-heading"> Data flow diagrams (DFD or Yourdon´s technique) </h3>
+
+
+
+<p class="has-medium-font-size">Developed in the early 1960s by Larry Constantine and Ed Yourdon, DFDs can be seen as methods of organizing data from their raw state [13]. It aims to show how information flows from one place to another, as well as their relationship with users and the outer. They can be used to record process reviews as part of project documentation [20]</p>
+
+
+
+<figure class="wp-block-image aligncenter is-resized"><img decoding="async" loading="lazy" src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/seo/data-flow-diagram/discovery/featured.svg" alt="Diagram" width="350" height="200"></figure>
+
+
+
+<p class="has-medium-font-size"><strong> </strong></p>
+
+
+
+<p></p>
+
+
+
+<h3 class="wp-block-heading"> Event-Driven Process Chain (EPC)  </h3>
+
+
+
+<p class="has-medium-font-size">Informal notation for the representation of business processes and concepts to the detriment of the formal aspects of their technical realization [13]. It is part of a holistic modeling approach called the Architecture of Integrated Information Systems (ARIS) framework [20] developed by August-Wilhelm Scheer [5], [6].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="407" height="261" src="../wp-content/uploads/2019/07/edpc.png" alt="Business Process Modeling - event driven process chain" class="wp-image-265" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/edpc.png 407w,https://jailsonevora.com/wp-content/uploads/2019/07/edpc-300x192.png 300w" sizes="(max-width: 407px) 100vw, 407px"></figure>
+
+
+
+<h3 class="wp-block-heading"> FlowChart  </h3>
+
+
+
+<p class="has-medium-font-size">Because it is made up of a few symbol patterns, it is easily understood. Also, its simplicity has made it a robust and effective tool, being one of the precursors of many other graphic languages and notations, being used for many years in process modeling. It uses a sequential flow of actions and does not support a division of activities. BPMN notation can be considered as an advanced version of this technique [13].</p>
+
+
+
+<figure class="wp-block-image aligncenter is-resized"><img decoding="async" loading="lazy" src="https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/chart/examples/flowchart-templates/sample-flowchart.svg" alt="sample flowchart" width="720" height="600"></figure>
+
+
+
+<p class="has-medium-font-size"></p>
+
+
+
+<h3 class="wp-block-heading"> Gantt Chart</h3>
+
+
+
+<p class="has-medium-font-size">It lists a to-do list with a timescale and can be used for process representation, although its focus is on the ability to monitor the current situation, project schedule, and resource allocation, eventually neglecting the modeling part [20], [13].</p>
+
+
+
+<h3 class="wp-block-heading"> Integrated Definition for Function Modeling (IDEF) </h3>
+
+
+
+<p class="has-medium-font-size">They are sets of methods for integrated modeling, directed to the business area and companies. They are used according to different applications, IDEF0, IDEF1, IDEF1X, IDEF2, IDEF3, IDEF4, and IDEF5 the most important parts of this family of methods [10].<br> However, for business process modeling, the most useful versions are IDEF0 and IDEF3 [20], [13].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="1172" height="484" src="../wp-content/uploads/2019/07/IDEF_Box_Format.jpg" alt="Business Process Modeling - IDEF" class="wp-image-266" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/IDEF_Box_Format.jpg 1172w,https://jailsonevora.com/wp-content/uploads/2019/07/IDEF_Box_Format-300x124.jpg 300w,https://jailsonevora.com/wp-content/uploads/2019/07/IDEF_Box_Format-768x317.jpg 768w,https://jailsonevora.com/wp-content/uploads/2019/07/IDEF_Box_Format-1024x423.jpg 1024w" sizes="(max-width: 1172px) 100vw, 1172px"></figure>
+
+
+
+<h3 class="wp-block-heading"> Object-Oriented Methods (OO) </h3>
+
+
+
+<p class="has-medium-font-size">Method for analysis, design, and implementation from the object-oriented technique, there are many different OO-based techniques [21]. UML is considered the default OO modeling language [13]</p>
+
+
+
+<h3 class="wp-block-heading"> Petri Nets</h3>
+
+
+
+<p class="has-medium-font-size">Petri nets are one of the best-known techniques for specifying formal and abstract business processes, as such, provide an important basis for process languages. “Formal” means that the semantics of the process instances resulting from the models specified in Petri nets are well-defined, unambiguous, and “abstract” because they do not take into account the execution environment of a business process so that all aspects beyond functional and process perspectives are not covered [5], [6], [13].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="355" height="171" src="../wp-content/uploads/2019/07/Detailed_petri_net.png" alt="Business Process Modeling - Petri Nets" class="wp-image-267" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/Detailed_petri_net.png 355w,https://jailsonevora.com/wp-content/uploads/2019/07/Detailed_petri_net-300x145.png 300w" sizes="(max-width: 355px) 100vw, 355px"></figure>
+
+
+
+<h3 class="wp-block-heading"> Role-Activity Diagrams (RAD) </h3>
+
+
+
+<p class="has-medium-font-size">An abstract notation to describe desired behavior within an organization. They are often organizational functions and may include software systems, customers, and suppliers [22]. They provide a different perspective on the process and are particularly useful in supporting communication [13].</p>
+
+
+
+<h3 class="wp-block-heading"> Role-Interaction Diagrams (RID) </h3>
+
+
+
+<p class="has-medium-font-size">Although slightly more complex than a flowchart, RIDs are quite intuitive to understand, and easy to read, but tend to be confusing and difficult to build [13].</p>
+
+
+
+<h3 class="wp-block-heading"> UML Activity Diagram </h3>
+
+
+
+<p class="has-medium-font-size">UML is a modeling language used primarily for software system specification, visualization, development, and documentation [7]. It has also become a powerful business process modeling technique. With 14 different types, it offers a flexible and powerful way to view almost every business process [19], [10].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="1300" height="805" src="../wp-content/uploads/2019/07/UML-activity-diagram-examples-transparent.png" alt="Business Process Modeling - UML activiy diagram" class="wp-image-268" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/UML-activity-diagram-examples-transparent.png 1300w,https://jailsonevora.com/wp-content/uploads/2019/07/UML-activity-diagram-examples-transparent-300x186.png 300w,https://jailsonevora.com/wp-content/uploads/2019/07/UML-activity-diagram-examples-transparent-768x476.png 768w,https://jailsonevora.com/wp-content/uploads/2019/07/UML-activity-diagram-examples-transparent-1024x634.png 1024w" sizes="(max-width: 1300px) 100vw, 1300px"></figure>
+
+
+
+<h3 class="wp-block-heading"> Workflow Diagram </h3>
+
+
+
+<p class="has-medium-font-size">Workflow diagrams are an approach to improving traditional Petri nets with concepts and notations that make it easier to represent business processes by introducing structural constraints that prove useful for business processes [5], [6].</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="262" height="192" src="../wp-content/uploads/2019/07/wf.png" alt="Business Process Modeling - Workflow diagram" class="wp-image-269"></figure>
+
+
+
+<p class="has-medium-font-size">It is more than a technique for modeling a process. It is a methodology for analyzing and improving a process, including its modeling. It comprises four steps: <strong>information gathering</strong>, <strong>modeling of business processes, workflow modeling and implementation, verification, and enforcement</strong> [13].<gwmw style="display:none;"></gwmw></p>
+
+
+
+<div style="height:71px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1] A. Sharp and P. Mcdermott, Workflow Modeling: Tools for Process Improvement and Applications Development 2nd Edition, vol. 104, no. 25. 2009.<br> [2] P. Harmon, Business Process Change: A Guide for Business Managers and BPM and Six Sigma Professionals 2nd Edition. 2007<br> [3] M. Laguna and J. Marklund, Business Process Modeling, Simulation, And Design 2nd Edition. 2013.<br> [4] M. Hewing, Business Process Blueprinting: A Method for Customer-Oriented Business Process Modeling. 2014.<br> [5] M. Weske, Business Process Management: Concepts, Languages, Architectures 2nd Edition. 2012<br> [6] M. Weske, Business Process Management: Concepts, Languages, Architectures. 2007<br> [7] P. Desfray and G. Raymon, Modeling Enterprise Architecture with TOGAF: A Practical Guide Using UML and BPMN. 2014.<br> [8] V. Stiehl, R. Raw, and P. Smith, Process-Driven Applications with BPMN. 2014<br> [9] A. Iyengar, V. Jessani, and M. Chilanti, WebSphere Business Integration Primer: Process Server, BPEL, SCA, and SOA. 2008.<br> [10] D. Minoli, Enterprise Architecture A to Z: Frameworks, Business Process Modeling, SOA, and Infrastructure Technology. 2008.<br> [11] Y. Chen-Burger and D. Robertson, Automating Business Modelling: A Guide to Using Logic to Represent Informal Methods and Support Reasoning. 2005.<br> [7] M. Juric and K. Pant, Business Process Driven SOA Using BPMN and BPEL: From Business Process Modeling to Orchestration and Service Oriented Architecture. 2008<br> [12] S. White and D. Miers, BPMN Modeling and Reference Guide: Understanding and Using BPMN. 2008<br> [13] Creately, “Business Process Modeling Techniques with Examples,” 2014. [Online]. Available: http://creately.com/blog/diagrams/business-process-modeling-techniques/#uml<br> [14] R. Shapiro et al., BPMN 2.0 Handbook Second Edition: Methods, Concepts, Case Studies and Standards in Business Process Modeling Notation (BPMN). 2012.<br> [15] Object Management Group (OMG), “Business Process Model and Notation (BPMN) Version 2.0,” Business, vol. 50, no. January, p. 170, 2011.<br> [16] O. M. G. D. Number and P. D. F. A. File, “BPMN 2.0 by Example,” vol. 0, no. June 2010.<br> [17] E. Herrera, The BPMN Graphic Handbook. 2015.<br> [18] Kurt Jensen and L. M. Kristensen, Coloured Petri Nets: Modelling and Validation of Concurrent Systems. 2009.<br> [19] F. Schönthaler, G. Vossen, A. Oberweis, and T. Karle, Business Processes for Business Communities: Modeling Languages, Methods, Tools. 2012.<br> [20] M. Von Rosing, H. Von Scheel, and A. W. Scheer, The Complete Business Process Handbook: Body of Knowledge from Process Modeling to BPM, vol. 1. 2014.<br> [21] “Object-oriented methodologies,” 2012. [Online]. Available: <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.slideshare.net/nainarani/object-oriented-methodologies" target="_blank">https://www.slideshare.net/nainarani/object-oriented-methodologies</a><br> [22] W. Zhao, A. Wang, and X. Fang, “Role-Activity Diagrams Modeling Based on Workflow Mining,”</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/30/business-process-modeling/">Business Process Modeling – Techniques and Notations</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></encoded>
+					
+					<commentrss>https://jailsonevora.com/2019/07/30/business-process-modeling/feed/</commentrss>
+			<comments>1</comments>
+		
+		
+			</item>
+		<item>
+		<title>Object-Oriented Analysis and Design – Design in the Software Process</title>
+		<link>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/
+					<comments>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/#respond</comments>
+		
+		<creator></creator>
+		<pubdate>Wed, 24 Jul 2019 01:17:02 +0000</pubdate>
+				<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<category></category>
+		<guid ispermalink="false">https://www.jeevora.com/?p=156</guid>
+
+					<description>“Object-oriented” is associated with coding and software development. In general, this is true. The notion of being object-oriented can apply outside of the role of a developer. Object-oriented thinking at first glance involves examining the problems, breaking them down into parts, and thinking of those as objects. Translating object-oriented modeling involves representing key concepts through […]
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/">Object-Oriented Analysis and Design – Design in the Software Process</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<encoded> “Object-oriented” is associated with coding and software development. In general, this is true. The notion of being object-oriented can apply outside of the role of a developer. Object-oriented thinking at first glance involves examining the problems, breaking them down into parts, and thinking of those as objects. <gwmw style="display:none;"></gwmw>
+
+
+
+<p class="has-medium-font-size">Translating <a rel="noreferrer noopener" aria-label="object-oriented modelling (opens in a new tab)" href="https://en.wikipedia.org/wiki/Object-oriented_analysis_and_design" target="_blank">object-oriented modeling</a> involves representing key concepts through objects in our software. Concepts have a wide range <gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15663048054640783078260">from</gwmw> even instances of people, places, or things that can be distinct objects in the software.  Objects may have specific details associated with them, which are relevant to users, regardless of might also have behaviors or responsibilities associated with them. </p>
+
+
+
+<p class="has-medium-font-size">By using object-oriented design our code stays organized, flexible, and reusable. In object-oriented thinking, often everything is considered an object, even if animated or live and they are all self-aware. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading"> Requirement</h2>
+
+
+
+<p class="has-medium-font-size">When software is developed, it generally goes through a process. A process takes a problem and creates a solution. These iterations consist of taking a set of requirements based on the identified problem(s) and using them to create <strong><a href="https://medium.com/omarelgabrys-blog/object-oriented-analysis-and-design-introduction-part-1-a93b0ca69d36">conceptual design</a></strong> mock-ups and <strong>technical design diagrams</strong>. </p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="320" height="192" src="../wp-content/uploads/2019/08/Object-Oriented-Design-Cycle.png" alt="" class="wp-image-349" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/Object-Oriented-Design-Cycle.png 320w,https://jailsonevora.com/wp-content/uploads/2019/08/Object-Oriented-Design-Cycle-300x180.png 300w" sizes="(max-width: 320px) 100vw, 320px"><figcaption class="wp-element-caption">Software Process life cycle.</figcaption></figure>
+
+
+
+<p class="has-medium-font-size">Many projects fail when this process is skipped over, especially when work immediately begins with coding, and there is a lack of understanding of the requirements and design. So, we must bear in mind that it is important to allot time to form the requirements and design, even if they are not perfectly established. The coding process relies on certain assumptions, and it can be difficult to change those assumptions once coding has begun. Requirements and design activities help us understand what assumptions we need so that we can create the right product. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size"> When the initial set of requirements has been created, the next step in the process is to produce a <strong>conceptual design</strong> and <strong>technical design</strong>. This results in the creation of two different kinds of artifacts: <strong>conceptual mock-ups</strong> and <strong>technical diagrams</strong>.  <gwmw style="display:none;"></gwmw></p>
+
+
+
+<div style="height:72px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Design – Conceptual Design</h2>
+
+
+
+<p class="has-medium-font-size"> Conceptual designs are created with an initial set of requirements as a basis. It outlines the more high-level concepts of the final product. They are expressed or communicated through conceptual mock-ups. </p>
+
+
+
+<p class="has-medium-font-size"> Conceptual mock-ups are visual notations that provide initial thoughts for how requirements will be satisfied. They are often presented as wire-frames, which are a kind of blueprint or basic visual representation of the product, helping to clarify design decisions with clients and users by providing a simple way to illustrate and discuss how a product will work. <gwmw style="display:none;"></gwmw></p>
+
+
+
+<p class="has-medium-font-size"> Mock-ups illustrate major components and connections, or relations between the components, allowing us to easily see what components are missing or may not work. Also, every component has a responsibility it needs to perform. Mock-ups do not outline technical details, because that falls outside the scope of conceptual design. Technical detail is related to a technical design that we will cover in the techn<em>ical design section</em>.</p>
+
+
+
+<h3 class="wp-block-heading">Object-Oriented – Class, Responsibility, Collaborator (CRC)</h3>
+
+
+
+<p class="has-medium-font-size">  Class, Responsibility, Collaborator (CRC) cards are an important technique to help represent the components, responsibilities, and connections at a high level when forming the conceptual design. CRC cards help record and organize components into classes, identify component responsibilities, and determine how they collaborate. Therefore, they also help refine the components of our software design.</p>
+
+
+
+<p class="has-medium-font-size"> CRC cards are used also to refine the components of system design. They are designed with three sections: the class name at the top of the card, the responsibilities of the class on the left side of the card, and collaborators on the right side of the card.</p>
+
+
+
+<figure class="wp-block-image aligncenter"><img decoding="async" loading="lazy" width="289" height="171" src="../wp-content/uploads/2019/07/image-1.png" alt="Object-Oriented Analysis and Design - Class, Responsibility, Collaborator (CRC)" class="wp-image-162"></figure>
+
+
+
+<p class="has-medium-font-size"> To keep track of each candidate component and its responsibilities using a CRC card, we place a component’s name in the class name section and the responsibilities in the responsibilities section. Connections are captured in the collaborator’s section. Connections indicate other classes that the class at the top of the card interacts with to fulfill its responsibilities. These steps are repeated iteratively and new cards are created until all the components of the cards are identified for a system. </p>
+
+
+
+<p class="has-medium-font-size">CRC cards have the purpose to coerce designers to keep breaking components down into smaller components and classes that can be individually described on a card.  They are cheap, editable, and widely available. They help sort information into manageable pieces and allow us to physically reorganize our design.</p>
+
+
+
+<p class="has-medium-font-size">So before we move on to technical design, bear in mind that the best practice is to form the conceptual design first. The clearer they are, the better will be the technical design, and the more likely our software will be built right </p>
+
+
+
+<div style="height:68px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Design – Technical Design</h2>
+
+
+
+<p class="has-medium-font-size"> Technical designs build on conceptual designs and requirements to define the technical details of the solution. In the conceptual design, the major components and connections, as well as their associated responsibilities for the software being developed, are outlined. </p>
+
+
+
+<p class="has-medium-font-size">The technical design uses the outline of conceptual design to describe how these responsibilities are met until each component has been refined to be specific enough to be designed in detail. To accomplish this, the components are split into smaller and smaller components that are specific enough to be designed in detail. By breaking down components into further components, we get down to a level where we can do a detailed design of a particular component with their technical details specified. </p>
+
+
+
+<p class="has-medium-font-size">To communicate technical design, technical diagrams are used. Technical diagrams visualize how to address specific issues for each component, once the conceptual mock-ups are generally not specific enough to capture this information. Many different technical diagrams can be used to describe the structure and behavior of components.</p>
+
+
+
+<h3 class="wp-block-heading">Object-Oriented – <a href="https://www.jeevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener" aria-label="UML Class Diagram (opens in a new tab)">UML Class Diagram</a></h3>
+
+
+
+<p class="has-medium-font-size">CRC cards make it easy to communicate with the client, and they allow us to create designs without the distraction of code. However, a more sophisticated technique to communicate our needs is needed. That is the UML class diagram, also known as the class diagram. These class diagrams provide more detail than CRC cards and allow for easier conversion to classes for coding and implementation.  </p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" loading="lazy" width="464" height="152" src="../wp-content/uploads/2019/07/image.png" alt="Object-Oriented Analysis and Design - UML Class Diagram" class="wp-image-161" srcset="https://jailsonevora.com/wp-content/uploads/2019/07/image.png 464w,https://jailsonevora.com/wp-content/uploads/2019/07/image-300x98.png 300w" sizes="(max-width: 464px) 100vw, 464px"></figure>
+
+
+
+<p class="has-medium-font-size"> Every concept or class in a class diagram is represented with a box, as above. The <strong>class name</strong> is the same as the class name in our POJO or POCO class, the <strong>properties </strong>section is equivalent to member variables and the <strong>operations </strong>section is equivalent to methods in <a rel="noreferrer noopener" aria-label="Object-Oriented Programming (opens in a new tab)" href="https://www.tutorialspoint.com/object_oriented_analysis_design/" target="_blank">Object-Oriented Programming</a>. </p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/">Object-Oriented Analysis and Design – Design in the Software Process</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></encoded>
+					
+					<commentrss>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/feed/</commentrss>
+			<comments>0</comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+</body></html>
