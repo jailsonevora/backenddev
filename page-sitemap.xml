@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.com/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.github.io/wordpress/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://jailsonevora.com/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/</loc>
 		<lastmod>2023-06-28T23:40:58+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/j-e-evora-portfolio-back-end-developer/about-j-e-evora/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/j-e-evora-portfolio-back-end-developer/about-j-e-evora/</loc>
 		<lastmod>2023-06-28T23:36:06+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/privacy-policy/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/privacy-policy/</loc>
 		<lastmod>2023-06-28T23:54:26+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/contact-j-e-evora/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/contact-j-e-evora/</loc>
 		<lastmod>2023-06-29T00:02:38+00:00</lastmod>
 	</url>
 </urlset>
@@ -21,11 +21,11 @@
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 36/78 objects using disk
+Object Caching 50/58 objects using disk
 Page Caching using disk: enhanced 
 Content Delivery Network via N/A
 Lazy Loading
-Database Caching 1/17 queries in 2.362 seconds using disk
+Database Caching 1/4 queries in 2.077 seconds using disk
 
-Served from: localhost @ 2023-06-29 00:08:41 by W3 Total Cache
+Served from: localhost @ 2023-06-29 22:39:59 by W3 Total Cache
 -->

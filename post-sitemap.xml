@@ -1,63 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.com/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//jailsonevora.github.io/wordpress/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://jailsonevora.com/j-e-evora-blog/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/j-e-evora-blog/</loc>
 		<lastmod>2023-06-28T00:08:56+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/</loc>
 		<lastmod>2023-04-19T21:16:32+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/</loc>
 		<lastmod>2023-04-19T21:22:36+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/11/18/publish-subscribe-messaging-systems/</loc>
 		<lastmod>2023-04-19T21:33:07+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/</loc>
 		<lastmod>2023-04-19T21:43:20+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/09/09/soa-and-process-service-integration/</loc>
 		<lastmod>2023-04-19T21:47:50+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/08/24/microservices-security-mechanisms/</loc>
 		<lastmod>2023-04-19T21:51:13+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/08/18/wcf-transport-security-with-certificate-authentication/</loc>
 		<lastmod>2023-04-19T21:59:43+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/08/16/two-types-of-workflow-systems/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/08/16/two-types-of-workflow-systems/</loc>
 		<lastmod>2023-04-19T22:02:13+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/08/10/java-ee/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/08/10/java-ee/</loc>
 		<lastmod>2023-04-19T22:05:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/08/04/three-functional-areas-of-workflow-systems/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/08/04/three-functional-areas-of-workflow-systems/</loc>
 		<lastmod>2023-04-19T22:09:07+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/07/30/business-process-modeling/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/07/30/business-process-modeling/</loc>
 		<lastmod>2023-04-19T22:20:03+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/07/28/process-automation/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/07/28/process-automation/</loc>
 		<lastmod>2023-04-19T22:26:03+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2019/07/24/object-oriented-analysis-and-design-design-in-the-software-process/</loc>
 		<lastmod>2023-04-19T22:29:21+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://jailsonevora.com/2020/08/11/linear-regression-under-the-hood-using-matlab/</loc>
+		<loc>https://jailsonevora.github.io/wordpress/2020/08/11/linear-regression-under-the-hood-using-matlab/</loc>
 		<lastmod>2023-06-28T00:08:56+00:00</lastmod>
 	</url>
 </urlset>
@@ -71,5 +71,5 @@ Content Delivery Network via N/A
 Lazy Loading
 Database Caching 25/146 queries in 0.104 seconds using disk
 
-Served from: localhost @ 2023-06-29 00:08:44 by W3 Total Cache
+Served from: localhost @ 2023-06-29 22:40:02 by W3 Total Cache
 -->
