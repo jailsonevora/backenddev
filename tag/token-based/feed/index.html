@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Token-based Archives - Backend-Dev</title>
+	<atom:link href="https://jailsonevora.com/tag/token-based/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jailsonevora.com/tag/token-based/</link>
+	<description>Backend development blog</description>
+	<lastBuildDate>Wed, 19 Apr 2023 21:51:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Microservices Security Mechanisms</title>
+		<link>https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/</link>
+					<comments>https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 24 Aug 2019 10:56:03 +0000</pubDate>
+				<category><![CDATA[Microservices]]></category>
+		<category><![CDATA[JSON]]></category>
+		<category><![CDATA[JWToken]]></category>
+		<category><![CDATA[OAuth]]></category>
+		<category><![CDATA[OpenID]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Token-based]]></category>
+		<guid isPermaLink="false">https://www.jeevora.com/?p=866</guid>
+
+					<description><![CDATA[<p>Within the universe of microservices security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service. Authorization to third parties using the traditional model, where the client accesses a [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/">Microservices Security Mechanisms</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-medium-font-size">Within the universe of <gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15666957602618843103249">microservice</gwmw>s security mechanisms, the access to information or resources &#8220;on behalf of&#8221;; allows third parties (a particular application or service) to communicate with other applications or services, acting on behalf of, and not while the application or service.</p>
+
+
+
+<p class="has-medium-font-size"> Authorization to third parties using the traditional model, where the client accesses a protected resource using the resource owner&#8217;s credentials, has associated with it a number of issues and limitations as the owner will have to share their credentials with third parties [1]:<gwmw style="display:none;"></gwmw></p>
+
+
+
+<ul>
+<li>Credentials need to be stored in third-party applications for future use.</li>
+
+
+
+<li>Servers will be required to support authentication.</li>
+
+
+
+<li>Third-party applications gain access to all protected resources of the resource owner, leaving them unable to restrict the duration or access to a limited subset of resources.</li>
+
+
+
+<li>The resource owner cannot revoke access to a third party without revoking access to all others and this is only possible by changing the password.</li>
+
+
+
+<li>The security breach in third-party applications results in the exposure of credentials and all data protected by the third party.</li>
+</ul>
+
+
+
+<p class="has-medium-font-size">To mitigate these problems, two mechanisms stand out, OAuth and token-based access<gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15666791254711889858676">.</gwmw><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<div style="height:66px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Microservices Security Mechanisms &#8211; Oauth 2.0</h2>
+
+
+
+<p class="has-medium-font-size">OAuth is an open standard that allows authorized client access to resources made available by a server. The OAuth standard also provides methods for customers to authorize third-party access to resources and information they own, which is made available by a server without having to enter or share that user&#8217;s access credentials.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<p class="has-medium-font-size">The problems and limitations identified in the traditional authorization model are addressed by this standard by introducing the authorization layer, separating the role of the client from the resource owner. The client requests access to resources owned by the resource owner hosted on the resource server and different credentials are issued than those of the resource owner. Instead of using the resource owner&#8217;s credentials to access protected resources, the client obtains an access token that indicates a specific scope, time, and other access attributes, which tokens are issued with the approval of the resource owner. The client uses the access token to access protected resources hosted by the resource server (Figure 1) [1]. <gwmw style="display:none;"><gwmw style="display:none;"></gwmw><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="1626" height="943" src="../wp-content/uploads/2019/08/oath.png" alt="" class="wp-image-1018" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/oath.png 1626w, https://jailsonevora.com/wp-content/uploads/2019/08/oath-300x174.png 300w, https://jailsonevora.com/wp-content/uploads/2019/08/oath-768x445.png 768w, https://jailsonevora.com/wp-content/uploads/2019/08/oath-1024x594.png 1024w" sizes="(max-width: 1626px) 100vw, 1626px" /></figure>
+
+
+
+<div style="height:34px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading">OpenID Connect<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></h3>
+
+
+
+<p class="has-medium-font-size">OpenID Connect builds on top of OAuth2 and adds authentication. OpenID Connect adds some constraints to OAuth2 like UserInfo Endpoint, ID Token, discovery and dynamic registration of OpenID Connect providers, and session management.</p>
+
+
+
+<p class="has-medium-font-size">It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User.</p>
+
+
+
+<p class="has-medium-font-size">OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as the encryption of identity data, the discovery of OpenID Providers, and session management.<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<div style="height:67px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">Microservices Security Mechanisms &#8211; Token-based</h2>
+
+
+
+<p class="has-medium-font-size">On the other hand, Token-based authorization is less complex and unlike OAuth is not a standard.</p>
+
+
+
+<p class="has-medium-font-size">The client accesses the server by sending the access credentials, the service provider validates the credentials, saves an authorization token on success, associates the token with the client address, and assigns the lifetime of this access token. The service sends a success message to the customer along with the token. The client starts to invoke the services on the server by sending the authorization token, where the server will validate each request, checking if the token is valid (Figure 2).<gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></p>
+
+
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="../wp-content/uploads/2019/08/image-4.png" alt="Microservices Security Mechanisms - JWToken" class="wp-image-908" width="766" height="590" srcset="https://jailsonevora.com/wp-content/uploads/2019/08/image-4.png 1021w, https://jailsonevora.com/wp-content/uploads/2019/08/image-4-300x231.png 300w, https://jailsonevora.com/wp-content/uploads/2019/08/image-4-768x592.png 768w" sizes="(max-width: 766px) 100vw, 766px" /></figure>
+
+
+
+<div style="height:38px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="wp-block-heading">JWToken</h3>
+
+
+
+<p class="has-medium-font-size">JWT tokens are JSON-encoded data structures that contain information about the issuer, subject (claims), expiration time, access token, refresh token, id token, and so on. </p>
+
+
+
+<p class="has-medium-font-size">It is signed for tamper proof and authenticity and it can be encrypted to protect the token information using a symmetric or asymmetric approach. JWT is simpler than SAML 1.1/2.0 and supported by all devices</p>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 class="wp-block-heading">References</h2>
+
+
+
+<p>[1]  “<a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noreferrer noopener" aria-label="The OAuth 2.0 Authorization Framework rfc6749,” 2012.  [Online] (opens in a new tab)">The OAuth 2.0 Authorization Framework rfc6749,” 2012.  </a><gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15666959832215444241089"><a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noreferrer noopener" aria-label="The OAuth 2.0 Authorization Framework rfc6749,” 2012.  [Online] (opens in a new tab)">[</a></gwmw><a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noreferrer noopener" aria-label="The OAuth 2.0 Authorization Framework rfc6749,” 2012.  [Online] (opens in a new tab)">Online]</a>.<br>[2] “<a rel="noreferrer noopener" aria-label="Cookies vs Tokens: The Definitive Guide,” 2016.  [Online] (opens in a new tab)" href="https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide" target="_blank">Cookies vs Tokens: The Definitive Guide,” 2016.  </a><gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15666959832236652773807"><a rel="noreferrer noopener" aria-label="Cookies vs Tokens: The Definitive Guide,” 2016.  [Online] (opens in a new tab)" href="https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide" target="_blank">[</a></gwmw><a rel="noreferrer noopener" aria-label="Cookies vs Tokens: The Definitive Guide,” 2016.  [Online] (opens in a new tab)" href="https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide" target="_blank">Online]</a>.  </p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/">Microservices Security Mechanisms</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 37/75 objects using disk
+Page Caching using disk: enhanced (Page is feed) 
+Content Delivery Network via N/A
+Lazy Loading (feed)
+Database Caching 11/14 queries in 0.008 seconds using disk
+
+Served from: localhost @ 2023-06-29 23:42:32 by W3 Total Cache
+-->
