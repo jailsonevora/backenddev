@@ -12,13 +12,21 @@
 	<atom:link href="https://jailsonevora.com/tag/micro-framework/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/micro-framework/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Wed, 19 Apr 2023 21:33:07 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 02 Jul 2023 23:13:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.2.2</generator>
+
+<image>
+	<url>https://jailsonevora.com/wp-content/uploads/2023/06/cropped-1678234464025-32x32.jpg</url>
+	<title>Micro Framework Archives - Backend-Dev</title>
+	<link>https://jailsonevora.com/tag/micro-framework/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
 	<item>
 		<title>Microservices in Publish-Subscribe communication using Apache Kafka as a Messaging Systems and validated through Integration Test.</title>
 		<link>https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/</link>
@@ -80,7 +88,7 @@
 
 
 
-<p class="has-medium-font-size"> Queue provides the simplest message delivery option. Messages in a Queue are organized by first-in, first-out (FIFO), and each message is expected to be processed by a single consumer. However, Topics and Subscriptions constitute a publish/subscribe pattern allowing the same message to be processed by N number of consumers.</p>
+<p class="has-medium-font-size"> Queue provides the simplest message delivery option.&nbsp;Messages in a Queue are organized by first-in, first-out (FIFO), and each message is expected to be processed by a single consumer. However, Topics and Subscriptions constitute a publish/subscribe pattern allowing the same message to be processed by N number of consumers.</p>
 
 
 
@@ -168,7 +176,7 @@
 
 
 
-<p class="has-medium-font-size">ZooKeeper is used to manage and coordinate the Kafka broker. Each Kafka broker is coordinated with other Kafka brokers using ZooKeeper. The producer and consumer are notified by the ZooKeeper service about the presence of a new broker or failure of the broker in the Kafka system. From the notification received by the Zookeeper regarding the presence or failure of the broker, the producer, and consumer takes the decision and start coordinating their work with some other broker.  Also, it is responsible to choose the new leaders for the partitions. </p>
+<p class="has-medium-font-size">ZooKeeper is used to manage and coordinate the Kafka broker. Each Kafka broker is coordinated with other Kafka brokers using ZooKeeper. The producer and consumer are notified by the ZooKeeper service about the presence of a new broker or failure of the broker in the Kafka system. From the notification received by the Zookeeper regarding the presence or failure of the broker, the producer, and consumer takes the decision and start coordinating their work with some other broker.&nbsp; Also, it is responsible to choose the new leaders for the partitions. </p>
 
 
 
@@ -328,7 +336,7 @@ public class KafkaProducer {
 
 
 
-<p class="has-medium-font-size"> To enable Kafka listeners, we use the <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/EnableKafka.html" target="_blank" rel="noreferrer noopener">@EnableKafka</a> annotation.  These annotated endpoints are created under the covers by an <a aria-label="AbstractListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.html" target="_blank" rel="noreferrer noopener">AbstractListenerContainerFactory</a>. The KafkaListenerContainerFactory is responsible to create the listener container for a particular endpoint. It enables the detection of <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html">KafkaListener </a>annotations on any Spring-managed bean in the container. </p>
+<p class="has-medium-font-size"> To enable Kafka listeners, we use the <a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/EnableKafka.html" target="_blank" rel="noreferrer noopener">@EnableKafka</a> annotation.  These annotated endpoints are created under the covers by an <a aria-label="AbstractListenerContainerFactory (opens in a new tab)" href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.html" target="_blank" rel="noreferrer noopener">AbstractListenerContainerFactory</a>. The KafkaListenerContainerFactory is responsible to create the listener container for a particular endpoint. It enables the detection of&nbsp;<a href="https://docs.spring.io/spring-kafka/docs/2.1.2.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html">KafkaListener </a>annotations on any Spring-managed bean in the container. </p>
 
 
 
@@ -377,7 +385,7 @@ public class KafkaConsumerConfig {
 </pre></div>
 
 
-<p class="has-medium-font-size">On the consumer factory, we have the possibility to disable the use of headers. this is achieved now by setting to false the second parameter in <em>new JsonDeserializer&lt;>(BusinessEntity.class, false));</em>. This allows the consumer to trust messages that come from any package.</p>
+<p class="has-medium-font-size">On the consumer factory, we have the possibility to disable the use of headers. this is achieved now by setting to false the second parameter in <em>new JsonDeserializer&lt;&gt;(BusinessEntity.class, false));</em>. This allows the consumer to trust messages that come from any package.</p>
 
 
 
@@ -424,7 +432,7 @@ public class KafkaConsumer {
 
 
 
-<p class="has-medium-font-size">As you may have noticed, we created the topic building with only one partition. However, for a topic with multiple partitions, a <em>@KafkaListener</em> can explicitly subscribe to a particular partition of a topic with an initial offset.</p>
+<p class="has-medium-font-size">As you may have noticed, we created the topic&nbsp;building&nbsp;with only one partition. However, for a topic with multiple partitions, a&nbsp;<em>@<a href="https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" target="_blank" rel="noreferrer noopener">KafkaListener</a></em>&nbsp;can explicitly subscribe to a particular partition of a topic with an initial offset.</p>
 
 
 
@@ -490,7 +498,7 @@ spring.kafka.template.default-topic=test
 
 
 
-<p class="has-medium-font-size">To make it work, we need to change the Zookeeper data directory location.<br>Open the <em>kafka\config\zookeeper.properties</em> file and change the Zookeeper data /log directory location config to a valid windows directory location.</p>
+<p class="has-medium-font-size">To make it work, we need to change the Zookeeper data directory location.<br>Open&nbsp;the <em>kafka\config\zookeeper.properties</em>&nbsp;file and change the Zookeeper data /log directory location config to a valid windows directory location.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -502,7 +510,7 @@ dataDir=C:\\kafka\\zookeeper-logs
 
 
 
-<p class="has-medium-font-size"> We also need to make some changes to the Kafka configurations. Open <em>kafka\config\server.properties</em> and set topic defaults to one. We will be running a single-node, Kafka. Also to prevent Kafka to create unnecessary numbers of offset, we specify the replicas to 1. We faced this issue on the windows environment with the latest Kafka 2.3.1 version. This led Kafka to stop because of insufficient memory to handle a bunch of data created automatically on the initial phase of starting the server.</p>
+<p class="has-medium-font-size"> We also need to make some changes to the Kafka configurations. Open&nbsp;<em>kafka\config\server.properties</em>&nbsp;and set topic defaults to one. We will be running a single-node, Kafka. Also to prevent Kafka to create unnecessary numbers of offset, we specify the replicas to 1. We faced this issue on the windows environment with the latest Kafka 2.3.1 version. This led Kafka to stop because of insufficient memory to handle a bunch of data created automatically on the initial phase of starting the server.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate">
@@ -561,11 +569,11 @@ class BusinessEntityIntegrationTest {
 </pre></div>
 
 
-<p class="has-medium-font-size"><a aria-label="@LocalServerPort (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/2.0.0.RC1/api/org/springframework/boot/web/server/LocalServerPort.html" target="_blank" rel="noreferrer noopener">@LocalServerPort</a> annotation provides us with the injected HTTP port that got allocated at runtime. It is a convenient alternative for <code>@Value("${local.server.port}")</code>. </p>
+<p class="has-medium-font-size"><a aria-label="@LocalServerPort (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/2.0.0.RC1/api/org/springframework/boot/web/server/LocalServerPort.html" target="_blank" rel="noreferrer noopener">@LocalServerPort</a> annotation provides us with the injected HTTP port that got allocated at runtime. It is a convenient alternative for&nbsp;<code>@Value("${local.server.port}")</code>. </p>
 
 
 
-<p class="has-medium-font-size">To access a third-party REST service inside a Spring application we use the Spring <strong><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank" rel="noreferrer noopener">RestTemplate</a></strong> or <a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html" target="_blank" rel="noreferrer noopener">TestRestTemplate </a>the convenient alternative that is suitable for integration tests by injecting it into our test class. With <strong>spring-boot-starter-test</strong> dependency in our project, we can access to &#8220;TestRestTemplate&#8221; class in runtime. </p>
+<p class="has-medium-font-size">To access a third-party REST service inside a Spring application we use the Spring&nbsp;<strong><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank" rel="noreferrer noopener">RestTemplate</a></strong>&nbsp;or <a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html" target="_blank" rel="noreferrer noopener">TestRestTemplate </a>the convenient alternative that is suitable for integration tests by injecting it into our test class. With <strong>spring-boot-starter-test</strong>&nbsp;dependency in our project, we can access to&nbsp;&#8220;TestRestTemplate&#8221;&nbsp;class in runtime. </p>
 
 
 
@@ -573,11 +581,11 @@ class BusinessEntityIntegrationTest {
 
 
 
-<p class="has-medium-font-size">In our test method, we are using the &#8220;<a aria-label="junit-json-params (opens in a new tab)" href="http://www.joshka.net/junit-json-params/" target="_blank" rel="noreferrer noopener">junit-json-params</a>&#8220;, a <a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noreferrer noopener">Junit 5</a> library that provides annotations to load data from JSON Strings or files in parameterized tests. We also annotated the method with <a aria-label="@ParameterizedTest (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/ParameterizedTest.html" target="_blank" rel="noreferrer noopener">@ParameterizedTest</a> annotation to complement the library below. It is used to signal the annotated method is a parameterized test method. That method must not be private or static. They also must specify at least one <a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsProvider.html" target="_blank" rel="noreferrer noopener"><code>ArgumentsProvider</code></a> via <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> or a corresponding composed annotation.</p>
+<p class="has-medium-font-size">In our test method, we are using the &#8220;<a aria-label="junit-json-params (opens in a new tab)" href="http://www.joshka.net/junit-json-params/" target="_blank" rel="noreferrer noopener">junit-json-params</a>&#8220;, a <a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noreferrer noopener">Junit 5</a> library that provides annotations to load data from JSON Strings or files in parameterized tests. We also annotated the method with <a aria-label="@ParameterizedTest (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/ParameterizedTest.html" target="_blank" rel="noreferrer noopener">@ParameterizedTest</a> annotation to complement the library below. It is used to signal the annotated method is a parameterized test method. That method must not be private or static. They also must specify at least one&nbsp;<a aria-label=" (opens in a new tab)" href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsProvider.html" target="_blank" rel="noreferrer noopener"><code>ArgumentsProvider</code></a>&nbsp;via&nbsp;<a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a>&nbsp;or a corresponding composed annotation.</p>
 
 
 
-<p class="has-medium-font-size">Our  <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> a JSON file @JsonFileSource(resources = &#8220;/business-entity-test-param.json&#8221;) is inside the test.resource package.  <code>@JsonFileSource</code> lets you use JSON files from the classpath. It supports single objects, arrays of objects, and JSON primitives. </p>
+<p class="has-medium-font-size">Our  <a href="https://junit.org/junit5/docs/5.3.0/api/org/junit/jupiter/params/provider/ArgumentsSource.html"><code>@ArgumentsSource</code></a> a JSON file @JsonFileSource(resources = &#8220;/business-entity-test-param.json&#8221;) is inside the test.resource package.  <code>@JsonFileSource</code>&nbsp;lets you use JSON files from the classpath. It supports single objects, arrays of objects, and JSON primitives. </p>
 
 
 
@@ -691,11 +699,11 @@ c:\kafka&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properti
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 35/107 objects using disk
+Object Caching 67/77 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 8/14 queries in 0.015 seconds using disk
+Database Caching 5/9 queries in 0.012 seconds using disk
 
-Served from: localhost @ 2023-06-29 23:42:17 by W3 Total Cache
+Served from: localhost @ 2023-07-03 00:40:27 by W3 Total Cache
 -->

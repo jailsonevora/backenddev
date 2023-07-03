@@ -12,13 +12,21 @@
 	<atom:link href="https://jailsonevora.com/tag/spring-boot/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/spring-boot/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Wed, 19 Apr 2023 21:43:20 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 02 Jul 2023 23:11:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.2.2</generator>
+
+<image>
+	<url>https://jailsonevora.com/wp-content/uploads/2023/06/cropped-1678234464025-32x32.jpg</url>
+	<title>Spring Boot Archives - Backend-Dev</title>
+	<link>https://jailsonevora.com/tag/spring-boot/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
 	<item>
 		<title>Key Java @Annotations to build full Spring Boot Rest API</title>
 		<link>https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/</link>
@@ -59,7 +67,7 @@
 
 
 
-<p class="has-medium-font-size"> The API is a simple module to implement CRUD operation of Business Entity from a more complex system intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the API uses the H2 in-memory database. </p>
+<p class="has-medium-font-size"> The <a href="https://jailsonevora.com/2019/11/18/publish-subscribe-messaging-systems/" target="_blank" rel="noreferrer noopener">API</a> is a simple module to implement CRUD operation of Business Entity from a more complex system intended to coordinate and harmonize economic information relating to enterprises, establishments, and groups of entities. For the sake of simplicity, the <a href="https://jailsonevora.com/2019/08/24/microservices-security-mechanisms/" target="_blank" rel="noreferrer noopener">API</a> uses the H2 in-memory database. </p>
 
 
 
@@ -117,7 +125,7 @@ public class BusinessEntityManagementApplication {
 
 
 
-<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank" rel="noreferrer noopener">@EntityScan</a>. For a specific scan, we can specify <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank" rel="noreferrer noopener">basePackageClasses()</a></code>, <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank" rel="noreferrer noopener">basePackages()</a></code> or its alias <code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank" rel="noreferrer noopener">value()</a></code> to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
+<p class="has-medium-font-size">To find the JPA entities in the project structure, we must instruct the auto-configuration to scan packages using the <a aria-label="@EntityScan (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html" target="_blank" rel="noreferrer noopener">@EntityScan</a>. For a specific scan, we can specify&nbsp;<code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackageClasses--" target="_blank" rel="noreferrer noopener">basePackageClasses()</a></code>,&nbsp;<code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#basePackages--" target="_blank" rel="noreferrer noopener">basePackages()</a></code>&nbsp;or its alias&nbsp;<code><a aria-label=" (opens in a new tab)" href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/domain/EntityScan.html#value--" target="_blank" rel="noreferrer noopener">value()</a></code>&nbsp;to define specific packages to scan. If specific packages are not defined, scanning will occur from the package of the class with this annotation.</p>
 
 
 
@@ -169,7 +177,7 @@ public class SwaggerConfig {
 </pre></div>
 
 
-<p class="has-medium-font-size">A specific annotation for Swagger is the <a aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank" rel="noreferrer noopener">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring Java config and should have an accompanying @Configuration annotation. The <a aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank" rel="noreferrer noopener">@Bean</a> is a method-level annotation and a direct analog of the XML <code>&lt;bean/></code> element.</p>
+<p class="has-medium-font-size">A specific annotation for Swagger is the <a aria-label="@EnableSwagger2 (opens in a new tab)" href="http://springfox.github.io/springfox/javadoc/2.5.0/springfox/documentation/swagger2/annotations/EnableSwagger2.html" target="_blank" rel="noreferrer noopener">@EnableSwagger2</a>. It indicates that Swagger support should be enabled and to be loaded all required beans defined in see swagger java-config class. This should be applied to a Spring Java config and should have an accompanying @Configuration annotation. The <a aria-label="@Bean (opens in a new tab)" href="https://docs.spring.io/spring-javaconfig/docs/1.0.0.M4/reference/html/ch02s02.html" target="_blank" rel="noreferrer noopener">@Bean</a> is a method-level annotation and a direct analog of the XML&nbsp;<code>&lt;bean/&gt;</code>&nbsp;element.</p>
 
 
 
@@ -193,7 +201,7 @@ public class SwaggerConfig {
 
 
 
-<p class="has-medium-font-size"> In the model class, we use @Entity annotation which indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the <em>@Table</em> annotation. </p>
+<p class="has-medium-font-size"> In the model class, we use @Entity annotation which indicates this class is a JPA entity. JPA will be aware that the POJO class can be stored in the database. If we do not define @Table annotation, spring config will assume that this entity is mapped to a table like the POJO class name. So, in these cases, we can specify the table name using the&nbsp;<em>@Table</em>&nbsp;annotation. </p>
 
 
 
@@ -238,7 +246,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">Another interesting annotation targeting the domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be null.  It can be used as well in a method or parameter. The @Column annotation specifies the name of the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
+<p class="has-medium-font-size">Another interesting annotation targeting the domain model field is @NotNull. It is a common Spring annotation to declare that annotated elements cannot be&nbsp;null.&nbsp; It can be used as well in a method or parameter. The @Column annotation specifies the name of the database column and also the table behavior. This behavior can be set to prevent it from being updated or to be null.</p>
 
 
 
@@ -468,7 +476,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">For Swagger documentation purposes, the <code><a aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank" rel="noreferrer noopener">@ApiOperation</a></code> annotation is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated <code>@ApiOperation</code> will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
+<p class="has-medium-font-size">For Swagger documentation purposes, the&nbsp;<code><a aria-label="@ApiOperation (opens in a new tab)" href="https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X#apioperation" target="_blank" rel="noreferrer noopener">@ApiOperation</a></code> annotation&nbsp;is used to declare a single operation within an API resource. An operation is considered a unique combination of a path and an HTTP method. Only methods that are annotated <code>@ApiOperation</code>&nbsp;will be scanned and added to the API declaration. Some handlers or operations need to ensure data integrity and consistency using the transaction.  </p>
 
 
 
@@ -506,7 +514,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 
 
 
-<p class="has-medium-font-size">Another useful annotation used in a well-designed system is <code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, leading us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
+<p class="has-medium-font-size">Another useful annotation used in a well-designed system is&nbsp;<code>@Autowired.</code> @Autowired can be used at the constructor method to resolve and inject collaborating beans into a bean, leading us to better application design. Applications developed using the principle of separating interface from implementation and the dependency injection pattern are easy to test, both for unit testing and integration testing because that principle and pattern can reduce coupling between different units of our application.</p>
 
 
 
@@ -629,11 +637,11 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 4/107 objects using disk
+Object Caching 51/57 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 21/40 queries in 0.031 seconds using disk
+Database Caching 5/8 queries in 0.013 seconds using disk
 
-Served from: localhost @ 2023-06-29 23:42:30 by W3 Total Cache
+Served from: localhost @ 2023-07-03 00:40:52 by W3 Total Cache
 -->
