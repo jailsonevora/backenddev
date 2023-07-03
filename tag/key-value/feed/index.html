@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/key-value/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/key-value/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Mon, 03 Jul 2023 14:05:51 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 03 Jul 2023 16:17:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Strategies for Scaling Databases</title>
+		<title>Databases Scaling Strategies</title>
 		<link>https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/</link>
 					<comments>https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/#respond</comments>
 		
@@ -63,7 +63,7 @@
 		<guid isPermaLink="false">https://jailsonevora.com/?p=2929</guid>
 
 					<description><![CDATA[<p>Different solutions for scaling databases</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/">Strategies for Scaling Databases</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/">Databases Scaling Strategies</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
 <p>Knowing the different techniques for scaling databases, help us to choose the appropriate strategy to adapt to our needs and propose.</p>
@@ -74,7 +74,7 @@
 
 
 
-<h2 class="wp-block-heading">Scaling databases &#8211; Reading/Loading</h2>
+<h2 class="wp-block-heading">Reading/Loading</h2>
 
 
 
@@ -82,7 +82,7 @@
 
 
 
-<h3 class="wp-block-heading">Caching for scaling databases</h3>
+<h3 class="wp-block-heading">Databases scaling &#8211; Caching</h3>
 
 
 
@@ -102,11 +102,11 @@
 
 
 
-<h3 class="wp-block-heading">Replication for scaling databases</h3>
+<h3 class="wp-block-heading">Databases scaling &#8211; Replication</h3>
 
 
 
-<p>Replication works with having one database referred to as <strong>main</strong> where all the writing request flow to it. In addition, we make an exact copy of that main database as new node replicas known as <strong>secondary, </strong>responsible only for dealing with the reading requests. The main database constantly feeds the slaves nodes with more recent data keeping our information consistent between all the nodes in the cluster. </p>
+<p>Replication works with having one database referred to as <strong>main</strong> where all the writing request flow to it. In addition, we make an exact copy of that main database as new node replicas known as <strong>secondary, </strong>responsible only for dealing with the reading requests. The main database constantly feeds the slaves nodes with more recent data keeping our information consistent between all the nodes in the cluster.</p>
 
 
 
@@ -115,6 +115,10 @@
 
 
 <figure class="wp-block-image aligncenter is-resized"><img decoding="async" loading="lazy" src="https://documents.lucid.app/documents/5f2ed513-1fa5-4d6e-91bd-b7f69e3433e3/pages/0_0?a=1602&amp;x=-314&amp;y=1336&amp;w=747&amp;h=528&amp;store=1&amp;accept=image%2F*&amp;auth=LCA%2062b5a257e06bc3e4a98457d2a2f2a475e428f0a6c74f2bb5bff089c27c6a12a6-ts%3D1688291822" alt="Scaling Databases Database replication technique" width="560" height="396"/><figcaption class="wp-element-caption">Database replication technique</figcaption></figure>
+
+
+
+<h4 class="wp-block-heading">Synchronous and asynchronous</h4>
 
 
 
@@ -130,7 +134,7 @@
 
 
 
-<h3 class="wp-block-heading">Indexing for scaling databases</h3>
+<h3 class="wp-block-heading">Databases scaling &#8211; Indexing</h3>
 
 
 
@@ -150,7 +154,7 @@
 
 
 
-<h2 class="wp-block-heading">Scaling Databases &#8211; Writing</h2>
+<h2 class="wp-block-heading">Writing</h2>
 
 
 
@@ -158,7 +162,7 @@
 
 
 
-<h3 class="wp-block-heading">Database Sharding for scaling databases</h3>
+<h3 class="wp-block-heading">Databases scaling &#8211; Sharding</h3>
 
 
 
@@ -206,7 +210,7 @@
 
 
 
-<h3 class="wp-block-heading">No SQL for Scaling Database</h3>
+<h3 class="wp-block-heading">Databases scaling &#8211; No SQL</h3>
 
 
 
@@ -218,11 +222,11 @@
 
 
 
-<p>NoSQL allows <strong>dynamic</strong> <strong>schema</strong> which can accommodate changes without schema alterations. Also, it provides <strong>horizontal</strong> <strong>scalability</strong> since it was designed to scale out by adding more nodes to a database cluster. It is also designed for <strong>high availability</strong> to handle node failures automatically and data replication across multiple nodes in the cluster.</p>
+<p>It allows <strong>dynamic</strong> <strong>schema</strong> which can accommodate changes without schema alterations. Also, it provides <strong>horizontal</strong> <strong>scalability</strong> since it was designed to scale out by adding more nodes to a database cluster. It is also designed for <strong>high availability</strong> to handle node failures automatically and data replication across multiple nodes in the cluster.</p>
 
 
 
-<p>NoSQL offers several benefits over relational databases, such as <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>cost-effectiveness</strong>. However, they also have several drawbacks, such as a lack of <strong>standardization</strong>, lack of <strong>ACID</strong> <strong>compliance</strong>, and lack of support for <strong>complex queries</strong>.</p>
+<p>This no-relational database offers several benefits over relational databases, such as <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>cost-effectiveness</strong>. However, they also have several drawbacks, such as a lack of <strong>standardization</strong>, lack of <strong>ACID</strong> <strong>compliance</strong>, and lack of support for <strong>complex queries</strong>.</p>
 
 
 
@@ -239,7 +243,7 @@
 
 
 <p>Finally, bear in mind that there are no perfect solutions, we need to understand our requirements and apply trade-offs to choose the best strategies for our application. </p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/">Strategies for Scaling Databases</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/">Databases Scaling Strategies</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2023/07/02/strategies-for-scaling-databases/feed/</wfw:commentRss>
@@ -257,7 +261,7 @@ Object Caching 69/75 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 4/8 queries in 0.011 seconds using disk
+Database Caching 5/8 queries in 0.016 seconds using disk
 
-Served from: localhost @ 2023-07-03 14:18:38 by W3 Total Cache
+Served from: localhost @ 2023-07-03 16:32:03 by W3 Total Cache
 -->
