@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/ssl/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/ssl/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Sun, 09 Jul 2023 16:13:35 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 09 Jul 2023 18:21:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -209,11 +209,11 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">Finally, at the <em><strong>services tag,</strong></em> we define our service, exposing two endpoints. One for <a aria-label="metadata exchange (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.description.imetadataexchange?view=netframework-4.8" target="_blank" rel="noreferrer noopener">metadata exchange</a> [<strong><code>&lt;endpoint address="mex"</code></strong><code> ...</code>] that allows exposing metadata about the service. It is useful to publish metadata about the service like a <a aria-label="Web Services Description Language (WSDL) (opens in a new tab)" href="https://www.w3.org/TR/2001/NOTE-wsdl-20010315" target="_blank" rel="noreferrer noopener">Web Services Description Language (WSDL)</a><em> </em>document that describes all of the methods and data types employed by a service. Returning metadata about a WCF service allows consumers of the service to easily create clients for the service. <gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
+<p class="has-medium-font-size">Finally, at the <em><strong>services tag,</strong></em> we define our service, exposing two endpoints. One for <a aria-label="metadata exchange (opens in a new tab)" href="https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.description.imetadataexchange?view=netframework-4.8" target="_blank" rel="noreferrer noopener">metadata exchange</a> [<strong><code>&lt;endpoint address="mex"</code></strong>>] that allows exposing metadata about the service. It is useful to publish metadata about the service like a <a aria-label="Web Services Description Language (WSDL) (opens in a new tab)" href="https://www.w3.org/TR/2001/NOTE-wsdl-20010315" target="_blank" rel="noreferrer noopener">Web Services Description Language (WSDL)</a><em> </em>document that describes all of the methods and data types employed by a service. Returning metadata about a WCF service allows consumers of the service to easily create clients for the service.<gwmw style="display:none;"><gwmw style="display:none;"><gwmw style="display:none;"></gwmw></gwmw></gwmw></p>
 
 
 
-<p class="has-medium-font-size">With the <em><strong>behavior </strong></em>and <em><strong>binding </strong></em>defined, we complete the attributes for our main endpoint [<strong><code>&lt;endpoint address="<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662637361444731005860">endpointRepeatedStringService</gwmw>" binding="<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662637361441146018336">wsHttpBinding</gwmw>"</code></strong><gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662637361442021322659">].</gwmw></p>
+<p class="has-medium-font-size">With the <em><strong>behavior </strong></em>and <em><strong>binding </strong></em>defined, we complete the attributes for our main endpoint [<strong><code>&lt;endpoint address="<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662637361444731005860">endpointRepeatedStringService</gwmw>" binding="<gwmw class="ginger-module-highlighter-mistake-type-1" id="gwmw-15662637361441146018336">wsHttpBinding</gwmw>"</code></strong><gwmw class="ginger-module-highlighter-mistake-type-3" id="gwmw-15662637361442021322659">>].</gwmw></p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; highlight: [4,5]; title: ; notranslate">
@@ -232,7 +232,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">After we configure our service, we need to enable Secure Socket Layer (SSL) on IIS to secure the service. Start the IIS Manager, in the connections panel, under sites, select the <code>ReapeatedString</code>service (1) that we want to enable SSL.</p>
+<p class="has-medium-font-size">After we&nbsp;configure our service, we need to enable Secure Socket Layer (SSL) on IIS to secure the service. Start the IIS Manager, in the connections panel, under sites, select the&nbsp;<code>ReapeatedString</code>service (1) that we want to enable SSL.</p>
 
 
 
@@ -441,7 +441,7 @@ Object Caching 58/64 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 6/8 queries in 0.004 seconds using disk
+Database Caching 5/8 queries in 0.009 seconds using disk
 
-Served from: localhost @ 2023-07-09 17:40:47 by W3 Total Cache
+Served from: localhost @ 2023-07-09 18:30:37 by W3 Total Cache
 -->
