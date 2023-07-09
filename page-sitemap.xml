@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://jailsonevora.com/</loc>
-		<lastmod>2023-07-02T23:25:57+00:00</lastmod>
+		<lastmod>2023-07-09T17:30:29+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://jailsonevora.com/j-e-evora-portfolio-back-end-developer/about-j-e-evora/</loc>
@@ -21,11 +21,11 @@
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 5/115 objects using disk
+Object Caching 32/82 objects using disk
 Page Caching using disk: enhanced 
 Content Delivery Network via N/A
 Lazy Loading
-Database Caching 9/43 queries in 2.610 seconds using disk
+Database Caching 1/19 queries in 0.430 seconds using disk
 
-Served from: localhost @ 2023-07-04 00:11:20 by W3 Total Cache
+Served from: localhost @ 2023-07-09 17:35:53 by W3 Total Cache
 -->

@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/testing/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/testing/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Wed, 19 Apr 2023 21:22:36 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 09 Jul 2023 17:02:24 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,11 +28,11 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</title>
+		<title>Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</title>
 		<link>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/</link>
 					<comments>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Tue, 14 Apr 2020 20:19:00 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
@@ -43,13 +43,13 @@
 		<category><![CDATA[SoapUI]]></category>
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[WCF]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1663</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1663</guid>
 
 					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project Firstly we need [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
+<p class="has-drop-cap has-medium-font-size">In the <a href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
 
 
 
@@ -117,7 +117,7 @@
 
 
 
-<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -> <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
+<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -&gt; <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
 
 
 
@@ -129,12 +129,12 @@
 
 
 
-<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
+<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
 
 
 
 <p class="has-medium-font-size">Our last and final demonstration in this series will show how to invoke another WCF service secured by Certificate Authentication.</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/feed/</wfw:commentRss>
@@ -143,11 +143,11 @@
 		
 			</item>
 		<item>
-		<title>Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</title>
+		<title>Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</title>
 		<link>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/</link>
 					<comments>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Tue, 31 Mar 2020 22:32:00 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
@@ -159,13 +159,13 @@
 		<category><![CDATA[SoapUI]]></category>
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[WCF]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1632</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1632</guid>
 
 					<description><![CDATA[<p>In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The second post will approach the steps required to invoke it while secured by a [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
+<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
 
 
 
@@ -173,7 +173,7 @@
 
 
 
-<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
+<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
 
 
 
@@ -185,7 +185,7 @@
 
 
 
-<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -> <em>View Markup</em> and changing to that below.</p>
+<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -&gt; <em>View Markup</em> and changing to that below.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -406,7 +406,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -> Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
+<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -&gt; Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
 
 
 
@@ -446,12 +446,12 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> By the end of this demonstration, we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
+<p class="has-medium-font-size"> By the end of this demonstration,&nbsp;we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
 
 
 
-<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/feed/</wfw:commentRss>
@@ -469,7 +469,7 @@ Object Caching 73/79 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 6/8 queries in 0.005 seconds using disk
+Database Caching 6/8 queries in 0.006 seconds using disk
 
-Served from: localhost @ 2023-07-04 00:16:37 by W3 Total Cache
+Served from: localhost @ 2023-07-09 17:40:48 by W3 Total Cache
 -->

@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/soap/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/soap/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Sun, 02 Jul 2023 22:12:14 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 09 Jul 2023 17:02:24 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,11 +28,11 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</title>
+		<title>Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</title>
 		<link>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/</link>
 					<comments>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Tue, 14 Apr 2020 20:19:00 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
@@ -43,13 +43,13 @@
 		<category><![CDATA[SoapUI]]></category>
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[WCF]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1663</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1663</guid>
 
 					<description><![CDATA[<p>In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project Firstly we need [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
+<p class="has-drop-cap has-medium-font-size">In the <a href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">first post</a> of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service.</p>
 
 
 
@@ -117,7 +117,7 @@
 
 
 
-<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -> <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
+<p class="has-medium-font-size">Finally in the left corner <strong><em>&#8220;Request Properties&#8221;</em></strong> -&gt; <em><strong>WSS-Password Type</strong></em> we select <strong>PasswordText</strong>. WSS-Password Type is a concept that will outline if the password in the XML payload is plain text or digest. For Digest, you can use the Require Ws-Security Password Digest Credentials which is a one-to-one relationship of the user to assertion as we need to know the password. For Plain text, you can use the WS-Security UsernameToken Profile Credentials.</p>
 
 
 
@@ -129,12 +129,12 @@
 
 
 
-<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://www.jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
+<p class="has-medium-font-size">In this post, we demonstrate how to config a SoapUI project to invoke a WCF Basic Authentication service, we used the <a href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_blank" rel="noreferrer noopener">previous </a>secure service created in the first post to serve as a system under test. The sample of both service and the SoapUi project is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>.</p>
 
 
 
 <p class="has-medium-font-size">Our last and final demonstration in this series will show how to invoke another WCF service secured by Certificate Authentication.</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/feed/</wfw:commentRss>
@@ -143,11 +143,11 @@
 		
 			</item>
 		<item>
-		<title>Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</title>
+		<title>Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</title>
 		<link>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/</link>
 					<comments>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Tue, 31 Mar 2020 22:32:00 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
@@ -159,13 +159,13 @@
 		<category><![CDATA[SoapUI]]></category>
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[WCF]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1632</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1632</guid>
 
 					<description><![CDATA[<p>In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The second post will approach the steps required to invoke it while secured by a [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://www.jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
+<p class="has-drop-cap has-medium-font-size">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The <a href="https://jailsonevora.com/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_blank" rel="noreferrer noopener">second post</a> will approach the steps required to invoke it while secured by a basic authentication mechanism. And in the last part, I will make a slight change to the initial service, allowing it to be guarded by the certificate authentication mechanism. In this same post, I will demonstrate how to invoke it using SoapUI as well.</p>
 
 
 
@@ -173,7 +173,7 @@
 
 
 
-<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
+<p class="has-medium-font-size">The access to the resource in the service to be implemented in this post is secured using <em><strong>Basic Authentication</strong></em> transport security mechanisms. One of many <a href="https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">provided </a>by the Windows Communication Foundation. This kind of mechanism is used in conjunction with HTTPS to provide confidentiality. </p>
 
 
 
@@ -185,7 +185,7 @@
 
 
 
-<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -> <em>View Markup</em> and changing to that below.</p>
+<p class="has-medium-font-size">Now you’ll see a couple of files already added to the WCF Service project. We have the option to delete the interface <em>IService1.cs</em> and service <em>Service1.svc</em> file to create new ones. Otherwise, we can rename both files, therefore pay attention to renaming as well as the markup of the Service.svc file, by right click on it -&gt; <em>View Markup</em> and changing to that below.</p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: csharp; title: ; notranslate">
@@ -406,7 +406,7 @@ namespace AVeryBigSum_BasicAuthentication
 </pre></div>
 
 
-<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -> Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
+<p class="has-medium-font-size">For this class to work properly, we need to add two external libraries to the project. We can do this by right click on the project -&gt; Manage NuGet Packages, and browsing for <em>Microsoft.IdentityModel.Logging</em> and <em>Microsoft.IdentityModel.Tokens</em> packages and add both.</p>
 
 
 
@@ -446,12 +446,12 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size"> By the end of this demonstration, we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
+<p class="has-medium-font-size"> By the end of this demonstration,&nbsp;we have a secure service to be invoked by SoapUI. Our next post will demonstrate step-by-step how to do that.</p>
 
 
 
-<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this <a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking Different Secure WCF SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p class="has-medium-font-size"> Also, the sample is accessible from the GitHub repository; to download it, please follow this&nbsp;<a href="https://github.com/jailsonevora/invoking-different-secure-wcf-soap-services-using-soapui" target="_blank" rel="noreferrer noopener">link</a>. </p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/feed/</wfw:commentRss>
@@ -464,7 +464,7 @@ namespace AVeryBigSum_BasicAuthentication
 		<link>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/</link>
 					<comments>https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Mon, 09 Sep 2019 11:46:02 +0000</pubDate>
 				<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
 		<category><![CDATA[BPEL]]></category>
@@ -480,7 +480,7 @@ namespace AVeryBigSum_BasicAuthentication
 		<category><![CDATA[WS-Policy]]></category>
 		<category><![CDATA[WSDL]]></category>
 		<category><![CDATA[XML]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1032</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1032</guid>
 
 					<description><![CDATA[<p>Service-oriented architectures (SOA) have brought significant gains for process automation. According to the official definition of OASIS [1], it is a paradigm for organizing and utilizing distributed resources that may be under the control of different domains of ownership. Although the official definition may be ambiguous, it is possible to define SOA as a paradigm [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/">SOA and process services integration</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
@@ -490,7 +490,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">Although the official definition may be ambiguous, it is possible to define SOA as a paradigm for designing software systems from reusable components designated by services [3], [2], with service being a set of code blocks that perform distinct functions [4], [5], [6]. The goal of SOA-based development is to enable organizations to build business systems from simple modules to obtain flexibility, agility, and productivity improvements in their business development [3], capable of relating <a href="https://www.jailsonevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener">business processes</a> to technical processes [7] and mapping <a href="https://www.jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">workflow </a>relationships between them [4]</p>
+<p class="has-medium-font-size">Although the official definition may be ambiguous, it is possible to define SOA as a paradigm for designing software systems from reusable components designated by services [3], [2], with service being a set of code blocks that perform distinct functions [4], [5], [6]. The goal of SOA-based development is to enable organizations to build business systems from simple modules to obtain flexibility, agility, and productivity improvements in their business development [3], capable of relating <a href="https://jailsonevora.com/2019/07/30/business-process-modeling/" target="_blank" rel="noreferrer noopener">business processes</a> to technical processes [7] and mapping <a href="https://jailsonevora.com/2019/07/28/process-automation/" target="_blank" rel="noreferrer noopener">workflow </a>relationships between them [4]</p>
 
 
 
@@ -536,7 +536,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p class="has-medium-font-size">Thus, communication with WS is done from the network using technologies such as XML (data fundamentals and protocol related), WSDL (service description related), SOAP, and UDDI (Figure 1), these are capable of providing a common approach to defining, publishing, and using WS accessible through a standard protocol, specifically SOAP [5]. A WS usually allows the discovery of the service, the customer makes a request to the provider, the provider processes the request, and sends the response to the customer [3],[6].<gwmw style="display:none;"></gwmw></p>
+<p class="has-medium-font-size">Thus, communication with WS is done from the network using technologies such as XML (data fundamentals and protocol related), WSDL (service description related), SOAP, and UDDI (Figure 1), these are capable of providing a common approach to defining, publishing, and using WS accessible through a standard protocol, specifically SOAP [5]. A WS usually allows the discovery of the service, the customer requests the provider, the provider processes the request, and sends the response to the customer [3],[6].<gwmw style="display:none;"></gwmw></p>
 
 
 
@@ -552,7 +552,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<figure class="wp-block-table aligncenter"><table><tbody><tr><td><strong>Benefits</strong></td><td><strong>Description</strong></td></tr><tr><td>Business-centric </td><td>Business-centric software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>The lower long term cost</td><td>The lower incremental cost for development<gwmw style="display:none;"></gwmw></td></tr><tr><td>Reduced Skills</td><td>Lower requirement for training and technical knowledge<gwmw style="display:none;"></gwmw></td></tr><tr><td>Low costs</td><td>Lower costs in software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Speed</td><td>The faster software development cycle<gwmw style="display:none;"></gwmw></td></tr><tr><td>Platform independent</td><td>The lower long-term cost</td></tr><tr><td>Focused developer roles</td><td>Developers can focus completely on implementing and maintaining their services without having to worry about the services of others as long as the default contract is respected.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Regardless of location</td><td>Regardless of location, it is possible for the service consumer to search for and discover it<gwmw style="display:none;"></gwmw></td></tr><tr><td>Code Reuse</td><td>Dividing applications into small separated parts helps to reuse in various other systems, thereby reducing the cost of development</td></tr><tr><td>Greater testability</td><td>Small, standalone services are easier to test and debug than monolithic applications, allowing you to have more reliable software<gwmw style="display:none;"></gwmw></td></tr><tr><td>Parallel development</td><td>Independence between services with pre-defined contracts helps parallel development by greatly reducing the software development lifecycle.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Better scalability</td><td>Possibility to have multiple instances of the service running on different servers, allowing you to move the service transparently to more resourceful servers<gwmw style="display:none;"></gwmw></td></tr><tr><td>Greater availability</td><td>The ability to have multiple instances of a service and not care about its location ensures high availability.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
+<figure class="wp-block-table aligncenter"><table><tbody><tr><td><strong>Benefits</strong></td><td><strong>Description</strong></td></tr><tr><td>Business-centric </td><td>Business-centric software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Regardless of location, the service consumer can search for and discover it<gwmw style="display:none;"></gwmw></td><td>The lower incremental cost for development<gwmw style="display:none;"></gwmw></td></tr><tr><td>Reduced Skills</td><td>Lower requirement for training and technical knowledge<gwmw style="display:none;"></gwmw></td></tr><tr><td>Low costs</td><td>Lower costs in software development.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Speed</td><td>The faster software development cycle<gwmw style="display:none;"></gwmw></td></tr><tr><td>Platform independent</td><td>The lower long-term cost</td></tr><tr><td>Focused developer roles</td><td>Developers can focus completely on implementing and maintaining their services without having to worry about the services of others as long as the default contract is respected.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Regardless of location</td><td>Regardless of location, it is possible for the service consumer to search for and discover it<gwmw style="display:none;"></gwmw></td></tr><tr><td>Code Reuse</td><td>Dividing applications into small separated parts helps to reuse in various other systems, thereby reducing the cost of development</td></tr><tr><td>Greater testability</td><td>Small, standalone services are easier to test and debug than monolithic applications, allowing you to have more reliable software<gwmw style="display:none;"></gwmw></td></tr><tr><td>Parallel development</td><td>Independence between services with pre-defined contracts helps parallel development by greatly reducing the software development lifecycle.<gwmw style="display:none;"></gwmw></td></tr><tr><td>Better scalability</td><td>Possibility to have multiple instances of the service running on different servers, allowing you to move the service transparently to more resourceful servers<gwmw style="display:none;"></gwmw></td></tr><tr><td>Greater availability</td><td>The ability to have multiple instances of a service and not care about its location ensures high availability.<gwmw style="display:none;"></gwmw></td></tr></tbody></table></figure>
 
 
 
@@ -564,7 +564,7 @@ namespace AVeryBigSum_BasicAuthentication
 
 
 
-<p>[1] C. M. Mackenzie, K. Laskey, F. Mccabe, R. Metz, and A. Hamilton, “Reference Model for Service Oriented Architecture 1.0 Committee Specification 1, 2 August 2006,” no. August, pp. 1–31, 2006.<br> [2] P. Desfray and G. Raymon, Modeling Enterprise Architecture with TOGAF: A Practical Guide Using UML and BPMN. 2014.<br> [3] M. Liu, WCF 4.5 Multi-Layer Services Development with Entity Framework Third Edition. 2012.<br> [4] D. Minoli, Enterprise Architecture A to Z: Frameworks, Business Process Modeling, SOA, and Infrastructure Technology. 2008.<br> [5] M. Gousset, B. Keller, A. Krishnamoorthy, and M. Woodward, “Professional WCF 4 Windows Communication Foundation with NET 4,” 2010.<br> [6] M. Liu, WCF 4.0 Multi-tier Services Development with LINQ to Entities, no. 4. 2010.<br> [7] N. Pathak, “Pro WCF 4,” pp. 3–24, 2011.<br> [8] J. Lowy, Programming WCF Services. 2010.<br> [9] Microsoft IC, “Introducing Windows Communication Foundation in .NET Framework 4.” [Online]. Available: <a href="https://msdn.microsoft.com/en-us/library/ee958158.aspx">https://msdn.microsoft.com/en-us/library/ee958158.aspx</a><br> [10] M. L. Bustamante, Learning WCF, Master Windows Communication Foundation and SOA Fundamentals. 2007.<br> [11] Scott Klein, Professional WCF Programming. 2007.<br> [12] “10 Principles of SOA,” 2007. [Online]. Available:  <a href="https://www.infoq.com/articles/tilkov-10-soa-principles/">https://www.infoq.com/articles/tilkov-10-soa-principles/</a>.<br> [13] C. Interfaces, “Common Object Request Broker Architecture (CORBA) Specification, Version 3.3,” no. November 2012.<br> [14] B. S. of I. University of California, “Distributed Computing Applications and Infrastructure.” [Online]. Available: <a href="http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html">http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html</a></p>
+<p>[1] C. M. Mackenzie, K. Laskey, F. Mccabe, R. Metz, and A. Hamilton, “Reference Model for Service Oriented Architecture 1.0 Committee Specification 1, 2 August 2006,” no. August, pp. 1–31, 2006.<br> [2] P. Desfray and G. Raymon, Modeling Enterprise Architecture with TOGAF: A Practical Guide Using UML and BPMN. 2014.<br> [3] M. Liu, WCF 4.5 Multi-Layer Services Development with Entity Framework Third Edition. 2012.<br> [4] D. Minoli, Enterprise Architecture A to Z: Frameworks, Business Process Modeling, SOA, and Infrastructure Technology. 2008.<br> [5] M. Gousset, B. Keller, A. Krishnamoorthy, and M. Woodward, “Professional WCF 4 Windows Communication Foundation with NET 4,” 2010.<br> [6] M. Liu, WCF 4.0 Multi-tier Services Development with LINQ to Entities, no. 4. 2010.<br> [7] N. Pathak, “Pro WCF 4,” pp. 3–24, 2011.<br> [8] J. Lowy, Programming WCF Services. 2010.<br> [9] Microsoft IC, “Introducing Windows Communication Foundation in .NET Framework 4.” [Online]. Available: <a href="https://msdn.microsoft.com/en-us/library/ee958158.aspx">https://msdn.microsoft.com/en-us/library/ee958158.aspx</a><br> [10] M. L. Bustamante, Learning WCF, Master Windows Communication Foundation, and SOA Fundamentals. 2007.<br> [11] Scott Klein, Professional WCF Programming. 2007.<br> [12] “10 Principles of SOA,” 2007. [Online]. Available:  https://www.infoq.com/articles/tilkov-10-soa-principles/.<br> [13] C. Interfaces, “Common Object Request Broker Architecture (CORBA) Specification, Version 3.3,” no. November 2012.<br> [14] B. S. of I. University of California, “Distributed Computing Applications and Infrastructure.” [Online]. Available: <a href="http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html">http://courses.ischool.berkeley.edu/i206/f97/GroupB/mom/what_is_mom.html</a></p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/09/soa-and-process-service-integration/">SOA and process services integration</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
@@ -578,7 +578,7 @@ namespace AVeryBigSum_BasicAuthentication
 		<link>https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/</link>
 					<comments>https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Sun, 18 Aug 2019 13:16:04 +0000</pubDate>
 				<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
 		<category><![CDATA[Client]]></category>
@@ -590,7 +590,7 @@ namespace AVeryBigSum_BasicAuthentication
 		<category><![CDATA[WCF]]></category>
 		<category><![CDATA[WSHttpBinding]]></category>
 		<category><![CDATA[X.509 certificates]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=470</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=470</guid>
 
 					<description><![CDATA[<p>This post demonstrates the use of X.509 certificates for server and client authentication when using WCF transport security. This security mode is ideal for communication between applications in the intranet network. Our demo creates a service that will implement a simple, repeated string algorithm. In this scenario, the service is hosted under Internet Information Services [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/">WCF Transport Security with Certificate Authentication</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
@@ -778,7 +778,7 @@ namespace RepeatedString
 
 
 
-<p class="has-medium-font-size">After we&nbsp;configure our service, we need to enable Secure Socket Layer (SSL) on IIS to secure the service. Start the IIS Manager, in connections panel, under sites, select the&nbsp;<code>ReapeatedString</code>service (1) that we want to enable SSL.</p>
+<p class="has-medium-font-size">After we configure our service, we need to enable Secure Socket Layer (SSL) on IIS to secure the service. Start the IIS Manager, in the connections panel, under sites, select the <code>ReapeatedString</code>service (1) that we want to enable SSL.</p>
 
 
 
@@ -987,7 +987,7 @@ Object Caching 107/113 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 6/8 queries in 0.005 seconds using disk
+Database Caching 6/8 queries in 0.010 seconds using disk
 
-Served from: localhost @ 2023-07-04 00:16:33 by W3 Total Cache
+Served from: localhost @ 2023-07-09 17:40:45 by W3 Total Cache
 -->

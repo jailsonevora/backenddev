@@ -12,7 +12,7 @@
 	<atom:link href="https://jailsonevora.com/tag/java/feed/" rel="self" type="application/rss+xml" />
 	<link>https://jailsonevora.com/tag/java/</link>
 	<description>Backend development blog</description>
-	<lastBuildDate>Sun, 02 Jul 2023 23:11:28 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 09 Jul 2023 16:32:22 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,11 +28,11 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Key Java @Annotations to build full Spring Boot Rest API</title>
+		<title>Key Java @annotations to build full Spring Boot Rest API</title>
 		<link>https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/</link>
 					<comments>https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Mon, 16 Sep 2019 10:29:31 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[@anotation]]></category>
@@ -41,13 +41,13 @@
 		<category><![CDATA[Java]]></category>
 		<category><![CDATA[REST]]></category>
 		<category><![CDATA[Spring Boot]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=1085</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=1085</guid>
 
-					<description><![CDATA[<p>This post aims to demonstrate key Java @annotations used to build a functional Spring Boot Rest API. The use of Java annotation gives developers the capability to reduce the code verbosity by a simple annotation. As an example, we can refer to a transaction. By the standard pro-grammatically process with a transaction template, this requires [&#8230;]</p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">Key Java @Annotations to build full Spring Boot Rest API</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+					<description><![CDATA[<p>This post aims to demonstrate key Java @annotations used to build a functional Spring Boot Rest API. The use of Java annotation gives developers the capability to reduce the code verbosity by a simple annotation. As an example, we can refer to a transaction. By the standard programmatically process with a transaction template, this requires [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">Key Java @annotations to build full Spring Boot Rest API</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="has-drop-cap has-medium-font-size">This post aims to demonstrate key Java @annotations used to build a functional Spring Boot Rest API. The use of Java annotation gives developers the capability to reduce the code verbosity by a simple annotation. As an example, we can refer to a transaction. By the standard pro-grammatically process with a transaction template, this requires a more complex config and boilerplate code to write, while this can be achieved with a simple @Transaction declarative annotation.</p>
+<p class="has-drop-cap has-medium-font-size">This post aims to demonstrate key Java @annotations used to build a functional Spring Boot Rest API. The use of Java annotation gives developers the capability to reduce the code verbosity by a simple annotation. As an example, we can refer to a transaction. By the standard programmatically process with a transaction template, this requires a more complex config and boilerplate code to write. At the same time, this can be achieved with a simple @Transaction declarative annotation.</p>
 
 
 
@@ -279,7 +279,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 </pre></div>
 
 
-<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null nor empty, we can also annotate it with @NotEmpty. It targets a vast kind of element, since {METHOD,FIELD,ANNOTATION_TYPE,CONSTRUCTOR,PARAMETER,TYPE_USE}. The @Size annotation delimits the boundaries of the element annotated. The boundaries are specified by two attributes, min, and max.</p>
+<p class="has-medium-font-size">If we want to prevent the element of an entity to be not null or not empty, we can also annotate it with @NotEmpty. It targets a vast kind of elements, since {METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE}. The @Size annotation delimits the boundaries of the element annotated. The boundaries are specified by two attributes, min, and max.</p>
 
 
 
@@ -287,7 +287,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">One of the most important features of any ORM mechanism is how one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as a foreign key in this relationship.</p>
+<p class="has-medium-font-size">One of the most critical features of any ORM mechanism is how one specifies the mapping from relationships between Objects to their database counterparts. In the code below, there is a @OneToOne annotation to describe the relationship between the BusinessEntity class with the Address class model. The @JoinColumn annotation specifies the column that will be treated as a foreign key in this relationship.</p>
 
 
 
@@ -363,7 +363,7 @@ public class BusinessEntityModel&lt;IAddressModel extends AddressModel, IPartner
 
 
 
-<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. To serialize and deserialize the DTO object, we need to annotate these objects with Jackson&#8217;s annotation. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method, or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
+<p class="has-medium-font-size">Sometimes we need to transfer data between entities through JSON. We need to annotate these objects with Jackson&#8217;s annotation to serialize and deserialize the DTO object. The @JsonInclude(JsonInclude.Include.NON_NULL) indicates when the annotated property can be serialized. By using this annotation we can specify simple exclusion rules based on property values. It can be used on a field, method, or constructor parameter. It can also be used in classes where in some cases the specified rules are applied to all properties of the class. </p>
 
 
 <div class="wp-block-syntaxhighlighter-code "><pre class="brush: java; title: ; notranslate">
@@ -551,7 +551,7 @@ public class BusinessEntityController implements IGenericCRUD&lt;BusinessEntityM
 </pre></div>
 
 
-<p class="has-medium-font-size">@PathVariable, as well as @RequestParam,  are used to extract values from the HTTP request, there is a subtle difference between them. @RequestParam is used to get the request parameters from URL (<a href="https://www.jeevora.com/">https://www.jeevora.com/</a>&#8230;?id=1), also known as query parameters, while @PathVariable extracts values from URI (<a href="https://www.jeevora.com/">https://www.jeevora.com/</a>id/1) as demonstrated in our case study.</p>
+<p class="has-medium-font-size">@PathVariable, as well as @RequestParam,  are used to extract values from the HTTP request, there is a subtle difference between them. @RequestParam is used to get the request parameters from URL (<a href="https://www.jailsonevora.com/">https://www.jailsonevora.com/</a>&#8230;?id=1), also known as query parameters, while @PathVariable extracts values from URI (<a href="https://www.jailsonevora.com/">https://www.jailsonevora.com/</a>id/1) as demonstrated in our case study.</p>
 
 
 
@@ -623,7 +623,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 <p>[1] Balaji Varanasi, Sudha Belida, Spring REST &#8211; Rest and Web Services development using Spring, 2015; <br>[2] Ludovic Dewailly, Building a RESTful Web Service with Spring &#8211; A hands-on guide to building an enterprise-grade, scalable RESTful web service using the Spring Framework, 2015;<br>[3]  Marten Deinum, Daniel Rubio, Josh Long, Spring 5 Recipes: A Problem-Solution Approach, 2017.  </p>
-<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">Key Java @Annotations to build full Spring Boot Rest API</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
+<p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">Key Java @annotations to build full Spring Boot Rest API</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://jailsonevora.com/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/feed/</wfw:commentRss>
@@ -636,7 +636,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 		<link>https://jailsonevora.com/2019/08/10/java-ee/</link>
 					<comments>https://jailsonevora.com/2019/08/10/java-ee/#respond</comments>
 		
-		<dc:creator><![CDATA[admin]]></dc:creator>
+		<dc:creator><![CDATA[jailson]]></dc:creator>
 		<pubDate>Sat, 10 Aug 2019 23:11:48 +0000</pubDate>
 				<category><![CDATA[Microservices]]></category>
 		<category><![CDATA[Service-Oriented Architecture (SOA)]]></category>
@@ -652,7 +652,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 		<category><![CDATA[Java Validation]]></category>
 		<category><![CDATA[Unified Expression Language]]></category>
 		<category><![CDATA[WebSocket]]></category>
-		<guid isPermaLink="false">https://www.jeevora.com/?p=416</guid>
+		<guid isPermaLink="false">https://www.jailsonevora.com/?p=416</guid>
 
 					<description><![CDATA[<p>Java EE &#8211; Java Platform, Enterprise Edition Java Platform, Enterprise Edition (Java EE) is the standard in community-driven enterprise software. Java EE is developed using the Java Community Process, with contributions from industry experts, commercial and open-source organizations, user groups, and countless individuals. Each release integrates new features that align with industry needs, improves application [&#8230;]</p>
 <p>The post <a rel="nofollow" href="https://jailsonevora.com/2019/08/10/java-ee/">Why Java EE &#8211; Java Enterprise Edition</a> appeared first on <a rel="nofollow" href="http://jailsonevora.com/">Backend-Dev</a>.</p>
@@ -713,7 +713,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 <ul>
-<li><strong>Java API for XML Web Services</strong> can be used to create <a href="https://www.jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">SOAP web services</a> JAX-WS; </li>
+<li><strong>Java API for XML Web Services</strong> can be used to create <a href="https://jailsonevora.com/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_blank" rel="noreferrer noopener">SOAP web services</a> JAX-WS; </li>
 
 
 
@@ -822,7 +822,7 @@ public interface IGenericRepository&lt;T&gt; extends PagingAndSortingRepository&
 
 
 
-<h3 class="wp-block-heading">Java &#8211; Consider using, if your project involves : </h3>
+<h3 class="wp-block-heading">Java &#8211; Consider using, this if your project involves : </h3>
 
 
 
@@ -877,7 +877,7 @@ Object Caching 74/80 objects using disk
 Page Caching using disk: enhanced (Page is feed) 
 Content Delivery Network via N/A
 Lazy Loading (feed)
-Database Caching 4/8 queries in 0.011 seconds using disk
+Database Caching 4/8 queries in 0.014 seconds using disk
 
-Served from: localhost @ 2023-07-04 00:16:09 by W3 Total Cache
+Served from: localhost @ 2023-07-09 17:40:27 by W3 Total Cache
 -->
