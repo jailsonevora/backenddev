@@ -290,13 +290,25 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 
 
 <div class="wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">Sometimes to choose the appropriate model, the suitable training algorithms, and the hyperparameter to best fit the task as well as to debug issues and perform error analysis more efficiently, it is necessary to understand what is under the hood when applying Linear Regression. Hence, in this post, we will dissect the implementation of linear [&hellip;]</p><p class="wp-block-post-excerpt__more-text"><a class="wp-block-post-excerpt__more-link" href="http://localhost/wordpress/2020/08/11/linear-regression-under-the-hood-using-matlab/">Continue Reading →</a></p></div>
+</li><li class="wp-block-post post-1632 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-microservices category-soa tag-authentication tag-csharp tag-iis tag-service tag-soap tag-soapui tag-testing tag-wcf">
+<figure style="margin-top:0px;margin-bottom:3rem;" class="wp-block-post-featured-image"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_self"  ><img width="2539" height="1611" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202539%201611'%3E%3C/svg%3E" data-src="http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I" decoding="async" data-srcset="http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI.png 2539w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-300x190.png 300w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-1024x650.png 1024w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-768x487.png 768w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-1536x975.png 1536w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-2048x1299.png 2048w" data-sizes="(max-width: 2539px) 100vw, 2539px" /></a></figure>
+
+<h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_self" >Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a></h2>
+
+
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-6"><div class="wp-block-post-date"><time datetime="2020-03-31T22:32:00+00:00"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">March 31, 2020</a></time></div>
+
+<div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/microservices/" rel="tag">Microservices</a><span class="wp-block-post-terms__separator">, </span><a href="http://localhost/wordpress/category/soa/" rel="tag">Service-Oriented Architecture (SOA)</a></div></div>
+
+
+<div class="wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The second post will approach the steps required to invoke it while secured by a [&hellip;]</p><p class="wp-block-post-excerpt__more-text"><a class="wp-block-post-excerpt__more-link" href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Continue Reading →</a></p></div>
 </li><li class="wp-block-post post-1028 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-event-driven-architecture category-microservices tag-brokers tag-integration-test tag-junit tag-kafka tag-micro-framework tag-microservices tag-partition tag-publish-subscribe-pattern tag-queue tag-topics tag-zookeeper">
 <figure style="margin-top:0px;margin-bottom:3rem;" class="wp-block-post-featured-image"><a href="http://localhost/wordpress/2019/11/18/microservices-publish-subscribe-messaging-systems/" target="_self"  ><img width="2548" height="1616" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202548%201616'%3E%3C/svg%3E" data-src="http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="Microservices in Publish-Subscribe Communication." decoding="async" data-srcset="http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka.png 2548w, http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka-300x190.png 300w, http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka-1024x649.png 1024w, http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka-768x487.png 768w, http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka-1536x974.png 1536w, http://localhost/wordpress/wp-content/uploads/2019/11/Microservices-with-kafka-2048x1299.png 2048w" data-sizes="(max-width: 2548px) 100vw, 2548px" /></a></figure>
 
 <h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2019/11/18/microservices-publish-subscribe-messaging-systems/" target="_self" >Microservices in Publish-Subscribe Communication.</a></h2>
 
 
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-6"><div class="wp-block-post-date"><time datetime="2019-11-18T23:00:00+00:00"><a href="http://localhost/wordpress/2019/11/18/microservices-publish-subscribe-messaging-systems/">November 18, 2019</a></time></div>
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-7"><div class="wp-block-post-date"><time datetime="2019-11-18T23:00:00+00:00"><a href="http://localhost/wordpress/2019/11/18/microservices-publish-subscribe-messaging-systems/">November 18, 2019</a></time></div>
 
 <div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/event-driven-architecture/" rel="tag">Event Driven Architecture</a><span class="wp-block-post-terms__separator">, </span><a href="http://localhost/wordpress/category/microservices/" rel="tag">Microservices</a></div></div>
 
@@ -308,7 +320,7 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 <h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/" target="_self" >Key Java @annotations to build full Spring Boot Rest API</a></h2>
 
 
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-7"><div class="wp-block-post-date"><time datetime="2019-09-16T10:29:31+00:00"><a href="http://localhost/wordpress/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">September 16, 2019</a></time></div>
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-8"><div class="wp-block-post-date"><time datetime="2019-09-16T10:29:31+00:00"><a href="http://localhost/wordpress/2019/09/16/key-java-annotations-to-build-spring-boot-rest-api/">September 16, 2019</a></time></div>
 
 <div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/microservices/" rel="tag">Microservices</a></div></div>
 
@@ -320,7 +332,7 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 <h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2019/08/18/wcf-transport-security-with-certificate-authentication/" target="_self" >WCF Transport Security with Certificate Authentication</a></h2>
 
 
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-8"><div class="wp-block-post-date"><time datetime="2019-08-18T13:16:04+00:00"><a href="http://localhost/wordpress/2019/08/18/wcf-transport-security-with-certificate-authentication/">August 18, 2019</a></time></div>
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-9"><div class="wp-block-post-date"><time datetime="2019-08-18T13:16:04+00:00"><a href="http://localhost/wordpress/2019/08/18/wcf-transport-security-with-certificate-authentication/">August 18, 2019</a></time></div>
 
 <div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/soa/" rel="tag">Service-Oriented Architecture (SOA)</a></div></div>
 
@@ -332,24 +344,12 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 <h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/" target="_self" >Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part II</a></h2>
 
 
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-9"><div class="wp-block-post-date"><time datetime="2020-04-14T20:19:00+00:00"><a href="http://localhost/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">April 14, 2020</a></time></div>
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-10"><div class="wp-block-post-date"><time datetime="2020-04-14T20:19:00+00:00"><a href="http://localhost/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">April 14, 2020</a></time></div>
 
 <div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/microservices/" rel="tag">Microservices</a><span class="wp-block-post-terms__separator">, </span><a href="http://localhost/wordpress/category/soa/" rel="tag">Service-Oriented Architecture (SOA)</a></div></div>
 
 
 <div class="wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">In the first post of this series, we created a basic authentication service to be invoked using SoapUI. Therefore, in this second post, we will demonstrate step by step how to use this tool to successfully invoke this kind of service. 1-Basic WCF SOAP using SoapUI &#8211; Create a New SOAP project Firstly we need [&hellip;]</p><p class="wp-block-post-excerpt__more-text"><a class="wp-block-post-excerpt__more-link" href="http://localhost/wordpress/2020/04/14/invoking-secure-wcf-soap-service-using-soap-ui-part2/">Continue Reading →</a></p></div>
-</li><li class="wp-block-post post-1632 post type-post status-publish format-standard has-post-thumbnail hentry category-microservices category-soa tag-authentication tag-csharp tag-iis tag-service tag-soap tag-soapui tag-testing tag-wcf">
-<figure style="margin-top:0px;margin-bottom:3rem;" class="wp-block-post-featured-image"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_self"  ><img width="2539" height="1611" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202539%201611'%3E%3C/svg%3E" data-src="http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I" decoding="async" data-srcset="http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI.png 2539w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-300x190.png 300w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-1024x650.png 1024w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-768x487.png 768w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-1536x975.png 1536w, http://localhost/wordpress/wp-content/uploads/2020/03/SOAPUI-2048x1299.png 2048w" data-sizes="(max-width: 2539px) 100vw, 2539px" /></a></figure>
-
-<h2 style="margin-bottom:1.5rem;margin-top:0px; font-size:clamp(45px, 2.813rem + ((1vw - 7.68px) * 1.803), 60px);" class="wp-block-post-title"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/" target="_self" >Invoking SOAP Services using SoapUI &#8211; Basic Authentication, Part I</a></h2>
-
-
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-10"><div class="wp-block-post-date"><time datetime="2020-03-31T22:32:00+00:00"><a href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">March 31, 2020</a></time></div>
-
-<div class="taxonomy-category wp-block-post-terms"><a href="http://localhost/wordpress/category/microservices/" rel="tag">Microservices</a><span class="wp-block-post-terms__separator">, </span><a href="http://localhost/wordpress/category/soa/" rel="tag">Service-Oriented Architecture (SOA)</a></div></div>
-
-
-<div class="wp-block-post-excerpt"><p class="wp-block-post-excerpt__excerpt">In this series divided into three-part, I will demonstrate how to use the SoapUI API tool to invoke a secured WCF SOAP service. The first post will focus on creating a service where it will be the system under test. The second post will approach the steps required to invoke it while secured by a [&hellip;]</p><p class="wp-block-post-excerpt__more-text"><a class="wp-block-post-excerpt__more-link" href="http://localhost/wordpress/2020/03/31/invoking-secure-wcf-soap-service-using-soap-ui-part1/">Continue Reading →</a></p></div>
 </li><li class="wp-block-post post-1032 post type-post status-publish format-standard has-post-thumbnail hentry category-soa tag-bpel tag-corba tag-mom tag-oasis tag-rest tag-saml tag-soa tag-soap tag-uddi tag-web-services tag-ws-policy tag-wsdl tag-xml">
 <figure style="margin-top:0px;margin-bottom:3rem;" class="wp-block-post-featured-image"><a href="http://localhost/wordpress/2019/09/09/soa-and-process-service-integration/" target="_self"  ><img width="2550" height="1614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202550%201614'%3E%3C/svg%3E" data-src="http://localhost/wordpress/wp-content/uploads/2019/09/SOA.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy" alt="SOA and process services integration" decoding="async" data-srcset="http://localhost/wordpress/wp-content/uploads/2019/09/SOA.png 2550w, http://localhost/wordpress/wp-content/uploads/2019/09/SOA-300x190.png 300w, http://localhost/wordpress/wp-content/uploads/2019/09/SOA-768x486.png 768w, http://localhost/wordpress/wp-content/uploads/2019/09/SOA-1024x648.png 1024w" data-sizes="(max-width: 2550px) 100vw, 2550px" /></a></figure>
 
@@ -650,11 +650,11 @@ ai_js_code = true;
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 222/229 objects using disk
+Object Caching 204/247 objects using disk
 Page Caching using disk: enhanced 
 Content Delivery Network via N/A
 Lazy Loading
-Database Caching 8/20 queries in 0.012 seconds using disk
+Database Caching 8/22 queries in 0.013 seconds using disk
 
-Served from: localhost @ 2023-07-16 20:45:06 by W3 Total Cache
+Served from: localhost @ 2023-07-16 21:48:01 by W3 Total Cache
 -->
