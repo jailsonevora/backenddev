@@ -226,7 +226,7 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 <script src='http://localhost/wordpress/wp-content/plugins/cookie-law-info/lite/frontend/js/script.min.js?ver=3.1.1' id='cookie-law-info-js'></script>
 <script src='http://localhost/wordpress/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
 <script src='http://localhost/wordpress/wp-content/plugins/buymeacoffee/public/js/buy-me-a-coffee-public.js?ver=3.8' id='buy-me-a-coffee-js'></script>
-<script async src='http://localhost/wordpress/wp-content/uploads/caos/7d208b8c.js?id=G-EVXFF6B497' id='caos-gtag-js'></script>
+<script async src='http://localhost/wordpress/wp-content/plugins/caos/7d208b8c.js?id=G-JCM3FLXK10' id='caos-gtag-js'></script>
 <script id='caos-gtag-js-after'>
     window.dataLayer = window.dataLayer || [];
 
@@ -234,7 +234,7 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
     dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-EVXFF6B497', {"cookie_prefix":"CaosGtag","cookie_domain":"localhost","cookie_flags":"samesite=none;secure","allow_google_signals":true,"anonymize_ip":true});
+    gtag('config', 'G-JCM3FLXK10', {"cookie_prefix":"CaosGtag","cookie_domain":"localhost","cookie_flags":"samesite=none;secure","allow_google_signals":true,"anonymize_ip":true});
         
 </script>
 <link rel="https://api.w.org/" href="http://localhost/wordpress/wp-json/" /><link rel="alternate" type="application/json" href="http://localhost/wordpress/wp-json/wp/v2/tags/184" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd" />
@@ -557,5 +557,5 @@ Content Delivery Network via N/A
 Lazy Loading
 Database Caching using disk
 
-Served from: localhost @ 2023-07-16 17:22:48 by W3 Total Cache
+Served from: localhost @ 2023-07-16 18:51:37 by W3 Total Cache
 -->
