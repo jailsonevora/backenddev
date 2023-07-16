@@ -680,11 +680,11 @@ ai_js_code = true;
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Object Caching 138/324 objects using disk
+Object Caching 130/333 objects using disk
 Page Caching using disk: enhanced 
 Content Delivery Network via N/A
 Lazy Loading
-Database Caching 1/16 queries in 0.039 seconds using disk
+Database Caching 1/16 queries in 0.036 seconds using disk
 
-Served from: localhost @ 2023-07-16 16:05:02 by W3 Total Cache
+Served from: localhost @ 2023-07-16 17:20:21 by W3 Total Cache
 -->
