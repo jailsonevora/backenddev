@@ -205,7 +205,7 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 <link rel="alternate" type="text/xml+oembed" href="http://localhost/wordpress/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fwordpress%2Fj-e-evora-portfolio-back-end-developer%2Fabout-j-e-evora%2F&#038;format=xml" />
         <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jailsonevoc" data-description="Support me on Buy Me a Coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#FF813F" data-position="right" data-x_margin="18" data-y_margin="18">
         </script>
-        <style id="cky-style-inline">[data-cky-tag]{visibility:hidden;}</style><!-- HFCM by 99 Robots - Snippet # 1: Google Integration -->
+        <style id="cky-style-inline">[data-cky-tag]{visibility:hidden;}</style><!-- HFCM by 99 Robots - Snippet # 1: Google Analytics -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCM3FLXK10"></script>
 <script>
@@ -215,6 +215,10 @@ var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; positio
 
   gtag('config', 'G-JCM3FLXK10');
 </script>
+<!-- /end HFCM by 99 Robots -->
+<!-- HFCM by 99 Robots - Snippet # 2: Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7574748925899188"
+     crossorigin="anonymous"></script>
 <!-- /end HFCM by 99 Robots -->
 <link rel="icon" href="http://localhost/wordpress/wp-content/uploads/2023/06/cropped-1678234464025-32x32.jpg" sizes="32x32" />
 <link rel="icon" href="http://localhost/wordpress/wp-content/uploads/2023/06/cropped-1678234464025-192x192.jpg" sizes="192x192" />
@@ -535,5 +539,5 @@ Content Delivery Network via N/A
 Lazy Loading
 Database Caching using disk
 
-Served from: localhost @ 2023-07-16 20:10:55 by W3 Total Cache
+Served from: localhost @ 2023-07-16 20:45:07 by W3 Total Cache
 -->
